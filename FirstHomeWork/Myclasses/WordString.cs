@@ -12,15 +12,37 @@ namespace HomeWorkFirst.Myclasses
         {
             System.Console.WriteLine("введите строку");
             text = Convert.ToString(Console.ReadLine());
+            if(string.IsNullOrEmpty(text))
+            {
+                System.Console.WriteLine("ERROR");
+            }
         }
         public string ReverseString()
         {
-            string timeText="";
-            for(int i=text.Length-1;i>-1;i--)
+            string timeText = "";
+            for (int i = text.Length - 1; i > -1; i--)
             {
-timeText+=text[i];
+                timeText += text[i];
             }
             return timeText;
+        }
+        public string UpperFirst()
+        {
+            text.Trim();
+            text = char.ToUpper(text[0]) + text.Remove(0, 1);
+            return text;
+        }
+        public string UpperEvery()
+        {
+            text.Trim();
+
+            string[] array = text.Split(" ");
+            for (int i = 0; i < array.Length; i++)
+            {
+                array[i] = char.ToUpper(array[i][0]) + array[i].Remove(0, 1);
+            }
+            text = string.Join(" ", array);
+            return text;
         }
     }
 }
