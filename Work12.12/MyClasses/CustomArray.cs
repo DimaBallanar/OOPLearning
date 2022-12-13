@@ -3,6 +3,7 @@ namespace OOPday1.MyClasses
     public class CustomArray
     {
         private int[] Items;
+        public int Length=>Items.Length;
 
 
         public CustomArray()
