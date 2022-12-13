@@ -65,14 +65,23 @@ namespace OOPday1.MyClasses
             return Items[index];
         }
 
-        public int SummMass(int[] array)
+        public int SummMass(int[] values)
         {
             int sum = 0;
-            for (int i = 0; i < array.Length; i++)
+            for (int i = 0; i < values.Length; i++)
             {
-                sum += array[i];
+                sum += values[i];
             }
             return sum;
+        }
+        public int DiffMass(int[] values)
+        {
+            int diff = 0;
+            for (int i = 0; i < values.Length; i++)
+            {
+                diff -= values[i];
+            }
+            return diff;
         }
 
         public override string ToString()
