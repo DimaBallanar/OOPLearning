@@ -6,8 +6,12 @@ namespace HomeWorkFirst //
     {
         static void Main(string[] args)
         {
-            Singer make=new Singer();
+            Singer make = new Singer();
             make.GetАutograph();
+            WordString use = new WordString();
+            System.Console.WriteLine(use.ReverseString());
+            System.Console.WriteLine(use.UpperFirst());
+            System.Console.WriteLine(use.UpperEvery());
         }
     }
 }
