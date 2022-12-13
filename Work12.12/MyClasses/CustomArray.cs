@@ -3,7 +3,7 @@ namespace OOPday1.MyClasses
     public class CustomArray
     {
         private int[] Items;
-        public int Length=>Items.Length;
+        public int Length => Items.Length;
 
 
         public CustomArray()
@@ -63,6 +63,16 @@ namespace OOPday1.MyClasses
                 return null;
             }
             return Items[index];
+        }
+
+        public int SummMass(int[] array)
+        {
+            int sum = 0;
+            for (int i = 0; i < array.Length; i++)
+            {
+                sum += array[i];
+            }
+            return sum;
         }
 
         public override string ToString()
