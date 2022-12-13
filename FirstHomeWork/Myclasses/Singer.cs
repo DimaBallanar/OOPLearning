@@ -1,3 +1,6 @@
+// Реализуйте класс Singer, который будет иметь следующие свойства: name,
+// surname. Также класс должен иметь метод GetАutograph (), который будет
+// выводить “{Name} {Surname), с наилучшими пожеланиями”. 
 namespace HomeWorkFirst.Myclasses
 {
     public class Singer
