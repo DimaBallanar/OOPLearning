@@ -65,21 +65,21 @@ namespace OOPday1.MyClasses
             return Items[index];
         }
 
-        public int SummMass(int[] values)
+        public int SummMass()
         {
             int sum = 0;
-            for (int i = 0; i < values.Length; i++)
+            for (int i = 0; i < Items.Length; i++)
             {
-                sum += values[i];
+                sum += Items[i];
             }
             return sum;
         }
-        public int DiffMass(int[] values)
+        public int DiffMass()
         {
             int diff = 0;
-            for (int i = 0; i < values.Length; i++)
+            for (int i = 0; i < Items.Length; i++)
             {
-                diff -= values[i];
+                diff -= Items[i];
             }
             return diff;
         }
