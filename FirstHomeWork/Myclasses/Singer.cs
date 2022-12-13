@@ -12,7 +12,7 @@ namespace HomeWorkFirst.Myclasses
             surname = Convert.ToString(Console.ReadLine());
 
         }
-        public void GetАutograph(string name, string surname)
+        public void GetАutograph()
         {
             System.Console.WriteLine($"{name} {surname}, c наилучшими пожеланиями");
         }

@@ -1,12 +1,13 @@
 ﻿using HomeWorkFirst.Myclasses;
 
-namespace HomeWorkFirst // Note: actual namespace depends on the project name.
+namespace HomeWorkFirst // 
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            
+            Singer make=new Singer();
+            make.GetАutograph();
         }
     }
 }
