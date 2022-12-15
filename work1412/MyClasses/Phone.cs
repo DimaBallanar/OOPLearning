@@ -28,13 +28,37 @@ public class Phone
 {
     public string Number = "+37525xxxxxxx";
     public string Model = "None";
-    public string Weigth = "Empty";
+    public string Weight = "Empty";
 
+    public Phone()
+    {
+
+    }
+
+    public Phone(string number, string model)
+    {
+        Number = number;
+        Model = model;
+    }
+    public Phone(string number, string model, string weight)
+    {
+        Number = number;
+        Model = model;
+        Weight = weight;
+    }
     public void RecieveCall(string name)
     {
         System.Console.WriteLine($"Вам звонит {name}");
     }
 
+    public void SendMessage(string message , params string[] numbers)
+    {
+        foreach(string item in numbers)
+        {
+            System.Console.WriteLine(string.Format("Phone:{0} message:{1}",item,message));
+        }
+
+    }
     public string GetNumber()
     {
         return Number;
@@ -42,6 +66,6 @@ public class Phone
 
     public override string ToString()
     {
-        return string.Join(",", Number, Model, Weigth);
+        return string.Join(",", Number, Model, Weight);
     }
 }
