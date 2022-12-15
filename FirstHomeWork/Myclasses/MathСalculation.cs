@@ -12,8 +12,8 @@ namespace HomeWorkFirst.Myclasses
         public MathCalculation()
         {
             System.Console.WriteLine("введите  любые числа через запятую");
-            // numbers = Convert.ToString(Console.ReadLine());
-            numbers = "10,-5,20";
+            numbers = Convert.ToString(Console.ReadLine());
+           // numbers = "10,-5,20";
             
         }
 
