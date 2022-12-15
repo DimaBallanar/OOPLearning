@@ -12,7 +12,8 @@ namespace HomeWorkFirst.Myclasses
         public MathCalculation()
         {
             System.Console.WriteLine("введите  любые числа через запятую");
-            numbers = Convert.ToString(Console.ReadLine());
+            // numbers = Convert.ToString(Console.ReadLine());
+            numbers = "10";
             string[] numbersString = numbers.Split(",");
         }
 
@@ -26,6 +27,7 @@ namespace HomeWorkFirst.Myclasses
                     summa += num;
                 }
             }
+            return summa;
         }
 
     }
