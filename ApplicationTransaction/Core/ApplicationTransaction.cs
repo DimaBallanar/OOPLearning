@@ -17,8 +17,13 @@ public class ApplicationTransaction
     };
     }
 
-    public void Work()
+    public void SignIn()
     {
         Autorization autorization = new Autorization();
+        if (autorization.Login(Users, out User? user))
+        {
+            System.Console.WriteLine(user);
+        }
+
     }
 }

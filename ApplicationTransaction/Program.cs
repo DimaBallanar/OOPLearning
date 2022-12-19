@@ -1,10 +1,11 @@
 ﻿using AppTransaction.Core;
 
 namespace AppTransaction;
-    internal class Program
+internal class Program
+{
+    static void Main(string[] args)
     {
-        static void Main(string[] args)
-        {
-            ApplicationTransaction applicationTransaction=new ApplicationTransaction();
-        }
+        ApplicationTransaction applicationTransaction = new ApplicationTransaction();
+        applicationTransaction.SignIn();
     }
+}

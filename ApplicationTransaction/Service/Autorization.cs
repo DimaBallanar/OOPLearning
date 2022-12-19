@@ -5,7 +5,9 @@ public class Autorization
 {
     public bool Login(User[] users, out User? user)
     {
+        System.Console.Write("введите email:");
         string? email = Console.ReadLine();
+        System.Console.Write("введите пароль:");
         string? pass = Console.ReadLine();
         user = Search(email, pass, users);
         return user != null;
@@ -13,7 +15,7 @@ public class Autorization
 
     private User? Search(string? email, string? pass, User[] users)
     {
-        if(string.IsNullOrEmpty(email)|| string.IsNullOrEmpty(pass))
+        if (string.IsNullOrEmpty(email) || string.IsNullOrEmpty(pass))
         {
             System.Console.WriteLine("ERROR");
             return null;
