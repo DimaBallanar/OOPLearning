@@ -38,3 +38,4 @@ public class Autorization
 }
 
 
+//проверка на ввод мыла
