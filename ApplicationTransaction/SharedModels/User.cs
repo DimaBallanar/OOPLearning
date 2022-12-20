@@ -1,4 +1,5 @@
 using System;
+using Registration.Service;
 
 namespace AppTransaction.SharedModels;
 

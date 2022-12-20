@@ -1,5 +1,6 @@
 using AppTransaction.SharedModels;
 using AppTransaction.Service;
+using Registration.Service;
 namespace AppTransaction.Core;
 
 public class ApplicationTransaction
