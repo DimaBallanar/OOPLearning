@@ -33,9 +33,9 @@ public class ApplicationTransaction
 
 
     }
-    public void RegIn(User user)
+    public void RegIn()
     {
-        User userok=RegUser()
+        
     }
     public void SignIn()
     {
