@@ -1,4 +1,6 @@
 ﻿using AppTransaction.Core;
+using AppTransaction.Service;
+using AppTransaction.SharedModels;
 
 namespace AppTransaction;
 internal class Program
