@@ -1,13 +1,13 @@
-
+using AppTransaction.Core;
 namespace Registration.Service;
 
 public class Registration
 {
     private readonly int[] IdUserMass;
     public int IdUser { get; set; }
-    public string Name { get; set; }
-    public string Password { get; set; }
-    public string Email { get; set; }
+    public string Name ;
+    public string Password ;
+    public string Email ;
 
 
     public Registration(int id, string name, string password, string email)
