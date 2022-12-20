@@ -28,14 +28,18 @@ public class ApplicationTransaction
         }
         else
         {
-            RegIn();
+            // RegIn();
         }
 
 
     }
-    public void RegIn()
+    public void RegIn(ref User[] Users)
     {
-        
+        User[] timeArray=new User[Users.Length+1];
+        Array.Copy(Users, timeArray, Users.Length);
+        timeArray[timeArray.Length - 1] = new Transaction(timeArray.Length, user.Id, comment, value, DateTime.Now.AddDays(0));
+        Users = timeArray;
+
     }
     public void SignIn()
     {
@@ -44,6 +48,11 @@ public class ApplicationTransaction
         {
             System.Console.WriteLine(user);
             WorkflowTransaction workflowTransactions = new WorkflowTransaction();
+            System.Console.WriteLine("введите коментарий");
+            string comment = Console.ReadLine();
+            System.Console.WriteLine("сколько ?");
+            decimal value = Convert.ToDecimal(Console.ReadLine());
+            workflowTransactions.SendTransaction(user,comment,value);
             workflowTransactions.Show(user);
 
         }
