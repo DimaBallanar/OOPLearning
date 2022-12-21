@@ -33,7 +33,7 @@ public class ApplicationTransaction
 
 
     }
-    public void RegIn(ref User[] Users)
+    public void RegIn(User[] Users,int id, string name, string password,string email)
     {
         User[] timeArray=new User[Users.Length+1];
         Array.Copy(Users, timeArray, Users.Length);
