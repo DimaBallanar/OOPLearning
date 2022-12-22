@@ -72,14 +72,7 @@ public class Account
         return new User(NextIdUser++, name, pass, email);
 
     }
-    public void RegIn(string name, string password, string email)
-    {
-        User[] timeArray = new User[Users.Length + 1];
-        Array.Copy(Users, timeArray, Users.Length);
-        timeArray[timeArray.Length - 1] = new Transaction(timeArray.Length, user.Id, comment, value, DateTime.Now.AddDays(0));
-        Users = timeArray;
-
-    }
+  
 
 }
 
