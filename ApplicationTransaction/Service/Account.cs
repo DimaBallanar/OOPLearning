@@ -53,6 +53,18 @@ public class Account
         return null;
 
     }
+    public bool Registr(out User? user)
+    {
+        System.Console.WriteLine("введите имя");
+        string? name = Console.ReadLine();
+        System.Console.WriteLine("введите пароль");
+        string? password = Console.ReadLine();
+        System.Console.WriteLine("введите почту");
+        string? email = Console.ReadLine();
+        user = SearchSimple(name, password, email);
+        return user != null;
+
+    }
     private User? SearchSimple(string? email, string? pass, string? name)
     {
         if (string.IsNullOrEmpty(email)
@@ -72,7 +84,7 @@ public class Account
         return new User(NextIdUser++, name, pass, email);
 
     }
-  
+
 
 }
 
