@@ -13,7 +13,7 @@ internal class Program
         int choose = Convert.ToInt32(Console.ReadLine());
         if (choose == 1)
         {
-
+Account
         }
         else if (choose == 2)
         {

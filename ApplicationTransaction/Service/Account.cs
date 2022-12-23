@@ -37,7 +37,7 @@ public class Account
 
         foreach (User user in Users)
         {
-            if (user == null) ;
+            if (user == null) 
             {
                 continue;
             }
