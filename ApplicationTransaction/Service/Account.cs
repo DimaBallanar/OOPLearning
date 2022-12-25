@@ -10,7 +10,7 @@ public class Account
         {
             Users = new User[20];
 
-            Users[0] = new User(NextIdUser++, "test1", "test2", "1111@gmail.com");
+            Users[0] = new User(NextIdUser++, "Вася", "test2", "1111@gmail.com");
             Users[1] = new User(NextIdUser++, "test2", "test2", "2111@gmail.com");
             Users[2] = new User(NextIdUser++, "test3", "test2", "3111@gmail.com");
             Users[3] = new User(NextIdUser++, "test4", "test2", "4111@gmail.com");
@@ -58,15 +58,15 @@ public class Account
         System.Console.WriteLine("введите имя");
         string? name = Console.ReadLine();
         System.Console.WriteLine("введите пароль");
-        string? password = Console.ReadLine();
+        string? pass = Console.ReadLine();
         System.Console.WriteLine("введите почту");
         string? email = Console.ReadLine();
-        user = SearchSimple(name, password, email);
+        user = SearchSimple(name, pass, email);                
         if (user != null)
         {
-            user = Users[user.Id - 1];
+            Users[user.Id - 1] = user;
         }
-       
+        // System.Console.WriteLine(string.Join(",", Users[5]));
         return user != null;
 
     }
@@ -86,7 +86,7 @@ public class Account
         //         return null;
         //     }
         // }
-        System.Console.WriteLine($"{name},{password},{email},{NextIdUser}");
+        // System.Console.WriteLine($"{name},{password},{email},{NextIdUser}");
         return new User(NextIdUser++, name, password, email);
 
     }
