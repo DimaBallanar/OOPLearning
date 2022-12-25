@@ -64,28 +64,29 @@ public class Account
         user = SearchSimple(name, password, email);
         if (user != null)
         {
-            Users[user.Id - 1] = user;
+            user = Users[user.Id - 1];
         }
         return user != null;
 
     }
-    private User? SearchSimple(string? email, string? pass, string? name)
+    private User? SearchSimple(string? name, string? password, string? email)
     {
         if (string.IsNullOrEmpty(email)
- || string.IsNullOrEmpty(pass))//name
+ || string.IsNullOrEmpty(password) || string.IsNullOrEmpty(name))
         {
             System.Console.WriteLine("error input");
             return null;
         }
-        for (int i = 0; i < Users.Length; i++)
-        {
-            if (Users[i].Email == email)//isnull
-            {
-                System.Console.WriteLine("This email not available");
-                return null;
-            }
-        }
-        return new User(NextIdUser++, name, pass, email);
+        // for (int i = 0; i < Users.Length; i++)
+        // {
+        //     if (Users[i].Email == email)//isnull
+        //     {
+        //         System.Console.WriteLine("This email not available");
+        //         return null;
+        //     }
+        // }
+        System.Console.WriteLine();
+        return new User(NextIdUser++, name, password, email);
 
     }
 
