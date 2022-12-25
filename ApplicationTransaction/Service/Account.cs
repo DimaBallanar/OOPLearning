@@ -37,7 +37,7 @@ public class Account
 
         foreach (User user in Users)
         {
-            if (user == null) 
+            if (user == null)
             {
                 continue;
             }
@@ -62,6 +62,10 @@ public class Account
         System.Console.WriteLine("введите почту");
         string? email = Console.ReadLine();
         user = SearchSimple(name, password, email);
+        if (user != null)
+        {
+            Users[user.Id - 1] = user;
+        }
         return user != null;
 
     }
