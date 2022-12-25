@@ -15,6 +15,10 @@ internal class Program
         {
             Account regisrt = new Account();
             regisrt.Registr(out User? user);
+            
+             ApplicationTransaction applicationTransaction = new ApplicationTransaction();
+            applicationTransaction.SignIn();
+            
         }
         else if (choose == 2)
         {

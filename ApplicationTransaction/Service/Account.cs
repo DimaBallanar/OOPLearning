@@ -66,6 +66,7 @@ public class Account
         {
             user = Users[user.Id - 1];
         }
+       
         return user != null;
 
     }
@@ -85,7 +86,7 @@ public class Account
         //         return null;
         //     }
         // }
-        System.Console.WriteLine();
+        System.Console.WriteLine($"{name},{password},{email},{NextIdUser}");
         return new User(NextIdUser++, name, password, email);
 
     }
