@@ -13,7 +13,8 @@ internal class Program
         int choose = Convert.ToInt32(Console.ReadLine());
         if (choose == 1)
         {
-Account
+            Account regisrt = new Account();
+            regisrt.Registr(out User? user);
         }
         else if (choose == 2)
         {
