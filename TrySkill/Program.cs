@@ -1,6 +1,5 @@
 ﻿using LiterSearch;
 
-
 namespace Game;
 
 internal class Program
@@ -10,7 +9,7 @@ internal class Program
         System.Console.WriteLine("введите текст");
         string? text = Console.ReadLine();
         System.Console.Write("какую букву ищем?");
-        char lite = Convert.ToChar(Console.ReadLine());
+        char lite = Console.ReadKey().KeyChar;
         Search literSearch = new Search(text, lite);
         literSearch.TryFind();
 

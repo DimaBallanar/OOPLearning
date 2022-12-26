@@ -1,5 +1,4 @@
 
-
 namespace LiterSearch
 {
     public class Search
@@ -7,12 +6,7 @@ namespace LiterSearch
         char Liter;
         string Text;
 
-        public Search()
-        {
-            
-System.Console.WriteLine("вы ничего не написали");
-
-        }
+       
         public Search(string text, char a)
         {
             Liter = a;
