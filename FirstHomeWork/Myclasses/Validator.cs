@@ -12,6 +12,13 @@ public class Validator
 
     public string email;
 
+    public Validator()
+    {
+        System.Console.Write("введите почту");
+        email=Convert.ToString(Console.ReadLine());
+        
+    }
+
    public bool CheckEmail()
         {
             int countSobak = 0;
