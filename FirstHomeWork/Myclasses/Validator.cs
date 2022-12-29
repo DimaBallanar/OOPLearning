@@ -12,10 +12,10 @@ public class Validator
 
     public string email;
 
-   public bool CheckEmail(string text)
+   public bool CheckEmail()
         {
             int countSobak = 0;
-            foreach (char a in text)
+            foreach (char a in email)
             {
                 if (a == '@' && countSobak < 2)
                 {
@@ -26,7 +26,7 @@ public class Validator
                     return false;
                 }
             }
-            string[] massiv = text.Split('@');
+            string[] massiv = email.Split('@');
             string myCheck = massiv[1];
             string[] result = myCheck.Split('.');
             if (result.Length == 2 && result[1].Length > 0)
