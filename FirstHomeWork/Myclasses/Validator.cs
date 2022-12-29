@@ -11,4 +11,10 @@ public class Validator
 {
 
     public string email;
+
+    public bool IsEmail()
+    {
+        
+    }
+
 }
