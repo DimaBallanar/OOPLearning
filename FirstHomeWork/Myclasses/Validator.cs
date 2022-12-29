@@ -10,30 +10,29 @@ namespace HomeWorkFirst.Myclasses;
 public class Validator
 {
 
-    public string email;
+    public string Email;
 
-    public Validator()
+    public Validator(string email)
     {
-        System.Console.Write("введите почту");
-        email=Convert.ToString(Console.ReadLine());
-        
+       Email=email;
+
     }
 
    public bool CheckEmail()
         {
             int countSobak = 0;
-            foreach (char a in email)
+            foreach (char a in Email)
             {
-                if (a == '@' && countSobak < 2)
+                if (a == '@' )
                 {
                     countSobak += 1;
                 }
-                else
+                else if(countSobak>1 || countSobak<1)
                 {
                     return false;
                 }
             }
-            string[] massiv = email.Split('@');
+            string[] massiv = Email.Split('@');
             string myCheck = massiv[1];
             string[] result = myCheck.Split('.');
             if (result.Length == 2 && result[1].Length > 0)

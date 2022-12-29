@@ -12,8 +12,10 @@ namespace HomeWorkFirst //
             // System.Console.WriteLine(use.ReverseString());
             // System.Console.WriteLine(use.UpperFirst());
             // System.Console.WriteLine(use.UpperEvery());
-            MathCalculation collect = new MathCalculation();
-            System.Console.WriteLine(collect.CheckPolar());
+            // MathCalculation collect = new MathCalculation();
+            // System.Console.WriteLine(collect.CheckPolar());
+            Validator validator=new Validator("D.Ballanargmail.com");
+            System.Console.WriteLine(validator.CheckEmail());
         }
     }
 }
