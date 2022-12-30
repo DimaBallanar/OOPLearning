@@ -14,54 +14,54 @@ public class Validator
 
     public Validator(string email)
     {
-       Email=email;
+        Email = email;
 
     }
 
-   public bool CheckEmail()
+    public bool CheckEmail()
+    {
+        int countSobak = 0;
+        foreach (char a in Email)
         {
-            int countSobak = 0;
-            foreach (char a in Email)
+            if (a == '@')
             {
-                if (a == '@' )
-                {
-                    countSobak += 1;
-                }
-                else if(countSobak>1 || countSobak<1)
-                {
-                    return false;
-                }
+                countSobak += 1;
             }
-            string[] massiv = Email.Split('@');
-            string myCheck = massiv[1];
-            string[] result = myCheck.Split('.');
-            if (result.Length == 2 && result[1].Length > 0)
-            {
-                return true;
-            }
-            else
+            else if (countSobak > 1 || countSobak < 1)
             {
                 return false;
             }
         }
-     public bool IsURL()
-     {
-        bool result=false;
-        if(Email.Contains("http"))
+        string[] massiv = Email.Split('@');
+        string myCheck = massiv[1];
+        string[] result = myCheck.Split('.');
+        if (result.Length == 2 && result[1].Length > 0)
         {
-            result=true;
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+    public bool IsURL()
+    {
+        bool result = false;
+        if (Email.Contains("http"))
+        {
+            result = true;
         }
         return result;
-     }   
+    }
 
-     public bool IsPhone()
-     {
-        bool result=false;
-        if(Email.StartsWith("+375"))
+    public bool IsPhone()
+    {
+        bool result = false;
+        if (Email.StartsWith("+375") || Email.StartsWith("80"))
         {
-            result=true;
+            result = true;
         }
         return result;
-     }  
+    }
 
 }
