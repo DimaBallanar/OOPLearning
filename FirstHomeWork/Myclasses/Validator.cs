@@ -54,4 +54,14 @@ public class Validator
         return result;
      }   
 
+     public bool IsPhone()
+     {
+        bool result=false;
+        if(Email.StartsWith("+375"))
+        {
+            result=true;
+        }
+        return result;
+     }  
+
 }
