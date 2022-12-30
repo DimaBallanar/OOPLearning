@@ -44,5 +44,14 @@ public class Validator
                 return false;
             }
         }
+     public bool IsURL()
+     {
+        bool result=false;
+        if(Email.Contains("http"))
+        {
+            result=true;
+        }
+        return result;
+     }   
 
 }
