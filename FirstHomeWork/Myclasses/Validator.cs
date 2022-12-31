@@ -54,6 +54,12 @@ public class Validator
         return result;
     }
 
+    public bool IsDate()
+    {
+        bool result =false;
+        if()
+    }
+
     public bool IsPhone()
     {
         bool result = false;
