@@ -57,7 +57,7 @@ public class Validator
     public bool IsDate()
     {
         bool result =false;
-        if()
+        if(Email.Contains('/')||Email.Contains('-')||Email.Contains('.'))
     }
 
     public bool IsPhone()
