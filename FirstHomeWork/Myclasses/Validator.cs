@@ -46,11 +46,12 @@ public class Validator
     }
     public bool IsURL()
     {
-        bool result = false;
-        if (Email.Contains("http"))
-        {
-            result = true;
-        }
+        // bool result = false;
+        bool result=Email.Contains("http")?true:false;
+        // if (Email.Contains("http"))
+        // {
+        //     result = true;
+        // }
         return result;
     }
 
@@ -58,6 +59,10 @@ public class Validator
     {
         bool result =false;
         if(Email.Contains('/')||Email.Contains('-')||Email.Contains('.'))
+        {
+            result=true;
+        }
+        return result;
     }
 
     public bool IsPhone()
