@@ -15,7 +15,7 @@
 
 using UserOBD;
 
-namespace ServerByld;
+namespace ServerBy;
 
 public class ServerByld
 {
@@ -48,20 +48,20 @@ public class ServerByld
     }
     public User Service(int id)
     {
-        User user = Repository(id);
-        if (user == null)
+        User User = Repository(id);
+        if (User == null)
         {
             Console.WriteLine("Not found data");
         }
-        return user;
+        return User;
     }
     public User Repository(int id)
     {
-        foreach (User user in m_user)
+        foreach (User User in User)
         {
-            if (user.Id == id)
+            if (User.Id == id)
             {
-                return user;
+                return User;
             }
         }
         return null;

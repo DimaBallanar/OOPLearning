@@ -1,5 +1,6 @@
 ﻿using System;
 using Server;
+using ServerBy;
 
 namespace MyApp // Note: actual namespace depends on the project name.
 {
@@ -7,8 +8,10 @@ namespace MyApp // Note: actual namespace depends on the project name.
     {
         static void Main(string[] args)
         {
-            ServerGetAll server=new ServerGetAll();
-            server.Controller();
+            // ServerGetAll server=new ServerGetAll();
+            // server.Controller();
+            ServerByld serv=new ServerByld();
+            serv.Controller(1);
         }
     }
 }
