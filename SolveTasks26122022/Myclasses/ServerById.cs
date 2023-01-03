@@ -21,5 +21,15 @@ public class ServerByld
 {
     private User[] User;
 
-    
+    public ServerByld()
+    {
+         User = new User[4];
+
+        User[0] = new User() { Id = 1, Name = "Yesenia", Age = 22 };
+        User[1] = new User() { Id = 2, Name = "Hanna", Age = 22 };
+        User[2] = new User() { Id = 3, Name = "Stanislau", Age = 25 };
+        User[3] = new User() { Id = 4, Name = "Germana", Age = 18 };
+    }
+
+
 }
