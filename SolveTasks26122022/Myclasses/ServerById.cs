@@ -30,6 +30,37 @@ public class ServerByld
         User[2] = new User() { Id = 3, Name = "Stanislau", Age = 25 };
         User[3] = new User() { Id = 4, Name = "Germana", Age = 18 };
     }
+      public bool Middleware(int id) {
+        return id > 0; // true false
+    }
+    public User Controller(int id) {
+        if (Middleware(id)) {
+            return Service(id)
+;
+        }
+        else {
+            Console.WriteLine("Error not coo");
+            return null;
+        }
+    }
+    public User Service(int id) {
+        User user = Repository(id)
+;
+        if (user == null) {
+           Console.WriteLine("Not found data");
+        }
+              return user;
+    }
+    public User Repository(int id) {
+      foreach(User user in m_user) {
+        if (user.Id == id) {
+            return user;
+        }
+      }
+      return null;
+    }
+
+}
 
 
 }
