@@ -11,7 +11,7 @@ namespace MyApp // Note: actual namespace depends on the project name.
             // ServerGetAll server=new ServerGetAll();
             // server.Controller();
             ServerByld serv=new ServerByld();
-            serv.Controller(1);
+            serv.Controller(7);
         }
     }
 }

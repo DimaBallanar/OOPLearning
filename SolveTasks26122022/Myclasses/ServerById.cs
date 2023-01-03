@@ -61,11 +61,18 @@ public class ServerByld
         {
             if (User.Id == id)
             {
-                return User;
+                return User.Print();
             }
         }
         return null;
     }
+    public void Print()
+    {
+        
+         System.Console.WriteLine($"ID : {Id}, Name: \"{Name}\", Age : {Age}");
+    } 
+
+     
 
 }
 
