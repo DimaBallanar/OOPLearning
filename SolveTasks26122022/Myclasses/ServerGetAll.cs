@@ -41,15 +41,17 @@ public class ServerGetAll
     private User[] Service()
     {
         User[] user = Repository();
-        if(user==null)
+        if (user == null)
         {
             System.Console.WriteLine("ERROR");
         }
+        // System.Console.WriteLine(string.Join(",",user[1]));
         return user;
     }
 
     private User[] Repository()
     {
+
         return User;
     }
 
