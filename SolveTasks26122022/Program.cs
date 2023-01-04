@@ -11,14 +11,16 @@ namespace MyApp // Note: actual namespace depends on the project name.
         {
             // ServerGetAll server=new ServerGetAll();
             // server.Controller();
+            System.Console.Write("укажите id пользователя");
             // ServerByld serv=new ServerByld();
             // serv.Controller(3);
             System.Console.Write("Введите имя: ");
-            string? name=Convert.ToString(Console.ReadLine());
+            string? name = Convert.ToString(Console.ReadLine());
             System.Console.Write("Введите возраст: ");
-            int age=Convert.ToInt32(Console.ReadLine());
-            ServerPost collect=new ServerPost();
-            collect.Controller(name,age);
+            int age = Convert.ToInt32(Console.ReadLine());
+            ServerPost collect = new ServerPost();
+            collect.Controller(name, age);
+
 
 
         }
