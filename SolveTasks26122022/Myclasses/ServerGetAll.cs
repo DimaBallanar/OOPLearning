@@ -51,6 +51,10 @@ public class ServerGetAll
 
     private User[] Repository()
     {
+        foreach (User User in User)
+        {
+            System.Console.WriteLine($"ID : {User.Id}, Name: \"{User.Name}\", Age : {User.Age}");
+        }
 
         return User;
     }
