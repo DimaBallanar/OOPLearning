@@ -3,6 +3,7 @@
 // все числа 2 системы счисления в 16, метод ToOctalNumber, преобразующий все
 // числа 2 системы счисления в 8
 
+using Conversion10;
 namespace Conversion2;
 
 public class ConversionTwo
@@ -18,6 +19,20 @@ public class ConversionTwo
             result += cifra * Convert.ToInt32(Math.Pow(2, helper));
             helper++;
         }
+        return result;
+    }
+
+    public string ToHexadecimalNumber(string number) //11 001 010
+    {
+
+        string result= Convert.ToString(ToDecimalNumber(number));
+        Conversion op=new Conversion();
+        result=op.ToOctalNumber(Convert.ToInt32(result));
+      
+        // for (int i = number.Length - 2; i >= 3; i=i-3)
+        // {
+        //     result+=number[i-1]+number[i]+number[i+1];
+        // }
         return result;
     }
 }

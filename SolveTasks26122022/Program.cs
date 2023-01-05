@@ -38,6 +38,7 @@ namespace MyApp // Note: actual namespace depends on the project name.
             string convDi=Convert.ToString(Console.ReadLine());
             ConversionTwo dva=new ConversionTwo();
             System.Console.WriteLine(dva.ToDecimalNumber(convDi));
+            System.Console.WriteLine(dva.ToHexadecimalNumber(convDi));
 
 
 
