@@ -26,7 +26,7 @@ public class Conversion
     public string ToHexadecimalNumber(int number)
     {
         string text = "";
-         if (number == 0)
+        if (number == 0)
         {
             return "0";
         }
@@ -60,9 +60,29 @@ public class Conversion
     }
     public string ToOctalNumber(int number)
     {
+        string text = "";
+        if (number == 0)
+        {
+            return "0";
+        }
+        while (number > 0)
+        {
+            int op = number % 8;
+            text += op switch
+            {
+                1 => 1,
+                2 => 2,
+                3 => 3,
+                4 => 4,
+                5 => 5,
+                6 => 6,
+                7 => 7,
+                _ => 0
+            };
 
-
-        return result;
+            number = number / 8;
+        }
+        return Reverse(text);
     }
     private string Reverse(string text)
     {

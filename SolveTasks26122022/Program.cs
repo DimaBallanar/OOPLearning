@@ -33,6 +33,7 @@ namespace MyApp // Note: actual namespace depends on the project name.
             int numberDis=Convert.ToInt32(Console.ReadLine());
             System.Console.WriteLine(conv.ToBinaryNumber(numberDis));
             System.Console.WriteLine(conv.ToHexadecimalNumber(numberDis));
+            System.Console.WriteLine(conv.ToOctalNumber(numberDis));
             
 
             
