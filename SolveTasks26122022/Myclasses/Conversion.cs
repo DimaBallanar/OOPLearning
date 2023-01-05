@@ -11,7 +11,10 @@ public class Conversion
 
     public string ToBinaryNumber(int number)
     {
-
+        if (number == 0)
+        {
+            return "0";
+        }
         string text = "";
         while (number > 0)
         {
@@ -23,9 +26,13 @@ public class Conversion
     public string ToHexadecimalNumber(int number)
     {
         string text = "";
+         if (number == 0)
+        {
+            return "0";
+        }
         while (number > 0)
         {
-            int op=number%16;
+            int op = number % 16;
             text += op switch
             {
                 1 => 1,
@@ -37,13 +44,13 @@ public class Conversion
                 7 => 7,
                 8 => 8,
                 9 => 9,
-                10 =>"A",
-                11=>"B",
-                12=>"C",
-                13=>"D",
-                14=>"E",
-                15=>"F",
-                _=>0
+                10 => "A",
+                11 => "B",
+                12 => "C",
+                13 => "D",
+                14 => "E",
+                15 => "F",
+                _ => 0
             };
 
             number = number / 16;
