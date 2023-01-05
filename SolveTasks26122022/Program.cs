@@ -5,6 +5,7 @@ using ServerPo;
 using ServerP;
 using ServerD;
 using Conversion10;
+using Conversion2;
 
 namespace MyApp // Note: actual namespace depends on the project name.
 {
@@ -28,13 +29,17 @@ namespace MyApp // Note: actual namespace depends on the project name.
             // zamena.Controller(id, name, age);
             // ServerDelete delete=new ServerDelete();
             // delete.Controller(id);
-            Conversion conv=new Conversion();
-            System.Console.WriteLine("введите число");
-            int numberDis=Convert.ToInt32(Console.ReadLine());
-            System.Console.WriteLine(conv.ToBinaryNumber(numberDis));
-            System.Console.WriteLine(conv.ToHexadecimalNumber(numberDis));
-            System.Console.WriteLine(conv.ToOctalNumber(numberDis));
-            
+            // Conversion conv=new Conversion();
+            // System.Console.WriteLine("введите число");
+            // int numberDis=Convert.ToInt32(Console.ReadLine());
+            // System.Console.WriteLine(conv.ToBinaryNumber(numberDis));
+            // System.Console.WriteLine(conv.ToHexadecimalNumber(numberDis));
+            // System.Console.WriteLine(conv.ToOctalNumber(numberDis));
+            string convDi=Convert.ToString(Console.ReadLine());
+            ConversionTwo dva=new ConversionTwo();
+            System.Console.WriteLine(dva.ToDecimalNumber(convDi));
+
+
 
             
 

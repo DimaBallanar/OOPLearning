@@ -7,8 +7,7 @@ namespace Conversion10;
 
 public class Conversion
 {
-    string result = "";
-
+    
     public string ToBinaryNumber(int number)
     {
         if (number == 0)
