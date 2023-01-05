@@ -29,7 +29,10 @@ namespace MyApp // Note: actual namespace depends on the project name.
             // ServerDelete delete=new ServerDelete();
             // delete.Controller(id);
             Conversion conv=new Conversion();
-            System.Console.WriteLine(conv.ToBinaryNumber(12));
+            System.Console.WriteLine("введите число");
+            int numberDis=Convert.ToInt32(Console.ReadLine());
+            System.Console.WriteLine(conv.ToBinaryNumber(numberDis));
+            System.Console.WriteLine(conv.ToHexadecimalNumber(numberDis));
             
 
             
