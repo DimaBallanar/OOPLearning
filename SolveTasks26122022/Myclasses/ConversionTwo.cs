@@ -15,24 +15,33 @@ public class ConversionTwo
         int helper = 0;
         for (int i = number.Length - 1; i >= 0; i--)
         {
-            int cifra = number[i]-48;
+            int cifra = number[i] - 48;
             result += cifra * Convert.ToInt32(Math.Pow(2, helper));
             helper++;
         }
         return result;
     }
 
-    public string ToHexadecimalNumber(string number) //11 001 010
+    public string ToOctalNumber(string number) //11 001 010
     {
 
-        string result= Convert.ToString(ToDecimalNumber(number));
-        Conversion op=new Conversion();
-        result=op.ToOctalNumber(Convert.ToInt32(result));
-      
+        string result = Convert.ToString(ToDecimalNumber(number));
+        Conversion op = new Conversion();
+        result = op.ToOctalNumber(Convert.ToInt32(result));
+
         // for (int i = number.Length - 2; i >= 3; i=i-3)
         // {
         //     result+=number[i-1]+number[i]+number[i+1];
         // }
         return result;
     }
+    public string ToHexadecimalNumber(string number) //11 001 010
+    {
+
+        string result = Convert.ToString(ToDecimalNumber(number));
+        Conversion op = new Conversion();
+        result = op.ToHexadecimalNumber(Convert.ToInt32(result));        
+        return result;
+    }
+
 }
