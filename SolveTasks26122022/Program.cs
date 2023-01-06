@@ -42,9 +42,10 @@ namespace MyApp // Note: actual namespace depends on the project name.
             // System.Console.WriteLine(dva.ToHexadecimalNumber(convDi));
             // System.Console.WriteLine(dva.ToOctalNumber(convDi));
             System.Console.WriteLine("введите число в 16 ричной системе счисления");
-            string ypr = Convert.ToString(Console.ReadLine());
+            string? ypr = Convert.ToString(Console.ReadLine());
             ConversionSix six = new ConversionSix();
             System.Console.WriteLine(six.ToDecimalNumber(ypr));
+            System.Console.WriteLine(six.ToBinaryNumber(ypr));
 
 
 
