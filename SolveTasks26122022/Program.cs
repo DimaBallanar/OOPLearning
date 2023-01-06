@@ -6,6 +6,7 @@ using ServerP;
 using ServerD;
 using Conversion10;
 using Conversion2;
+using Conversion16;
 
 namespace MyApp // Note: actual namespace depends on the project name.
 {
@@ -35,11 +36,15 @@ namespace MyApp // Note: actual namespace depends on the project name.
             // System.Console.WriteLine(conv.ToBinaryNumber(numberDis));
             // System.Console.WriteLine(conv.ToHexadecimalNumber(numberDis));
             // System.Console.WriteLine(conv.ToOctalNumber(numberDis));
-            string convDi = Convert.ToString(Console.ReadLine());
-            ConversionTwo dva = new ConversionTwo();
-            System.Console.WriteLine(dva.ToDecimalNumber(convDi));
-            System.Console.WriteLine(dva.ToHexadecimalNumber(convDi));
-            System.Console.WriteLine(dva.ToOctalNumber(convDi));
+            // string convDi = Convert.ToString(Console.ReadLine());
+            // ConversionTwo dva = new ConversionTwo();
+            // System.Console.WriteLine(dva.ToDecimalNumber(convDi));
+            // System.Console.WriteLine(dva.ToHexadecimalNumber(convDi));
+            // System.Console.WriteLine(dva.ToOctalNumber(convDi));
+            System.Console.WriteLine("введите число в 16 ричной системе счисления");
+            string ypr = Convert.ToString(Console.ReadLine());
+            ConversionSix six = new ConversionSix();
+            System.Console.WriteLine(six.ToDecimalNumber(ypr));
 
 
 
