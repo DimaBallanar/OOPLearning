@@ -5,12 +5,12 @@ using Myclasses.Employee;
 public class ProductionWorker : Employee
 {
     public int WorkPeriod { get; set; }
-    public double MoneyPerHour { get; set; }
+    public double MoneyPerHour { get;set ; }
 
-    public ProductionWorker(string name, int number, int workperiod, double money) : base(name, number)
+    public ProductionWorker(string name, int number, string workperiod, double money) : base(name, number)
     {
-        WorkPeriod = workperiod;
-        MoneyPerHour = money;
+        WorkPeriod = Period(workperiod);
+        MoneyPerHour = CashMoney(workperiod);
     }
     public int Period(string text)
     {
@@ -21,9 +21,9 @@ public class ProductionWorker : Employee
         else { return 2; }
 
     }
-    public double CashMoney(int workperiod)
+    public double CashMoney(string workperiod)
     {
-        if (workperiod == 1) { return 8.2; }
+        if (workperiod == "дневная") { return 8.2; }
         else { return 20; }
 
     }
