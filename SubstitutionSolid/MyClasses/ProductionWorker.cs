@@ -1,5 +1,7 @@
 using Myclasses.Employee;
 
+
+
 public class ProductionWorker : Employee
 {
     public int WorkPeriod { get; set; }
@@ -12,19 +14,22 @@ public class ProductionWorker : Employee
     }
     public int Period(string text)
     {
-        System.Console.WriteLine("введите смену в которую вы работаете? дневная/вечерняя/ночная");
+        System.Console.WriteLine("введите смену в которую вы работаете? дневная/вечерняя");
 
         if (text == "дневная") { return 1; }
 
-        if (text == "вечерняя") { return 2; }
-        else { return 3; }
+        else { return 2; }
+
     }
     public double CashMoney(int workperiod)
     {
         if (workperiod == 1) { return 8.2; }
-        if (workperiod == 2) { return 10; }
         else { return 20; }
 
+    }
+     public void Print()
+    {
+         Console.WriteLine($"Имя: {Name}, Личный номер: {Number}, смена :{WorkPeriod}, почасовая оплата {MoneyPerHour}");
     }
 
 }

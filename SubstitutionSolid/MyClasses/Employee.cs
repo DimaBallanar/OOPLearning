@@ -7,12 +7,12 @@ public class Employee
 
     public Employee(string name)
     {
-        Name=name;
-        
+        Name=name;        
     }
 
     public Employee(string name,int number):this(name)
     {
         Number=number;
     }
+   
 }
