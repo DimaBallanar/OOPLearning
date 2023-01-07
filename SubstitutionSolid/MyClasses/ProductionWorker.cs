@@ -10,4 +10,14 @@ public class ProductionWorker:Employee
         WorkPeriod=workperiod;
         MoneyPerHour=money;
     }
+    public int Period(string text)
+    {
+        System.Console.WriteLine("введите смену в которую вы работаете? дневная/вечерняя/ночная");
+        
+        if(text=="дневная"){return 1;}
+        
+        if(text=="вечерняя"){return 2;}
+        else {return 3;}
+    }
+
 }
