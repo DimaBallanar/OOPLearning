@@ -11,11 +11,11 @@ namespace MyApp // Note: actual namespace depends on the project name.
             string? name = Convert.ToString(Console.ReadLine());
             Console.Write("ВВедите личный номер : ");
             int number = Convert.ToInt32(Console.ReadLine());
-            Console.Write("В какую смену работает?дневная/вечерняя");
+            Console.Write("В какую смену работает?дневная/вечерняя:  ");
             string? smena = Convert.ToString(Console.ReadLine());
-            System.Console.Write("какая ставка оплаты труда в час?: ");
-            double check = Convert.ToDouble(Console.ReadLine());
-            ProductionWorker worker = new ProductionWorker(name, number, smena, check);
+            // System.Console.Write("какая ставка оплаты труда в час?: ");
+            // double check = Convert.ToDouble(Console.ReadLine());
+            ProductionWorker worker = new ProductionWorker(name, number, smena);
             worker.Print();
         }
     }

@@ -7,7 +7,7 @@ public class ProductionWorker : Employee
     public int WorkPeriod { get; set; }
     public double MoneyPerHour { get; }
 
-    public ProductionWorker(string name, int number, string workperiod, double money) : base(name, number)
+    public ProductionWorker(string name, int number, string workperiod) : base(name, number)
     {
         WorkPeriod = Period(workperiod);
         MoneyPerHour = CashMoney(workperiod);
