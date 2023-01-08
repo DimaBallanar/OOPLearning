@@ -14,7 +14,8 @@ public class ProductionWorker : Employee
     }
     public int Period(string text)
     {
-        System.Console.WriteLine("введите смену в которую вы работаете? дневная/вечерняя");
+        // System.Console.WriteLine("введите смену в которую вы работаете? дневная/вечерняя");
+        // string text=Convert.ToString(Console.ReadLine());
 
         if (text == "дневная") { return 1; }
 
