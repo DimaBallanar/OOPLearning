@@ -14,6 +14,7 @@ public class ShiftSupervisor : Employee
 
     public ShiftSupervisor(string name, int number, double oklad, double premiya) : base(name, number)
     {
-
+        Oklad = oklad;
+        Premiya = premiya;
     }
 }
