@@ -24,7 +24,7 @@ public class Customer : Person
 
     public bool CheckCall()
     {
-        System.Console.Write("делать ли Вам рассылку?да/нет");
+        System.Console.Write("делать ли Вам рассылку?да/нет  ");
         string? check = Convert.ToString(Console.ReadLine());
         if (check == "да")
         {
@@ -34,5 +34,9 @@ public class Customer : Person
         {
             return false;
         }
+    }
+    public void Print()
+    {
+        System.Console.WriteLine($"имя {Name}, адрес {Adress}, номер {TelNumber},айдишник {ClientId},рассылка? {Sms}");
     }
 }

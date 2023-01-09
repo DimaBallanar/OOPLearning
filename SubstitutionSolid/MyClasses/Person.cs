@@ -34,14 +34,14 @@ public class Person
 
     public string GetAdress()
     {
-        System.Console.Write("Введите свое имя: ");
+        System.Console.Write("Введите свой адрес: ");
         string? adress = Convert.ToString(Console.ReadLine());
         return adress;
     }
 
     public string GetNumber()
     {
-        System.Console.Write("Введите свое имя: ");
+        System.Console.Write("Введите свой номер телефона: ");
         string? number = Convert.ToString(Console.ReadLine());
         return number;
     }
