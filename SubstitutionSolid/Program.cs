@@ -14,10 +14,9 @@ namespace MyApp // Note: actual namespace depends on the project name.
             worker.Name = worker.Im9();
             worker.Number = worker.Num();
             worker.WorkPeriod = worker.Period();
+            worker.MoneyPerHour=worker.CashMoney();
 
             worker.Print();
-
-
 
 
         }

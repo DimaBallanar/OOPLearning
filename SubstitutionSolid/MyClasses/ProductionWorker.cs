@@ -14,7 +14,7 @@ public class ProductionWorker : Employee
     public ProductionWorker(string name, int number, string workperiod) : base(name, number)
     {
         WorkPeriod = Period();
-        MoneyPerHour = CashMoney(workperiod);
+        MoneyPerHour = CashMoney();
     }
     public int Period()
     {
@@ -26,9 +26,9 @@ public class ProductionWorker : Employee
         else { return 2; }
 
     }
-    public double CashMoney(string workperiod)
+    public double CashMoney()
     {
-        if (workperiod == "дневная") { return 8.2; }
+        if (WorkPeriod == 1) { return 8.2; }
         else { return 20; }
 
     }
