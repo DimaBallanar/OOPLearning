@@ -10,6 +10,11 @@ public class Person
     {
 
     }
+    public Person(string number)
+    {
+        number = GetNumber();
+
+    }
 
     public Person(string name, string adress, string number)
     {
