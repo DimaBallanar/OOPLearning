@@ -18,4 +18,10 @@ public class ShiftSupervisor : Employee
         Premiya = premiya;
     }
 
+    // System.Console.Write("какой оклад у начальника смены? :");
+            // double oklad=Convert.ToDouble(Console.ReadLine());
+            // System.Console.Write("годовая премия");
+            // double premiya=Convert.ToDouble(Console.ReadLine());
+            // ShiftSupervisor boss=new ShiftSupervisor(name,number,oklad,premiya);
+
 }
