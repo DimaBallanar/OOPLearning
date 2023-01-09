@@ -1,6 +1,7 @@
 ﻿using System;
 using Myclasses.Employee;
 
+
 namespace MyApp // Note: actual namespace depends on the project name.
 {
     internal class Program
@@ -17,6 +18,10 @@ namespace MyApp // Note: actual namespace depends on the project name.
             // double check = Convert.ToDouble(Console.ReadLine());
             ProductionWorker worker = new ProductionWorker(name, number, smena);
             worker.Print();
+            ShiftSupervisor boss=new ShiftSupervisor(name,number,oklad,premiya);
+            double oklad=Convert.ToDouble(Console.ReadLine());
+
+
         }
     }
 }

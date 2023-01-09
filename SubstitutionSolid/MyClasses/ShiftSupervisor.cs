@@ -17,4 +17,5 @@ public class ShiftSupervisor : Employee
         Oklad = oklad;
         Premiya = premiya;
     }
+    
 }
