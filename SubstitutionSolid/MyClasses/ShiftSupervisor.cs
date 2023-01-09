@@ -11,17 +11,32 @@ public class ShiftSupervisor : Employee
 {
     public double Oklad;
     public double Premiya;
+    public ShiftSupervisor()
+    {
+
+    }
 
     public ShiftSupervisor(string name, int number, double oklad, double premiya) : base(name, number)
     {
-        Oklad = oklad * 12;
-        Premiya = premiya;
+        Oklad = Okla() * 12;
+        Premiya = Prem();
     }
 
-    // System.Console.Write("какой оклад у начальника смены? :");
-            // double oklad=Convert.ToDouble(Console.ReadLine());
-            // System.Console.Write("годовая премия");
-            // double premiya=Convert.ToDouble(Console.ReadLine());
-            // ShiftSupervisor boss=new ShiftSupervisor(name,number,oklad,premiya);
+    public double Okla()
+    {
+        System.Console.Write("введите месячный оклад: ");
+        double oklad = Convert.ToDouble(Console.ReadLine());
+        return oklad;
+    }
+
+    public double Prem()
+    {
+        System.Console.Write("введите премию: ");
+        double prem = Convert.ToDouble(Console.ReadLine());
+        return prem;
+    }
+
+
+
 
 }
