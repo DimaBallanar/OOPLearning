@@ -9,13 +9,13 @@ using Myclasses.Employee;
 
 public class ShiftSupervisor : Employee
 {
-    public double Oklad { get; set; }
-    public double Premiya { get; set; }
+    public double Oklad;
+    public double Premiya;
 
     public ShiftSupervisor(string name, int number, double oklad, double premiya) : base(name, number)
     {
-        Oklad = oklad;
+        Oklad = oklad * 12;
         Premiya = premiya;
     }
-    
+
 }

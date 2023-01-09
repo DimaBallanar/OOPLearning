@@ -4,18 +4,22 @@ using Myclasses.Employee;
 
 public class ProductionWorker : Employee
 {
-    public int WorkPeriod { get; set; }
-    public double MoneyPerHour { get; }
+    public int WorkPeriod;
+    public double MoneyPerHour;
 
+    public ProductionWorker()
+    {
+
+    }
     public ProductionWorker(string name, int number, string workperiod) : base(name, number)
     {
-        WorkPeriod = Period(workperiod);
+        WorkPeriod = Period();
         MoneyPerHour = CashMoney(workperiod);
     }
-    public int Period(string text)
+    public int Period()
     {
-        // System.Console.WriteLine("введите смену в которую вы работаете? дневная/вечерняя");
-        // string text=Convert.ToString(Console.ReadLine());
+        System.Console.WriteLine("введите смену в которую вы работаете? дневная/вечерняя");
+        string? text = Convert.ToString(Console.ReadLine());
 
         if (text == "дневная") { return 1; }
 
@@ -28,9 +32,9 @@ public class ProductionWorker : Employee
         else { return 20; }
 
     }
-     public void Print()
+    public void Print()
     {
-         Console.WriteLine($"Имя: {Name}, Личный номер: {Number}, смена :{WorkPeriod}, почасовая оплата {MoneyPerHour}");
+        Console.WriteLine($"Имя: {Name}, Личный номер: {Number}, смена :{WorkPeriod}, почасовая оплата {MoneyPerHour}");
     }
 
 }
