@@ -34,7 +34,10 @@ public class ProductionWorker : Employee
     }
     public void Print()
     {
-        Console.WriteLine($"Имя: {Name}, Личный номер: {Number}, смена :{WorkPeriod}, почасовая оплата {MoneyPerHour}");
+        System.Console.WriteLine($"Имя: {Name}");
+        System.Console.WriteLine($"Личный номер: {Number}");
+        System.Console.WriteLine($"смена :{WorkPeriod}");
+        System.Console.WriteLine($"почасовая оплата {MoneyPerHour}");
     }
 
 }
