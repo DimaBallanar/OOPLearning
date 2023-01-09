@@ -6,6 +6,7 @@ public class Person
     public string Adress;
     public string TelNumber;
 
+
     public Person()
     {
 
@@ -24,25 +25,40 @@ public class Person
 
     }
 
-    static string GetName()
+    public string GetName()
     {
         System.Console.Write("Введите свое имя: ");
         string? name = Convert.ToString(Console.ReadLine());
         return name;
     }
 
-    static string GetAdress()
+    public string GetAdress()
     {
         System.Console.Write("Введите свое имя: ");
         string? adress = Convert.ToString(Console.ReadLine());
         return adress;
     }
 
-    static string GetNumber()
+    public string GetNumber()
     {
         System.Console.Write("Введите свое имя: ");
         string? number = Convert.ToString(Console.ReadLine());
         return number;
     }
 
+
 }
+
+// class Pers
+// {
+//     static Person GetPerson()
+//     {
+//         var person = new Person()
+//         {
+//             person.Name = GetName();
+//     }
+
+
+
+// }
+// }

@@ -5,13 +5,17 @@ public class Customer : Person
     public int ClientId = 1;
     public bool Sms;
 
+    public Customer()
+    {
+
+    }
     public Customer(string name, string adress, string number, int clientId, bool call) : base(name, adress, number)
     {
-        ClientId = GetId(ref ClientId);
+        ClientId = GetId();
         Sms = CheckCall();
     }
 
-    static int GetId(ref int ClientId)
+    public int GetId()
     {
         int id = ClientId;
         ClientId++;

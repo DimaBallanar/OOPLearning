@@ -1,5 +1,6 @@
 ﻿using System;
 using Myclasses.Employee;
+using Myclasses.Person;
 
 
 namespace MyApp // Note: actual namespace depends on the project name.
@@ -22,6 +23,16 @@ namespace MyApp // Note: actual namespace depends on the project name.
             boss.Number = boss.Num();
             boss.Oklad = boss.Okla();
             boss.Premiya = boss.Prem();
+
+
+            Customer user=new Customer();
+            user.Name=user.GetName();
+            user.Adress=user.GetAdress();
+            user.TelNumber=user.GetNumber();
+            user.ClientId=user.GetId();
+            user.Sms=user.CheckCall();
+
+            
         }
     }
 }
