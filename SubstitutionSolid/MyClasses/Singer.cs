@@ -19,6 +19,7 @@ public class Singer : Worker
     {
         Birth = GetBirth();
         Years = GetYears();
+        Style = GetStyle();
 
     }
 
@@ -39,5 +40,17 @@ public class Singer : Worker
         DateTime now = DateTime.Now;
         int years = now.Year - Birth.Year;
         return years;
+    }
+
+    public string GetStyle()
+    {
+        System.Console.Write("стиль исполнения: ");
+        string style = Convert.ToString(Console.ReadLine());
+        return style;
+    }
+
+    public void Print()
+    {
+        System.Console.WriteLine($"{Name},{Surname},{Years}, {Birth},{Style}");
     }
 }
