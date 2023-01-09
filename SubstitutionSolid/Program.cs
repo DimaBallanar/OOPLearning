@@ -22,9 +22,6 @@ namespace MyApp // Note: actual namespace depends on the project name.
             boss.Number = boss.Num();
             boss.Oklad = boss.Okla();
             boss.Premiya = boss.Prem();
-
-
-
         }
     }
 }

@@ -36,7 +36,4 @@ public class ShiftSupervisor : Employee
         return prem;
     }
 
-
-
-
 }
