@@ -1,5 +1,6 @@
 ﻿using MyClasses.Transport;
 using MyClasses.Cars;
+using Incapsulation;
 
 namespace MyApp // Note: actual namespace depends on the project name.
 {
@@ -33,17 +34,37 @@ namespace MyApp // Note: actual namespace depends on the project name.
             //     trans.Stoping();
             // }
 
-            Transport transport = new Transport("top");
-            System.Console.WriteLine(transport.Name);
-            transport.Moving();
+            // Transport transport = new Transport("top");
+            // System.Console.WriteLine(transport.Name);
+            // transport.Moving();
 
-            Car car = new Car("por");
-            System.Console.WriteLine(car.Name);
-            car.Moving();
+            // Car car = new Car("por");
+            // System.Console.WriteLine(car.Name);
+            // car.Moving();
 
-            Transport transcar = new Car("frt");
-            System.Console.WriteLine(transcar.Name);
-            transcar.Moving();
+            // Transport transcar = new Car("frt");
+            // System.Console.WriteLine(transcar.Name);
+            // transcar.Moving();
+            // Tiles tile=new Tiles("sd",0.45,0.6, 15);
+            // System.Console.WriteLine(tile.GetData());
+            // System.Console.WriteLine(tile.GetCountTiles(76));
+            // System.Console.WriteLine($"заплати {tile.GetCountTiles(76)*tile.Price} рублей");
+
+            // Children child1 = new Children();
+            // child1.SetName("дима");
+            // child1.SetSurName("Пупкин");
+            // child1.SetAge(12);
+            // System.Console.WriteLine(child1.GetName());
+            // System.Console.WriteLine(child1.GetSurName());
+            // System.Console.WriteLine(child1.GetAge());
+
+            Matrix mat1 = new Matrix(4, 2);
+            mat1.SetData();
+            System.Console.WriteLine();
+            mat1.ChangeData();
+
+
+
 
         }
     }
