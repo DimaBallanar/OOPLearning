@@ -19,17 +19,17 @@ namespace ServerD;
 
 public class ServerDelete
 {
-    private User[] User;
+    private User[] Users;
 
 
     public ServerDelete()
     {
-        User = new User[4];
+        Users = new User[4];
 
-        User[0] = new User() { Id = 1, Name = "Yesenia", Age = 22 };
-        User[1] = new User() { Id = 2, Name = "Hanna", Age = 22 };
-        User[2] = new User() { Id = 3, Name = "Stanislau", Age = 25 };
-        User[3] = new User() { Id = 4, Name = "Germana", Age = 18 };
+        Users[0] = new User() { Id = 1, Name = "Yesenia", Age = 22 };
+        Users[1] = new User() { Id = 2, Name = "Hanna", Age = 22 };
+        Users[2] = new User() { Id = 3, Name = "Stanislau", Age = 25 };
+        Users[3] = new User() { Id = 4, Name = "Germana", Age = 18 };
     }
     public bool Middleware(int id)
     {
@@ -60,7 +60,7 @@ public class ServerDelete
     }
     public User Repository(int id)
     {
-        foreach (User user in User)
+        foreach (User user in Users)
         {
             if (user.Id == id)
             {
