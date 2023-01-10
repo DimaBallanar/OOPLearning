@@ -14,11 +14,11 @@ public class Worker
 
     public Worker(string name, string surname)
     {
-        Name = GetName();
+        Name = CreateName();
         Surname = surname;
     }
 
-    public string GetName()
+    public static string CreateName()
     {
         System.Console.Write("Введите свое имя: ");
         string? name = Convert.ToString(Console.ReadLine());

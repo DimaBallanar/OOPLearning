@@ -45,20 +45,5 @@ public class Person
         string? number = Convert.ToString(Console.ReadLine());
         return number;
     }
-
-
 }
 
-// class Pers
-// {
-//     static Person GetPerson()
-//     {
-//         var person = new Person()
-//         {
-//             person.Name = GetName();
-//     }
-
-
-
-// }
-// }

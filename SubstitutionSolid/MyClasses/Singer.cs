@@ -20,7 +20,6 @@ public class Singer : Worker
         Birth = GetBirth();
         Years = GetYears();
         Style = GetStyle();
-
     }
 
     public DateOnly GetBirth()
@@ -45,7 +44,7 @@ public class Singer : Worker
     public string GetStyle()
     {
         System.Console.Write("стиль исполнения: ");
-        string style = Convert.ToString(Console.ReadLine());
+        string? style = Convert.ToString(Console.ReadLine());
         return style;
     }
 

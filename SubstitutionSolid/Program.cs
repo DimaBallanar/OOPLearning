@@ -2,6 +2,7 @@
 using Myclasses.Employee;
 using Myclasses.Person;
 using Myclasses.Worker;
+using Figur;
 
 
 namespace MyApp // Note: actual namespace depends on the project name.
@@ -35,14 +36,28 @@ namespace MyApp // Note: actual namespace depends on the project name.
             // user.Print();
 
             Singer akon=new Singer();
-            akon.Name=akon.GetName();
+            akon.Name=Singer.CreateName();
             akon.Surname=akon.GetSurname();
             akon.Birth=akon.GetBirth();
             akon.Years=akon.GetYears();
             akon.Style=akon.GetStyle();
             akon.Print();
 
+            Figures[] array = new Figures[3]
+            {
+            new Rectangle("прямоугольник", 5, 10),
 
+            new Triangle("треугольник", 3, 4, 5),
+
+             new Circle("круг", 13)
+
+            };
+            int number = 0;
+            while (number < array.Length)
+            {
+                array[number].Square();
+                number++;
+            }
         }
     }
 }
