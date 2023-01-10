@@ -21,16 +21,16 @@ namespace Server;
 public class ServerGetAll
 {
 
-    private User[] User;
+    private User[] Users;
 
     public ServerGetAll()
     {
-        User = new User[4];
+        Users = new User[4];
 
-        User[0] = new User() { Id = 1, Name = "Yesenia", Age = 22 };
-        User[1] = new User() { Id = 2, Name = "Hanna", Age = 22 };
-        User[2] = new User() { Id = 3, Name = "Stanislau", Age = 25 };
-        User[3] = new User() { Id = 4, Name = "Germana", Age = 18 };
+        Users[0] = new User() { Id = 1, Name = "Yesenia", Age = 22 };
+        Users[1] = new User() { Id = 2, Name = "Hanna", Age = 22 };
+        Users[2] = new User() { Id = 3, Name = "Stanislau", Age = 25 };
+        Users[3] = new User() { Id = 4, Name = "Germana", Age = 18 };
     }
 
     public User[] Controller()
@@ -40,23 +40,16 @@ public class ServerGetAll
 
     private User[] Service()
     {
-        User[] user = Repository();
-        if (user == null)
+        foreach (User user in Users)
         {
-            System.Console.WriteLine("ERROR");
+            Repository();
+            System.Console.WriteLine(user.ToString());
         }
-        // System.Console.WriteLine(string.Join(",",user[1]));
-        return user;
+        return Users;
     }
 
     private User[] Repository()
     {
-        foreach (User user in User)
-        {
-            System.Console.WriteLine($"ID : {user.Id}, Name: \"{user.Name}\", Age : {user.Age}");
-        }
-
-        return User;
+        return Users;
     }
-
 }

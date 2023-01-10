@@ -14,8 +14,9 @@ namespace MyApp // Note: actual namespace depends on the project name.
     {
         static void Main(string[] args)
         {
-            // ServerGetAll server=new ServerGetAll();
-            // server.Controller();
+            ServerGetAll server=new ServerGetAll();
+            server.Controller();
+            
             // System.Console.Write("укажите id пользователя: ");
             // int id = Convert.ToInt32(Console.ReadLine());
             // ServerByld serv=new ServerByld();
@@ -41,11 +42,11 @@ namespace MyApp // Note: actual namespace depends on the project name.
             // System.Console.WriteLine(dva.ToDecimalNumber(convDi));
             // System.Console.WriteLine(dva.ToHexadecimalNumber(convDi));
             // System.Console.WriteLine(dva.ToOctalNumber(convDi));
-            System.Console.WriteLine("введите число в 16 ричной системе счисления");
-            string? ypr = Convert.ToString(Console.ReadLine());
-            ConversionSix six = new ConversionSix();
-            System.Console.WriteLine(six.ToDecimalNumber(ypr));
-            System.Console.WriteLine(six.ToBinaryNumber(ypr));
+            // System.Console.WriteLine("введите число в 16 ричной системе счисления");
+            // string? ypr = Convert.ToString(Console.ReadLine());
+            // ConversionSix six = new ConversionSix();
+            // System.Console.WriteLine(six.ToDecimalNumber(ypr));
+            // System.Console.WriteLine(six.ToBinaryNumber(ypr));
 
 
 
