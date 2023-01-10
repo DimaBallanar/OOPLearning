@@ -62,14 +62,14 @@ public class ServerPut
     }
     public User Repository(int id, string name, int age)
     {
-        foreach (User User in User)
+        foreach (User user in User)
         {
-            if (User.Id == id)
+            if (user.Id == id)
             {
-                User.Name = name;
-                User.Age = age;
-                System.Console.WriteLine($"ID : {User.Id}, Name: \"{User.Name}\", Age : {User.Age}");
-                return User;
+                user.Name = name;
+                user.Age = age;
+                // System.Console.WriteLine($"ID : {User.Id}, Name: \"{User.Name}\", Age : {User.Age}");
+                return user;
             }
         }
 
