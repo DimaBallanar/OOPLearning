@@ -60,15 +60,12 @@ public class ServerDelete
     }
     public User Repository(int id)
     {
-        foreach (User User in User)
+        foreach (User user in User)
         {
-            if (User.Id == id)
+            if (user.Id == id)
             {
-                System.Console.WriteLine($"ID : {User.Id}, Name: \"{User.Name}\", Age : {User.Age}");
-                User.Name = "";
-                User.Age = 0;
-                System.Console.WriteLine($"ID : {User.Id}, Name: \"{User.Name}\", Age : {User.Age}");
-                return User;
+
+                return null;
             }
         }
         return null;

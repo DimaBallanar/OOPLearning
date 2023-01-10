@@ -48,21 +48,21 @@ public class ServerByld
     }
     public User Service(int id)
     {
-        User User = Repository(id);
-        if (User == null)
+        User user = Repository(id);
+        if (user == null)
         {
             Console.WriteLine("Not found data");
         }
-        return User;
+        return user;
     }
     public User Repository(int id)
     {
-        foreach (User User in User)
+        foreach (User user in User)
         {
-            if (User.Id == id)
+            if (user.Id == id)
             {
-                System.Console.WriteLine($"ID : {id}, Name: \"{User.Name}\", Age : {User.Age}");
-                return User;
+                
+                return user;
             }
         }
         return null;
