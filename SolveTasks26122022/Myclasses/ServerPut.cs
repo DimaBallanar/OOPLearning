@@ -52,13 +52,13 @@ public class ServerPut
     }
     public User Service(int id, string name, int age)
     {
-        User User = Repository(id, name, age);
-        if (User == null)
+        User user = Repository(id, name, age);
+        if (user == null)
         {
             Console.WriteLine($"пользователя с таким id:{id} не существует");
         }
 
-        return User;
+        return user;
     }
     public User Repository(int id, string name, int age)
     {
@@ -68,7 +68,6 @@ public class ServerPut
             {
                 user.Name = name;
                 user.Age = age;
-                // System.Console.WriteLine($"ID : {User.Id}, Name: \"{User.Name}\", Age : {User.Age}");
                 return user;
             }
         }
