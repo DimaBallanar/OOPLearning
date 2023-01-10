@@ -3,8 +3,12 @@ namespace MyClasses.Transport;
 public class Transport
 {
     public double Spead;
-    public string Name;
+    public virtual string Name { get; set; }
 
+    public Transport()
+    {
+
+    }
     public Transport(double spead, string name) : this(name)
     {
         Spead = spead;
@@ -15,7 +19,7 @@ public class Transport
     }
     public void Moving()
     {
-        System.Console.WriteLine($"{Name} is moving");
+        System.Console.WriteLine($"Transport '{Name}' is moving");
     }
 
     public void Stoping()
