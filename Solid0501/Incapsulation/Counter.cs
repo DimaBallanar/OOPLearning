@@ -35,4 +35,11 @@ public class Counter
             Num++;
         }
     }
+     public void Decrement()
+    {
+        if (Num > Min)
+        {
+            Num--;
+        }
+    }
 }
