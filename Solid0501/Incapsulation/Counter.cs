@@ -9,7 +9,7 @@ namespace Counter;
 
 public class Counter
 {
-     public int Num { get; private set; }
+    public int Num { get; private set; }
     private int Min;
     private int Max;
 
@@ -28,5 +28,11 @@ public class Counter
             Console.WriteLine("error counter");
         }
     }
-
+    public void Incriment()
+    {
+        if (Num < Max)
+        {
+            Num++;
+        }
+    }
 }
