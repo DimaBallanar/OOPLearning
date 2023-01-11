@@ -1,6 +1,7 @@
 ﻿using MyClasses.Transport;
 using MyClasses.Cars;
 using Incapsulation;
+using Counter;
 
 namespace MyApp // Note: actual namespace depends on the project name.
 {
@@ -58,10 +59,18 @@ namespace MyApp // Note: actual namespace depends on the project name.
             // System.Console.WriteLine(child1.GetSurName());
             // System.Console.WriteLine(child1.GetAge());
 
-            Matrix mat1 = new Matrix(4, 2);
-            mat1.SetData();
-            System.Console.WriteLine();
-            mat1.ChangeData();
+            // Matrix mat1 = new Matrix(4, 2);
+            // mat1.SetData();
+            // System.Console.WriteLine();
+            // mat1.ChangeData();
+
+            Counter cn = new Counter(99);
+            cn.Incriment();
+            Console.WriteLine(cn);
+            cn.Incriment();
+            Console.WriteLine(cn);
+            cn.Incriment();
+            Console.WriteLine(cn);
 
 
 
