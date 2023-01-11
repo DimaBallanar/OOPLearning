@@ -42,4 +42,8 @@ public class Counter
             Num--;
         }
     }
+     public override string ToString()
+    {
+        return $"{Num}";
+    }
 }
