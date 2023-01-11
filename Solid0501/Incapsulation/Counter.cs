@@ -14,19 +14,19 @@ public class Counter
     private int Max;
 
 
-    public Counter(int num = 5)
+    public Counter(int num = 5, int min = 0, int max = 100)
     {
         Num = num;
+        Min = min;
+        Max = max;
+        if (min > max)
+        {
+            Console.WriteLine("error min max value");
+        }
+        if (num < min || num > max)
+        {
+            Console.WriteLine("error counter");
+        }
     }
-    public void Incriment()
-    {
-        Num++;
-    }
-
-    public void Decrement()
-    {
-        Num--;
-    }
-    
 
 }
