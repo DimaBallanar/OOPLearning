@@ -1,7 +1,7 @@
 ﻿using MyClasses.Transport;
 using MyClasses.Cars;
 using Incapsulation;
-using Counter;
+using Counters;
 
 namespace MyApp // Note: actual namespace depends on the project name.
 {

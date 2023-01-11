@@ -5,7 +5,7 @@
 // позволяющее получить его текущее состояние. Написать программу, 
 // демонстрирующую все возможности класса.
 
-namespace Counter;
+namespace Counters;
 
 public class Counter
 {
