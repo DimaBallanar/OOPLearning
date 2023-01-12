@@ -5,7 +5,6 @@ namespace ValidatorE
 
     public class ValidatorEmail
     {
-
         public bool CheckEmail(string text)
         {
             int countSobak = 0;
