@@ -67,9 +67,9 @@ public class ServerPost
     }
     public User[] Repository(string name, int age)
     {
-        foreach (User User in User)
+        foreach (User user in User)
         {
-            if (User.Name == name)
+            if (user.Name == name)
             {
                 return null;
             }
@@ -78,10 +78,10 @@ public class ServerPost
         {
             return null;
         }
-        User[] UserTime = new User[User.Length + 1];
-        Array.Copy(User, UserTime, User.Length);
-        UserTime[User.Length] = new User() { Id = UserTime.Length, Name = name, Age = age };
-        User = UserTime;
+        User[] userTime = new User[User.Length + 1];
+        Array.Copy(User, userTime, User.Length);
+        userTime[User.Length] = new User() { Id = userTime.Length, Name = name, Age = age };
+        User = userTime;
         System.Console.WriteLine($"ID : {User[User.Length - 1].Id}, Name: \"{User[User.Length - 1].Name}\", Age : {User[User.Length - 1].Age}");
         return User;
     }
