@@ -34,10 +34,10 @@ public class ServerPost
         User[3] = new User() { Id = 4, Name = "Germana", Age = 18 };
 
     }
-    public bool Middleware(string name)
+    public bool Middleware(string name, int age)
     {
         bool result = true;
-        if (string.IsNullOrEmpty(name))
+        if (string.IsNullOrEmpty(name) || age > 150 || age <= 0)
         {
             result = false;
         }
@@ -45,7 +45,7 @@ public class ServerPost
     }
     public User[] Controller(string name, int age)
     {
-        if (Middleware(name))
+        if (Middleware(name, age))
         {
             return Service(name, age);
         }
@@ -74,10 +74,7 @@ public class ServerPost
                 return null;
             }
         }
-        if (age > 150 || age <= 0)
-        {
-            return null;
-        }
+
         User[] userTime = new User[User.Length + 1];
         Array.Copy(User, userTime, User.Length);
         userTime[User.Length] = new User() { Id = userTime.Length, Name = name, Age = age };
