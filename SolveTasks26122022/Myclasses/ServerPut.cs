@@ -33,14 +33,18 @@ public class ServerPut
         User[2] = new User() { Id = 3, Name = "Stanislau", Age = 25 };
         User[3] = new User() { Id = 4, Name = "Germana", Age = 18 };
     }
-    public bool Middleware(int id)
+    public bool Middleware(int id, string name, int age)
     {
+        if (string.IsNullOrEmpty(name) || age > 150 || age < 0)
+        {
+            return false;
+        }
 
         return id > 0; // true false
     }
     public User Controller(int id, string name, int age)
     {
-        if (Middleware(id))
+        if (Middleware(id, name, age))
         {
             return Service(id, name, age);
         }
