@@ -82,7 +82,6 @@ public class ServerPost
         Array.Copy(User, userTime, User.Length);
         userTime[User.Length] = new User() { Id = userTime.Length, Name = name, Age = age };
         User = userTime;
-        System.Console.WriteLine($"ID : {User[User.Length - 1].Id}, Name: \"{User[User.Length - 1].Name}\", Age : {User[User.Length - 1].Age}");
         return User;
     }
 }
