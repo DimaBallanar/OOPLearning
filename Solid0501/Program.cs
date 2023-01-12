@@ -2,6 +2,7 @@
 using MyClasses.Cars;
 using Incapsulation;
 using Counters;
+using Time;
 
 namespace MyApp // Note: actual namespace depends on the project name.
 {
@@ -64,13 +65,23 @@ namespace MyApp // Note: actual namespace depends on the project name.
             // System.Console.WriteLine();
             // mat1.ChangeData();
 
-            Counter cn = new Counter(99);
-            cn.Incriment();
-            Console.WriteLine(cn);
-            cn.Incriment();
-            Console.WriteLine(cn);
-            cn.Incriment();
-            Console.WriteLine(cn);
+            // Counter cn = new Counter(99);
+            // cn.Incriment();
+            // Console.WriteLine(cn);
+            // cn.Incriment();
+            // Console.WriteLine(cn);
+            // cn.Incriment();
+            // Console.WriteLine(cn);
+
+            SetTime time = new SetTime();
+            time.Hours=5;
+            time.ChangeH(time.Hours);
+            // time.GetMinutes();
+            // time.GetSeconds();
+            time.ToPrint();
+           
+
+
 
 
 
