@@ -36,7 +36,18 @@ public class BuyerData
             array[3] = new BuyerData("коля", "Корыто", "Георгиевич", "игуменский тракт 4 квартира 75", 123400001, 1223);
         };
     }
-    
+
+    public string ABC(BuyerData[] array)
+    {
+        string result="";
+        string alfavit="абвгдеёжзийклмнопрстуфхцчшщъыьэюя";
+        for(int i=1;i<array.Length;i++)
+        {
+           
+
+        }
+        return result;
+    }
 
 
 
