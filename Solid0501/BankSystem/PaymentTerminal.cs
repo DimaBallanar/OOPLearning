@@ -7,18 +7,22 @@ public class PaymentTerminal
 
     public PaymentTerminal(string name)
     {
-        NameTerminal=name;
+        NameTerminal = name;
     }
-public void SetMoneyByPaymentSystem(decimal money , AccountPayment account)
-{
-    if(account.Payment($"request money from {NameTerminal}",money))
+    public void SetMoneyByPaymentSystem(decimal money, AccountPayment account)
     {
-        MoneyTerm+=money;
-        System.Console.WriteLine("succesful");
+        if (account.Payment($"request money from {NameTerminal}", money))
+        {
+            MoneyTerm += money;
+            System.Console.WriteLine("succesful");
+        }
+        else
+        {
+            System.Console.WriteLine("нет денег");
+        }
     }
-    else
+    public override string ToString()
     {
-        System.Console.WriteLine("нет денег");
+        return $"Terminal name : {NameTerminal},money {MoneyTerm}";
     }
-}
 }
