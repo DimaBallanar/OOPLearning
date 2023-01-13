@@ -19,5 +19,8 @@ public abstract class AccountPayment
     public abstract bool Payment(string information, decimal request);
     public abstract decimal SetMoney(decimal money);
 
-    
+    public override string ToString()
+    {
+        return $"Name : {Number} money : {Money}";
+    }
 }
