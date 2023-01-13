@@ -3,6 +3,7 @@ namespace PaymentSystems;
 public abstract class AccountPayment
 {
     protected decimal Money;
+    public readonly List<string> History=new List<string>();
     public string Number { get; private set; }
 
     public AccountPayment(string number)
