@@ -17,11 +17,7 @@ public abstract class AccountPayment
     }
 
     public abstract bool Payment(string information, decimal request);
+    public abstract decimal SetMoney(decimal money);
 
-    public virtual decimal SetMoney(decimal money)
-    {
-        Money += money;
-        System.Console.WriteLine($"{money} return on your account");
-        return default;
-    }
+    
 }
