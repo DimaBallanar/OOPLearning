@@ -2,16 +2,16 @@ namespace PaymentSystems;
 
 public class PaymentTerminal
 {
-    private string NameTarminal;
+    private string NameTerminal;
     private decimal MoneyTerm;
 
     public PaymentTerminal(string name)
     {
-        NameTarminal=name;
+        NameTerminal=name;
     }
 public void SetMoneyByPaymentSystem(decimal money , AccountPayment account)
 {
-    if(account.Payment(NameTarminal,money))
+    if(account.Payment($"request money from {NameTerminal}",money))
     {
         MoneyTerm+=money;
         System.Console.WriteLine("succesful");
