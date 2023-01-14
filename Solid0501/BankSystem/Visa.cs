@@ -16,7 +16,7 @@ public class Visa : AccountPayment
     {
         if (Money > request)
         {
-            History.Add($"{information}-{request}")
+            History.Add($"{information}-{request}");
             Money -= request;
             return true;
         }
