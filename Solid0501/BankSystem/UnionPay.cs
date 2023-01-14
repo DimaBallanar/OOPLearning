@@ -15,9 +15,10 @@ public class UnionPay : AccountPayment
     public override bool Payment(string information, decimal request)
     {
         request *= (decimal)1.03;
-        System.Console.WriteLine(information);
-        if (Money > request)
+        
+        if (Money >= request)
         {
+            History.Add($"{information}-{request}");
             Money -= request;
           
             return true;
