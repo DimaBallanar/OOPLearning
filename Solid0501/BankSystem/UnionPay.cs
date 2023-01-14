@@ -28,14 +28,14 @@ public class UnionPay : AccountPayment
     }
     public override decimal SetMoney(decimal money)
     {
-        decimal com = money switch
-        {
-            < 50 => money * (decimal)0.0001,
-            < 100 => money * (decimal)0.0005,
-            < 500 => money * (decimal)0.001,
-            < 1000 => money * (decimal)0.002,
-            _ => money * (decimal)0.003
-        };
+        // decimal com = money switch
+        // {
+        //     < 50 => money * (decimal)0.0001,
+        //     < 100 => money * (decimal)0.0005,
+        //     < 500 => money * (decimal)0.001,
+        //     < 1000 => money * (decimal)0.002,
+        //     _ => money * (decimal)0.003
+        // };
         // decimal com = 0;        
         // if (money < 50)
         // {
