@@ -36,29 +36,30 @@ public class UnionPay : AccountPayment
         //     < 1000 => money * (decimal)0.002,
         //     _ => money * (decimal)0.003
         // };
-        // decimal com = 0;        
-        // if (money < 50)
-        // {
-        //     com = money * (decimal)0.0001;
-        // }
-        // else if (money < 100)
-        // {
-        //     com = money * (decimal)0.0005;
-        // }
-        // else if (money < 500)
-        // {
-        //     com = money * (decimal)0.001;
+        decimal com = 0;        
+        if (money < 50)
+        {
+            com = money * (decimal)0.0001;
+        }
+        else if (money < 100)
+        {
+            com = money * (decimal)0.0005;
+        }
+        else if (money < 500)
+        {
+            com = money * (decimal)0.001;
 
-        // }
-        // else if (money < 1000)
-        // {
-        //     com = money * (decimal)0.002;
+        }
+        else if (money < 1000)
+        {
+            com = money * (decimal)0.002;
 
-        // }
-        // else
-        // {
-        //     com = money * (decimal)0.003;
-        // }
+        }
+        else
+        {
+            com = money * (decimal)0.003;
+        }
+        Money+=money-com;
         base.SetMoney(money - com);
         return com;
     }
