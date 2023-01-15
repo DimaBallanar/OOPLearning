@@ -15,15 +15,15 @@ public class UnionPay : AccountPayment
     public override bool Payment(string information, decimal request)
     {
         request *= (decimal)1.03;
-        
+
         if (Money >= request)
         {
             History.Add($"{information}-{request}");
             Money -= request;
-          
+
             return true;
         }
-     
+
         return false;
     }
     public override decimal SetMoney(decimal money)
@@ -36,7 +36,7 @@ public class UnionPay : AccountPayment
         //     < 1000 => money * (decimal)0.002,
         //     _ => money * (decimal)0.003
         // };
-        decimal com = 0;        
+        decimal com = 0;
         if (money < 50)
         {
             com = money * (decimal)0.0001;
@@ -48,19 +48,17 @@ public class UnionPay : AccountPayment
         else if (money < 500)
         {
             com = money * (decimal)0.001;
-
         }
         else if (money < 1000)
         {
             com = money * (decimal)0.002;
-
         }
         else
         {
             com = money * (decimal)0.003;
         }
-        Money+=money-com;
-        History.Add($"На ваш счет +{money-com}");
+        Money += money - com;
+        History.Add($"На ваш счет +{money - com}");
         return com;
     }
 }
