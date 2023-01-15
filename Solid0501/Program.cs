@@ -3,6 +3,7 @@ using MyClasses.Cars;
 using Incapsulation;
 using Counters;
 using Time;
+using BuyerDataSpace;
 
 namespace MyApp // Note: actual namespace depends on the project name.
 {
@@ -73,13 +74,28 @@ namespace MyApp // Note: actual namespace depends on the project name.
             // cn.Incriment();
             // Console.WriteLine(cn);
 
-            SetTime time = new SetTime();
-            time.Hours=5;
-            time.ChangeH(time.Hours);
+            // SetTime time = new SetTime();
+            // time.Hours=5;
+            // time.ChangeH(time.Hours);
             // time.GetMinutes();
             // time.GetSeconds();
-            time.ToPrint();
-           
+            // time.ToPrint();
+            BuyerData array = new BuyerData();
+            array.SortABC();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
