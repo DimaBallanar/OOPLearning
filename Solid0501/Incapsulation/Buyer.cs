@@ -39,16 +39,20 @@ public class BuyerData
 
     public string ABC(BuyerData[] array)
     {
-        string temp="";
-        string a="";
-        string b="";
-        string alfavit="абвгдеёжзийклмнопрстуфхцчшщъыьэюя";
-        for(int i=0;i<array.Length;i++)
+        string temp = "";
+        char a = ' ';
+        char b = ' ';
+        string alfavit = "абвгдеёжзийклмнопрстуфхцчшщъыьэюя";
+        for (int i = 0; i < array.Length; i++)
         {
-           for(int j=i+1;j<array.Length;j++)
-           {
-            a=array[i][1][0];
-            if()
+            for (int j = i + 1; j < array.Length; j++)
+            {
+                a = (array[i].SecondName)[0];
+                b = (array[j].SecondName)[0];
+                if (alfavit.IndexOf(a)>alfavit.IndexOf(b))
+                {
+                    
+                }
            }
 
         }
