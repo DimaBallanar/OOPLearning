@@ -39,9 +39,9 @@ public class BuyerData
         // };
         {
             Array[0] = new UserBuyers() { FirstName = "дима", SecondName = "Пупкин", Patronymic = "владимирович", Addres = "игуменский тракт 47 квартира 75", CreditCard = 000000001, BankAccount = 1223 };
-            Array[1] = new UserBuyers() { FirstName = "вася", SecondName = "Грач", Patronymic = "Степанович", Addres = "игуменский тракт 44 квартира 75", CreditCard = 000666000, BankAccount = 1223 };
-            Array[2] = new UserBuyers() { FirstName = "петя", SecondName = "Топор", Patronymic = "Васильевич", Addres = "игуменский тракт 98 квартира 75", CreditCard = 100000000, BankAccount = 1223 };
-            Array[3] = new UserBuyers() { FirstName = "коля", SecondName = "Корыто", Patronymic = "Георгиевич", Addres = "игуменский тракт 4 квартира 75", CreditCard = 123400001, BankAccount = 1223 };
+            Array[1] = new UserBuyers() { FirstName = "вася", SecondName = "Грач", Patronymic = "Степанович", Addres = "игуменский тракт 44 квартира 75", CreditCard = 000666000, BankAccount = 1224 };
+            Array[2] = new UserBuyers() { FirstName = "петя", SecondName = "Топор", Patronymic = "Васильевич", Addres = "игуменский тракт 98 квартира 75", CreditCard = 100000000, BankAccount = 1225 };
+            Array[3] = new UserBuyers() { FirstName = "коля", SecondName = "Корыто", Patronymic = "Георгиевич", Addres = "игуменский тракт 4 квартира 75", CreditCard = 123400001, BankAccount = 1226 };
         }
     }
 
