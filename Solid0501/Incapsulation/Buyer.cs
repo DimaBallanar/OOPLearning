@@ -39,11 +39,17 @@ public class BuyerData
 
     public string ABC(BuyerData[] array)
     {
-        string result="";
+        string temp="";
+        string a="";
+        string b="";
         string alfavit="абвгдеёжзийклмнопрстуфхцчшщъыьэюя";
-        for(int i=1;i<array.Length;i++)
+        for(int i=0;i<array.Length;i++)
         {
-           
+           for(int j=i+1;j<array.Length;j++)
+           {
+            a=array[i][1][0];
+            if()
+           }
 
         }
         return result;
