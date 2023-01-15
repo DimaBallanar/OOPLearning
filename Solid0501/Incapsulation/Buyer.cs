@@ -99,6 +99,20 @@ public class BuyerData
         System.Console.WriteLine(string.Join(',', names));
     }
 
+    public void SortNumberCard()
+    {
+        System.Console.WriteLine("введите нижний порог значений");
+        ulong x = Convert.ToUInt64(Console.ReadLine());
+        System.Console.WriteLine("введите верхний порог значений");
+        ulong y = Convert.ToUInt64(Console.ReadLine());
+        for (int i = 0; i < Array.Length; i++)
+            if (x < Array[i].CreditCard && Array[i].CreditCard > y)
+            {
+                System.Console.WriteLine(Array[i].FirstName);
+            }
+
+    }
+
 
 
 

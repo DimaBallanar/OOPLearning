@@ -82,6 +82,7 @@ namespace MyApp // Note: actual namespace depends on the project name.
             // time.ToPrint();
             BuyerData array = new BuyerData();
             array.SortABC();
+            array.SortNumberCard();
 
 
 
