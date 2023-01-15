@@ -60,7 +60,7 @@ public class UnionPay : AccountPayment
             com = money * (decimal)0.003;
         }
         Money+=money-com;
-        base.SetMoney(money - com);
+        History.Add($"На ваш счет +{money-com}");
         return com;
     }
 }

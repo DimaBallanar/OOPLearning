@@ -3,16 +3,15 @@ namespace AllAnimals;
 public class Animals
 {
     public string Name { get; set; }          // имя
-   
+
     public string TypeOfFood { get; set; }   //тип пищи
     public double CountFood { get; set; }  //количество пищи
 
     public Animals()
     {
 
-
     }
-    public Animals(string name,  string typeOfFood, double countFood)
+    public Animals(string name, string typeOfFood, double countFood)
     {
         Name = name;
         TypeOfFood = typeOfFood;
