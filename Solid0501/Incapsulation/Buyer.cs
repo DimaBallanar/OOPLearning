@@ -37,9 +37,10 @@ public class BuyerData
         };
     }
 
-    public string ABC(BuyerData[] array)
+    public void ABC(BuyerData[] array)
     {
-        string temp = "";
+        string[] temp=new string[array.Length];
+        string help;
         char a = ' ';
         char b = ' ';
         string alfavit = "абвгдеёжзийклмнопрстуфхцчшщъыьэюя";
@@ -49,14 +50,17 @@ public class BuyerData
             {
                 a = (array[i].SecondName)[0];
                 b = (array[j].SecondName)[0];
-                if (alfavit.IndexOf(a)>alfavit.IndexOf(b))
+                if (alfavit.IndexOf(a) > alfavit.IndexOf(b))
                 {
-                    
+                    help= array[i].SecondName;
+                    temp[i]=array[j].SecondName;
+                    temp[j]=help;
                 }
-           }
+                else if()
+            }
 
         }
-        return result;
+        return;
     }
 
 
