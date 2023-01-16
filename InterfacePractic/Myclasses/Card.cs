@@ -1,6 +1,7 @@
+using MyClasses;
 namespace Cards;
 
-public class Card
+public class Card:IPayments
 {
     public decimal Money { get; private set; }
     public string Id { get; private set; }
@@ -21,7 +22,7 @@ public class Card
     {
         if (Money >= sum)
         {
-            Money -= Money;
+            Money -= sum;
             System.Console.WriteLine($"мы сняли {sum} и осталось {Money}");
             return true;
         }

@@ -1,17 +1,17 @@
 using MyClasses;
 namespace Wallets;
 
-public class Wallet
+public abstract class Wallet : IPayments
 {
-    public decimal Money{get;private set;}
+    public decimal Money { get; protected set; }
     public readonly WalletTypes Types;
-    public Wallet(WalletTypes type,decimal money=0)
+    public Wallet(WalletTypes type, decimal money = 0)
     {
-        Types=type;
-        Money=money;
+        Types = type;
+        Money = money;
     }
 
-   
+
 
     public void PushMoney(decimal money)
     {
@@ -19,15 +19,6 @@ public class Wallet
         System.Console.WriteLine($"вы закинули себе {Money}");
     }
 
-    public bool TryGetMoney(decimal sum)
-    {
-        if (Money >= sum)
-        {
-            Money -= Money;
-            System.Console.WriteLine($"мы сняли {sum} и осталось {Money}");
-            return true;
-        }
-        System.Console.WriteLine("не достаточно средств");
-        return false;
-    }
+    public abstract bool TryGetMoney(decimal sum);
+    
 }
