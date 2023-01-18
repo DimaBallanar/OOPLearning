@@ -12,9 +12,13 @@ public class Data : Validation
         return false;
     }
 
-    public override bool IsValidEmail(string text)    
+    public override bool IsValidEmail(string text)
     {
-        throw new NotImplementedException();
+        if (text.Contains('@') && (text.EndsWith(".com") || text.EndsWith(".by")))
+        {
+            return true;
+        }
+        return false;
     }
 
     public override bool IsValidPwd()
