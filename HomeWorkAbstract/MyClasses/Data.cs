@@ -21,8 +21,15 @@ public class Data : Validation
         return false;
     }
 
-    public override bool IsValidPwd()
+    public override bool IsValidPwd(string text, string text1)
     {
-        throw new NotImplementedException();
+        for (int i = 0; i < text.Length; i++)
+        {
+            if (text[i] != text1[i])
+            {
+                return false;
+            }
+        }
+        return true;
     }
 }

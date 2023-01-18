@@ -5,6 +5,6 @@ public abstract class Validation
 
     public abstract bool IsValidId(string text);
     public abstract bool IsValidEmail(string text);
-    public abstract bool IsValidPwd();
+    public abstract bool IsValidPwd(string text,string text1);
 
 }
