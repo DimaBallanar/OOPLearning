@@ -9,4 +9,9 @@ public class Server : User
         SurName = surName;
         Pwd = pwd;
     }
+
+    public void GetUser()
+    {
+        System.Console.WriteLine($"{UserId},{Name},{SurName},{Pwd}");
+    }
 }
