@@ -1,3 +1,4 @@
+using System.Text.RegularExpressions;
 namespace Myclasses;
 
 public class Data : Validation
@@ -11,7 +12,7 @@ public class Data : Validation
         return false;
     }
 
-    public override bool IsValidEmail()
+    public override bool IsValidEmail(string text)    
     {
         throw new NotImplementedException();
     }
