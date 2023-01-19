@@ -25,7 +25,7 @@ namespace MyApp // Note: actual namespace depends on the project name.
             // string? text = Console.ReadLine();
             // TryParse(text, out int result);
             // System.Console.WriteLine(result);
-            Method(new int[] { 1, 2, 3 }, 2);
+            Method(new int[] {  2, 3 }, 2);
 
         }
         static bool TryParse(string? text, out int result)
@@ -74,6 +74,10 @@ namespace MyApp // Note: actual namespace depends on the project name.
             catch (Exception ex)
             {
                 System.Console.WriteLine(ex.Message);
+            }
+            finally
+            {
+                System.Console.WriteLine("финал");
             }
         }
     }
