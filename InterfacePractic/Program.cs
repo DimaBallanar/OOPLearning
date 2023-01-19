@@ -47,11 +47,17 @@ namespace MyApp // Note: actual namespace depends on the project name.
         {
             try
             {
-
+                int sum = 0;
+                for (int i = 0; i < array.Length; i++)
+                {
+                    sum += array[i];
+                    i++;
+                }
+                System.Console.WriteLine(sum);
             }
-            catch(IndexOutOfRangeException)
+            catch (IndexOutOfRangeException)
             {
-                
+                System.Console.WriteLine("вышли за границу");
             }
         }
     }
