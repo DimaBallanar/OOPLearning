@@ -25,6 +25,7 @@ namespace MyApp // Note: actual namespace depends on the project name.
             // string? text = Console.ReadLine();
             // TryParse(text, out int result);
             // System.Console.WriteLine(result);
+            Method(new int[] { 1, 2, 3 }, 2);
 
         }
         static bool TryParse(string? text, out int result)
@@ -47,10 +48,10 @@ namespace MyApp // Note: actual namespace depends on the project name.
         {
             try
             {
-                int sum = 0;
+                double sum = 0;
                 for (int i = 0; i < length; i++)
                 {
-                    sum += 1 / array[i];
+                    sum += 1 / (double)array[i];
                 }
                 if (sum < 1)
                 {
@@ -70,7 +71,7 @@ namespace MyApp // Note: actual namespace depends on the project name.
             {
                 System.Console.WriteLine("Ne deli na nol");
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 System.Console.WriteLine(ex.Message);
             }
