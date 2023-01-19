@@ -21,10 +21,10 @@ namespace MyApp // Note: actual namespace depends on the project name.
             // shop.PayCash(wallet);
 
             // лами while, foreach
-            System.Console.WriteLine("введите строку");
-            string? text = Console.ReadLine();
-            TryParse(text, out int result);
-            System.Console.WriteLine(result);
+            // System.Console.WriteLine("введите строку");
+            // string? text = Console.ReadLine();
+            // TryParse(text, out int result);
+            // System.Console.WriteLine(result);
 
         }
         static bool TryParse(string? text, out int result)
@@ -43,21 +43,36 @@ namespace MyApp // Note: actual namespace depends on the project name.
             }
         }
 
-        static void Method(int[] array)
+        static void Method(int[] array, int length)
         {
             try
             {
                 int sum = 0;
-                for (int i = 0; i < array.Length; i++)
+                for (int i = 0; i < length; i++)
                 {
-                    sum += array[i];
-                    i++;
+                    sum += 1 / array[i];
+                }
+                if (sum < 1)
+                {
+                    throw new Exception("наше число меньше единицы");
                 }
                 System.Console.WriteLine(sum);
             }
             catch (IndexOutOfRangeException)
             {
-                System.Console.WriteLine("вышли за границу");
+                System.Console.WriteLine("Uncorrcect index");
+            }
+            catch (NullReferenceException)
+            {
+                System.Console.WriteLine("NullReference");
+            }
+            catch (DivideByZeroException)
+            {
+                System.Console.WriteLine("Ne deli na nol");
+            }
+            catch(Exception ex)
+            {
+                System.Console.WriteLine(ex.Message);
             }
         }
     }
