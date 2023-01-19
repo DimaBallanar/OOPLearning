@@ -42,5 +42,17 @@ namespace MyApp // Note: actual namespace depends on the project name.
                 return false;
             }
         }
+
+        static void Method(int[] array)
+        {
+            try
+            {
+
+            }
+            catch(IndexOutOfRangeException)
+            {
+                
+            }
+        }
     }
 }
