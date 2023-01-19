@@ -21,20 +21,26 @@ namespace MyApp // Note: actual namespace depends on the project name.
             // shop.PayCash(wallet);
 
             // лами while, foreach
-            string[] array = { "2131231", "fff" };
-            int number = 0;
-            while (number < array.Length)
+            System.Console.WriteLine("введите строку");
+            string? text = Console.ReadLine();
+            TryParse(text, out int result);
+            System.Console.WriteLine(result);
+
+        }
+        static bool TryParse(string? text, out int result)
+        {
+
+            try
             {
-                System.Console.WriteLine(array[number++]);
-               
+                result = int.Parse(text);
+                return true;
             }
-
-            foreach(string str in array)
+            catch (Exception ex)
             {
-                System.Console.WriteLine(str);
+                result = 0;
+                System.Console.WriteLine(ex);
+                return false;
             }
-
-
         }
     }
 }
