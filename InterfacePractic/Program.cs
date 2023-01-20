@@ -20,11 +20,11 @@ namespace MyApp // Note: actual namespace depends on the project name.
             // Shop shop = new Shop();
             // shop.PayCash(wallet);
 
-            // лами while, foreach
-            // System.Console.WriteLine("введите строку");
-            // string? text = Console.ReadLine();
-            // TryParse(text, out int result);
-            // System.Console.WriteLine(result);
+     
+            System.Console.WriteLine("введите строку");
+            string? text = Console.ReadLine();
+            TryParse(text, out int result);
+            System.Console.WriteLine(result);
             Method(new int[] {  2, 3 }, 2);
 
         }
