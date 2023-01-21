@@ -78,6 +78,7 @@ namespace MyApp // Note: actual namespace depends on the project name.
             catch (Exception ex)
             {
                 System.Console.WriteLine(ex.Message);
+                return false;
             }
             finally
             {
