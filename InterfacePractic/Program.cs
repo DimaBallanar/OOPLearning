@@ -68,6 +68,7 @@ namespace MyApp // Note: actual namespace depends on the project name.
             catch (NullReferenceException)
             {
                 System.Console.WriteLine("NullReference");
+                return false;
             }
             catch (DivideByZeroException)
             {
