@@ -73,6 +73,7 @@ namespace MyApp // Note: actual namespace depends on the project name.
             catch (DivideByZeroException)
             {
                 System.Console.WriteLine("Ne deli na nol");
+                return false;              
             }
             catch (Exception ex)
             {
