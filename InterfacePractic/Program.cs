@@ -44,7 +44,7 @@ namespace MyApp // Note: actual namespace depends on the project name.
             }
         }
 
-        static void Method(int[] array, int length)
+        static bool Method(int[] array, int length)
         {
             try
             {
@@ -58,10 +58,12 @@ namespace MyApp // Note: actual namespace depends on the project name.
                     throw new Exception("наше число меньше единицы");
                 }
                 System.Console.WriteLine(sum);
+                return true;
             }
             catch (IndexOutOfRangeException)
             {
                 System.Console.WriteLine("Uncorrcect index");
+                return false;
             }
             catch (NullReferenceException)
             {
