@@ -19,25 +19,29 @@ public class AbonentOBD
     public int Credit { get; set; }
     public int RepublicTime { get; set; }
     public int CityTime { get; set; }
-    
-    public  AbonentOBD()
+
+    public AbonentOBD()
     {
 
     }
 
-    public AbonentOBD(string firstName,string secondname,string patronymic,string adress,ulong creditCard,
-    int debet,int credit,int republicTime,int cityTime)
+    public AbonentOBD(string firstName, string secondname, string patronymic, string adress, ulong creditCard,
+    int debet, int credit, int republicTime, int cityTime)
     {
-        FirstName=firstName;
-        SecondName=secondname;
-        Patronymic=patronymic;
-        Addres=adress;
-        CreditCard=creditCard;
-        Debet=debet;
-        Credit=credit;
-        RepublicTime=republicTime;
-        CityTime=cityTime;
+        FirstName = firstName;
+        SecondName = secondname;
+        Patronymic = patronymic;
+        Addres = adress;
+        CreditCard = creditCard;
+        Debet = debet;
+        Credit = credit;
+        RepublicTime = republicTime;
+        CityTime = cityTime;
     }
 
-    public  void GetName()
+    public void GetName()
+    {
+        System.Console.Write("введите имя: ");
+        FirstName = Console.ReadLine();
+    }
 }
