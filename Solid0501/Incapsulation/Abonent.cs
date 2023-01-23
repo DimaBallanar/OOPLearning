@@ -13,7 +13,7 @@ public class AbonentOBD
     public string FirstName { get; set; }    //имя
     public string SecondName { get; set; }   //фамилия
     public string Patronymic { get; set; }
-    public string Addres { get; set; }
+    private string _addres;
     public ulong CreditCard { get; set; }
     public int Debet { get; set; }
     public int Credit { get; set; }
@@ -31,7 +31,7 @@ public class AbonentOBD
         FirstName = firstName;
         SecondName = secondname;
         Patronymic = patronymic;
-        Addres = adress;
+        _addres = adress;
         CreditCard = creditCard;
         Debet = debet;
         Credit = credit;
@@ -39,11 +39,17 @@ public class AbonentOBD
         CityTime = cityTime;
     }
 
-    public string GetName()
+    public string GetAddres()
     {
-        System.Console.Write("введите имя: ");
-        string? firstName = Convert.ToString(Console.ReadLine());
-        return firstName;
+        return _addres;
 
+    }
+    public void SetAddres(string adress)
+    {
+        if (string.IsNullOrEmpty(adress))
+        {
+            throw new ArgumentNullException(nameof(adress));
+        }
+        _addres = adress;
     }
 }
