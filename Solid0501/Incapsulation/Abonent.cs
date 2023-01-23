@@ -66,9 +66,17 @@ public class OutClass<T, K>
         PropertyT = propertyT;
         PropertyK = propertyK;
     }
+    public T GetPropertyT()
+    {
+        return PropertyT;
+    }
     public void SetPropertyT(T propertyT)
     {
         PropertyT = propertyT;
+    }
+    public K GetPropertyK()
+    {
+        return PropertyK;
     }
     public void SetPropertyK(K propertyK)
     {
