@@ -94,7 +94,7 @@ public class OutClass<T> where T:struct
 
     public void Show()
     {
-        System.Console.WriteLine($"{PropertyT.ToString()} {PropertyK.ToString()}");
+        System.Console.WriteLine($"{PropertyT.ToString()} ");
     }
 
 }
