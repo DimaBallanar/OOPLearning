@@ -42,7 +42,7 @@ namespace MyApp // Note: actual namespace depends on the project name.
             // System.Console.WriteLine(transport.Name);
             // transport.Moving();
 
-            // Car car = new Car("por");
+            Car car = new Car("por");
             // System.Console.WriteLine(car.Name);
             // car.Moving();
 
@@ -85,9 +85,14 @@ namespace MyApp // Note: actual namespace depends on the project name.
             // array.SortABC();
             // array.SortNumberCard();
 
-            var test = new OutClass<long, string>(2, "555");  // OutClass<int, string> test = new OutClass<int, string>(2, "555");
+            var test = new OutClass<int>( 555);  // OutClass<int, string> test = new OutClass<int, string>(2, "555");
+            var test1=new OutClass<double>(21312);
+            var test2=new OutClass<bool>(true);
+            var test3=new OutClass<string>("fddf");
+
             test.Show();
-            test = new OutClass<long, string>(1, "1fft2");
+            test.GetPropertyT();
+
 
 
 

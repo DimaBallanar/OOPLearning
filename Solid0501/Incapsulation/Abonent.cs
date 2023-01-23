@@ -54,18 +54,27 @@ namespace AbonentOBD;
 //     }
 // }
 
-public class OutClass<T, K>
+public class OutClass<T> where T:struct
 {
-    public T PropertyT;
-    public K PropertyK;
+    private T PropertyT;
+    // private K PropertyK;
+    // private int v1;
+    // private string v2;
 
-    public OutClass(T propertyT, K propertyK)
+    public OutClass(T propertyT) //, K propertyK
     {
-        if (propertyT == null) throw new ArgumentNullException(nameof(propertyT));
-        if (propertyK == null) throw new ArgumentNullException(nameof(propertyK));
+        // if (propertyT == null) throw new ArgumentNullException(nameof(propertyT));
+        // if (propertyK == null) throw new ArgumentNullException(nameof(propertyK));
         PropertyT = propertyT;
-        PropertyK = propertyK;
+        // PropertyK = propertyK;
     }
+
+    // public OutClass(int v1, string v2)
+    // {
+    //     this.v1 = v1;
+    //     this.v2 = v2;
+    // }
+
     public T GetPropertyT()
     {
         return PropertyT;
@@ -74,14 +83,14 @@ public class OutClass<T, K>
     {
         PropertyT = propertyT;
     }
-    public K GetPropertyK()
-    {
-        return PropertyK;
-    }
-    public void SetPropertyK(K propertyK)
-    {
-        PropertyK = propertyK;
-    }
+    // public K GetPropertyK()
+    // {
+    //     return PropertyK;
+    // }
+    // public void SetPropertyK(K propertyK)
+    // {
+    //     PropertyK = propertyK;
+    // }
 
     public void Show()
     {
