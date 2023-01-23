@@ -39,9 +39,11 @@ public class AbonentOBD
         CityTime = cityTime;
     }
 
-    public void GetName()
+    public string GetName()
     {
         System.Console.Write("введите имя: ");
-        FirstName = Console.ReadLine();
+        string? firstName = Convert.ToString(Console.ReadLine());
+        return firstName;
+
     }
 }
