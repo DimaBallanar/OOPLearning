@@ -4,6 +4,7 @@ using Incapsulation;
 using Counters;
 using Time;
 using BuyerDataSpace;
+using AbonentOBD;
 
 namespace MyApp // Note: actual namespace depends on the project name.
 {
@@ -80,9 +81,13 @@ namespace MyApp // Note: actual namespace depends on the project name.
             // time.GetMinutes();
             // time.GetSeconds();
             // time.ToPrint();
-            BuyerData array = new BuyerData();
-            array.SortABC();
-            array.SortNumberCard();
+            // BuyerData array = new BuyerData();
+            // array.SortABC();
+            // array.SortNumberCard();
+
+            var test = new OutClass<long, string>(2, "555");  // OutClass<int, string> test = new OutClass<int, string>(2, "555");
+            test.Show();
+            test = new OutClass<long, string>(1, "1fft2");
 
 
 

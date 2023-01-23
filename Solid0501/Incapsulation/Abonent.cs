@@ -8,48 +8,68 @@
 
 namespace AbonentOBD;
 
-public class AbonentOBD
+// public class AbonentOBD
+// {
+//     public string FirstName { get; set; }    //имя
+//     public string SecondName { get; set; }   //фамилия
+//     public string Patronymic { get; set; }
+//     private string _addres;
+//     public ulong CreditCard { get; set; }
+//     public int Debet { get; set; }
+//     public int Credit { get; set; }
+//     public int RepublicTime { get; set; }
+//     public int CityTime { get; set; }
+
+//     public AbonentOBD()
+//     {
+
+//     }
+
+//     public AbonentOBD(string firstName, string secondname, string patronymic, string adress, ulong creditCard,
+//     int debet, int credit, int republicTime, int cityTime)
+//     {
+//         FirstName = firstName;
+//         SecondName = secondname;
+//         Patronymic = patronymic;
+//         _addres = adress;
+//         CreditCard = creditCard;
+//         Debet = debet;
+//         Credit = credit;
+//         RepublicTime = republicTime;
+//         CityTime = cityTime;
+//     }
+
+//     public string GetAddres()
+//     {
+//         return _addres;
+
+//     }
+//     public void SetAddres(string adress)
+//     {
+//         if (string.IsNullOrEmpty(adress))
+//         {
+//             throw new ArgumentNullException(nameof(adress));
+//         }
+//         _addres = adress;
+//     }
+// }
+
+public class OutClass<T, K>
 {
-    public string FirstName { get; set; }    //имя
-    public string SecondName { get; set; }   //фамилия
-    public string Patronymic { get; set; }
-    private string _addres;
-    public ulong CreditCard { get; set; }
-    public int Debet { get; set; }
-    public int Credit { get; set; }
-    public int RepublicTime { get; set; }
-    public int CityTime { get; set; }
+    public T PropertyT { get; set; }
+    public K PropertyK { get; set; }
 
-    public AbonentOBD()
+    public OutClass(T propertyT, K propertyK)
     {
-
+        if (propertyT == null) throw new ArgumentNullException(nameof(propertyT));
+        if (propertyK == null) throw new ArgumentNullException(nameof(propertyK));
+        PropertyT = propertyT;
+        PropertyK = propertyK;
     }
 
-    public AbonentOBD(string firstName, string secondname, string patronymic, string adress, ulong creditCard,
-    int debet, int credit, int republicTime, int cityTime)
+    public void Show()
     {
-        FirstName = firstName;
-        SecondName = secondname;
-        Patronymic = patronymic;
-        _addres = adress;
-        CreditCard = creditCard;
-        Debet = debet;
-        Credit = credit;
-        RepublicTime = republicTime;
-        CityTime = cityTime;
+        System.Console.WriteLine($"{PropertyT.ToString()} {PropertyK.ToString()}");
     }
-
-    public string GetAddres()
-    {
-        return _addres;
-
-    }
-    public void SetAddres(string adress)
-    {
-        if (string.IsNullOrEmpty(adress))
-        {
-            throw new ArgumentNullException(nameof(adress));
-        }
-        _addres = adress;
-    }
+    
 }
