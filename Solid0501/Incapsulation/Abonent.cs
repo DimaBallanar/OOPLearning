@@ -56,8 +56,8 @@ namespace AbonentOBD;
 
 public class OutClass<T, K>
 {
-    public T PropertyT { get; set; }
-    public K PropertyK { get; set; }
+    public T PropertyT;
+    public K PropertyK;
 
     public OutClass(T propertyT, K propertyK)
     {
@@ -66,10 +66,18 @@ public class OutClass<T, K>
         PropertyT = propertyT;
         PropertyK = propertyK;
     }
+    public void SetPropertyT(T propertyT)
+    {
+        PropertyT = propertyT;
+    }
+    public void SetPropertyK(K propertyK)
+    {
+        PropertyK = propertyK;
+    }
 
     public void Show()
     {
         System.Console.WriteLine($"{PropertyT.ToString()} {PropertyK.ToString()}");
     }
-    
+
 }
