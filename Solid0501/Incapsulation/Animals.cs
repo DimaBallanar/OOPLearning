@@ -1,6 +1,6 @@
 namespace AllAnimals;
 
-public class Animals
+public abstract class Animals
 {
     public string Name { get; set; }          // имя
 
@@ -25,7 +25,7 @@ public class Animals
         return name;
     }
 
-    public double GetFoodCounter()
+    public virtual double GetFoodCounter()
     {
         System.Console.Write("сколько ест за прием,кг?:");
         double foodPerTime = Convert.ToDouble(Console.ReadLine());
