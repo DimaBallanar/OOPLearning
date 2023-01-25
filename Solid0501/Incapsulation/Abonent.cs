@@ -8,48 +8,48 @@
 
 namespace AbonentOBD;
 
-// public class AbonentOBD
-// {
-//     public string FirstName { get; set; }    //имя
-//     public string SecondName { get; set; }   //фамилия
-//     public string Patronymic { get; set; }
-//     private string _addres;
-//     public ulong CreditCard { get; set; }
-//     public int Debet { get; set; }
-//     public int Credit { get; set; }
-//     public int RepublicTime { get; set; }
-//     public int CityTime { get; set; }
+public class AbonentOBD
+{
+    public string FirstName { get; set; }    //имя
+    public string SecondName { get; set; }   //фамилия
+    public string Patronymic { get; set; }
+    private string _addres;
+    public ulong CreditCard { get; set; }
+    public int Debet { get; set; }
+    public int Credit { get; set; }
+    public int RepublicTime { get; set; }
+    public int CityTime { get; set; }
 
-//     public AbonentOBD()
-//     {
+    public AbonentOBD()
+    {
 
-//     }
+    }
 
-//     public AbonentOBD(string firstName, string secondname, string patronymic, string adress, ulong creditCard,
-//     int debet, int credit, int republicTime, int cityTime)
-//     {
-//         FirstName = firstName;
-//         SecondName = secondname;
-//         Patronymic = patronymic;
-//         _addres = adress;
-//         CreditCard = creditCard;
-//         Debet = debet;
-//         Credit = credit;
-//         RepublicTime = republicTime;
-//         CityTime = cityTime;
-//     }
+    public AbonentOBD(string firstName, string secondname, string patronymic, string adress, ulong creditCard,
+    int debet, int credit, int republicTime, int cityTime)
+    {
+        FirstName = firstName;
+        SecondName = secondname;
+        Patronymic = patronymic;
+        _addres = adress;
+        CreditCard = creditCard;
+        Debet = debet;
+        Credit = credit;
+        RepublicTime = republicTime;
+        CityTime = cityTime;
+    }
 
-//     public string GetAddres()
-//     {
-//         return _addres;
+    public string GetAddres()
+    {
+        return _addres;
 
-//     }
-//     public void SetAddres(string adress)
-//     {
-//         if (string.IsNullOrEmpty(adress))
-//         {
-//             throw new ArgumentNullException(nameof(adress));
-//         }
-//         _addres = adress;
-//     }
-// }
+    }
+    public void SetAddres(string adress)
+    {
+        if (string.IsNullOrEmpty(adress))
+        {
+            throw new ArgumentNullException(nameof(adress));
+        }
+        _addres = adress;
+    }
+}
