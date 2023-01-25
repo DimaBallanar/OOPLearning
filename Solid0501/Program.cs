@@ -85,10 +85,9 @@ namespace MyApp // Note: actual namespace depends on the project name.
             // array.SortABC();
             // array.SortNumberCard();
 
-            var test = new OutClass<int>( 555);  // OutClass<int, string> test = new OutClass<int, string>(2, "555");
-            var test1=new OutClass<double>(21312);
-            var test2=new OutClass<bool>(true);
-           
+            var test = new OutClass<int>(555);  // OutClass<int, string> test = new OutClass<int, string>(2, "555");
+            var test1 = new OutClass<double>(21312);
+            var test2 = new OutClass<bool>(true);
 
             test.Show();
             test.GetPropertyT();
