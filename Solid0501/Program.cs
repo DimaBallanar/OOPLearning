@@ -75,15 +75,15 @@ namespace MyApp // Note: actual namespace depends on the project name.
             // cn.Incriment();
             // Console.WriteLine(cn);
 
-            SetTime time = new SetTime();
-            time.Hours=5;
-            time.ChangeH(time.Hours);
-            time.GetMinutes();
-            time.GetSeconds();
-            time.ToPrint();
-            BuyerData array = new BuyerData();
-            array.SortABC();
-            array.SortNumberCard();
+            // SetTime time = new SetTime();
+            // time.Hours=5;
+            // time.ChangeH(time.Hours);
+            // time.GetMinutes();
+            // time.GetSeconds();
+            // time.ToPrint();
+            // BuyerData array = new BuyerData();
+            // array.SortABC();
+            // array.SortNumberCard();
 
             var test = new OutClass<int>( 555);  // OutClass<int, string> test = new OutClass<int, string>(2, "555");
             var test1=new OutClass<double>(21312);
