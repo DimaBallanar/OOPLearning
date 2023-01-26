@@ -9,7 +9,7 @@ namespace MyClasses;
 
 public class GenericHome<T>
 {
-    private T[] Items;
+    public T[] Items;
 
     public GenericHome(T item)
     {
@@ -63,6 +63,14 @@ public class GenericHome<T>
             }
         }
     }
+    public void ShowAll()
+    {
+        foreach(T t in Items)
+        {
+            System.Console.WriteLine($"{t} ");
+        }
+    }
+
 
 
 
