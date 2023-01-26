@@ -4,7 +4,7 @@ namespace MyClasses;
 // поле Items массив 
 // метод добавления
 // метод поиск индеса по значению
-// удаления значения (по индексу, удаление по занчению)
+// удаления значения (по индексу, удаление по значению)
 // метод вывода 
 
 public class GenericHome<T>
@@ -37,7 +37,21 @@ public class GenericHome<T>
         }
         return false;
     }
+    public void RemoveEntries(int index)
+    {
+        if (index < Items.Length)
+        {
+            Items[index] = default;
+        }
+        else
+        {
+            System.Console.WriteLine("такого индекса в массиве нет");
+        }
+    }
+
+    
 
 
 
-}
+
+    }
