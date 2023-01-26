@@ -62,8 +62,9 @@ public class GenericHome<T>
                 System.Console.WriteLine("такого элемента в массиве нет");
             }
         }
-
-
-
-
     }
+
+
+
+
+}
