@@ -9,6 +9,11 @@ namespace MyClasses;
 
 public class GenericHome<T>
 {
-    private T PropertyT;
-    
+    private T[] Items;
+
+    public GenericHome( T[] items)
+    {
+        Items=items;
+    }
+
 }
