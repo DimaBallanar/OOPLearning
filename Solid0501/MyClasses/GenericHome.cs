@@ -11,9 +11,18 @@ public class GenericHome<T>
 {
     private T[] Items;
 
-    public GenericHome( T[] items)
+    public GenericHome()
     {
-        Items=items;
+        T[] Items = new T[] { };
     }
+
+    public T AddItem(T item)
+    {
+        T[] timearray = new T[Items.Length + 1] { };
+        Array.Copy(Items, timearray, Items.Length);
+
+
+    }
+
 
 }
