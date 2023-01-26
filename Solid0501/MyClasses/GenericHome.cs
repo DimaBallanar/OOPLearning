@@ -49,7 +49,19 @@ public class GenericHome<T>
         }
     }
 
-    
+    public void RemoveEntries(T item)
+    {
+        for (int i = 0; i < Items.Length; i++)
+        {
+            if (item.Equals(Items[i]))
+            {
+                Items[i] = default;
+            }
+            else
+            {
+                System.Console.WriteLine("такого элемента в массиве нет");
+            }
+        }
 
 
 
