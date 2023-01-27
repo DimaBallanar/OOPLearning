@@ -128,6 +128,7 @@ namespace MyApp // Note: actual namespace depends on the project name.
             Console.WriteLine($" наша результирующая = {result}");
             Func<int, int, int> ourDel = (x, y) => x + y;
             Console.WriteLine(ourDel(1,2));
+            System.Console.WriteLine(ourDel(2,3));
 
 
 
