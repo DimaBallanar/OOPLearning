@@ -16,13 +16,13 @@ public class GenericHome<T>
         T[] Items = new T[1] { default };
     }
 
-    public void AddItem(T item)
-    {
-        T[] timearray = new T[++Items.Length] { };
-        Array.Copy(Items, timearray, Items.Length);
-        timearray[timearray.Length - 1] = item;
-        Items = timearray;
-    }
+    // public void AddItem(T item)
+    // {
+    //     T[] timearray = new T[++Items.Length] { };
+    //     Array.Copy(Items, timearray, Items.Length);
+    //     timearray[timearray.Length - 1] = item;
+    //     Items = timearray;
+    // }
 
     public bool FindIndex(T item, out int index)
     {

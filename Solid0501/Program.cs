@@ -5,6 +5,7 @@ using Counters;
 using Time;
 using BuyerDataSpace;
 using AbonentOBD;
+using System.Security.Cryptography.X509Certificates;
 
 namespace MyApp // Note: actual namespace depends on the project name.
 {
@@ -42,7 +43,7 @@ namespace MyApp // Note: actual namespace depends on the project name.
             // System.Console.WriteLine(transport.Name);
             // transport.Moving();
 
-            Car car = new Car("por");
+            // Car car = new Car("por");
             // System.Console.WriteLine(car.Name);
             // car.Moving();
 
@@ -85,12 +86,52 @@ namespace MyApp // Note: actual namespace depends on the project name.
             // array.SortABC();
             // array.SortNumberCard();
 
-            var test = new OutClass<int>(555);  // OutClass<int, string> test = new OutClass<int, string>(2, "555");
-            var test1 = new OutClass<double>(21312);
-            var test2 = new OutClass<bool>(true);
+            // var test = new OutClass<int>(555);  // OutClass<int, string> test = new OutClass<int, string>(2, "555");
+            // var test1 = new OutClass<double>(21312);
+            // var test2 = new OutClass<bool>(true);
 
-            test.Show();
-            test.GetPropertyT();
+            // test.Show();
+            // test.GetPropertyT();
+
+            List<int> array = new List<int>();
+            System.Console.WriteLine($"Capacity={array.Capacity} countItem={array.Count}");
+            array.Add(1);
+            System.Console.WriteLine($"Capacity={array.Capacity} countItem={array.Count}");
+            array.Add(1);
+            array.Add(1);
+            array.Add(77);
+            array.Add(1);
+            array.Add(5);
+            System.Console.WriteLine($"Capacity={array.Capacity} countItem={array.Count}");
+            array.Add(1);
+            array.Add(1);
+            array.Add(2);
+            array.Add(1);
+            array.Add(1);
+            array.Add(8);
+            array.Add(1);
+            array.Add(1);
+            array.Add(1);
+            array.Add(1);
+            array.Add(5);
+            array.Add(1);
+            array.Add(1);
+            array.Add(4);
+            array.Add(11);
+            System.Console.WriteLine($"Capacity={array.Capacity} countItem={array.Count}");
+            Console.WriteLine(string.Join(";", array));
+            array.Sort();
+            Console.WriteLine(string.Join(";", array));
+            Console.WriteLine("firstOrDefault");
+            Func<int, bool> foundItem = x => x > 22;а          
+            int result = array.FirstOrDefault(foundItem);
+            Console.WriteLine($" наша результирующая = {result}");
+            Func<int, int, int> ourDel = (x, y) => x + y;
+            Console.WriteLine(ourDel(1,2));
+
+
+
+
 
 
 
