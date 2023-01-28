@@ -123,7 +123,7 @@ namespace MyApp // Note: actual namespace depends on the project name.
             array.Sort();
             Console.WriteLine(string.Join(";", array));
             Console.WriteLine("firstOrDefault");
-            Func<int, bool> foundItem = x => x > 22;а          
+            Func<int, bool> foundItem = x => x > 22;         
             int result = array.FirstOrDefault(foundItem);
             Console.WriteLine($" наша результирующая = {result}");
             Func<int, int, int> ourDel = (x, y) => x + y;
