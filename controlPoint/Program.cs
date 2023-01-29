@@ -5,44 +5,10 @@
 
 
 
-namespace MyInterface;
-
-public abstract class Transport
-{
-	public string Name{get;set;}
-	public int NumberOfTransport{get;set;}
-
-	public Transport(string name, int number)
-	{
-	Name=name;
-	NumberOfTransport=number;
-	}
-	public abstract void Move(); 
-}
 
 
-namespace MyInterface;
 
-public class Plane:Transport, IFly
-{
-public Plane(string name,int number):base(name="Plane",number)
-{
-	
-}
-    public void FlyAway()
-    {
-    Console.WriteLine("Plane {Number} улетел");
-    }
-    void SitGround()
-    {
-    Console.WriteLine("Plane {Number} прилетел");
-    }
 
-	public override Move()
-	{
-	Console.WriteLine("Plane {Number} летит");
-	}
-}
 
 namespace MyInterface;
 
@@ -61,7 +27,7 @@ public Ship(string name,int number):base(name="корабль",number)
     Console.WriteLine("корабль {Number} приплыл");
     }
 
-	public override Move()
+	public override void Move()
 	{
 	Console.WriteLine("корабль {Number} плывет");
 	}
