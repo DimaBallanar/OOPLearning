@@ -19,4 +19,6 @@ public Plane(string name,int number):base(name="Plane",number)
 	{
 	Console.WriteLine("Plane {Number} летит");
 	}
+
+  
 }
