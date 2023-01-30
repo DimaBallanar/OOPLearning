@@ -21,10 +21,10 @@ public class TransportSystemCity
                 count++;
             }
         }
-        if (count >= 11) throw new OurException("нет места в массиве");
+        if (count >= 11) throw new Exception("нет места в массиве");
 
         // base.SitGround();
-        SitGround();
+        Transport.SitGround();
         
     }
 
@@ -38,7 +38,7 @@ public class TransportSystemCity
                 count++;
             }
         }
-        if (count >= 11) throw new OurException("нет места в массиве");
+        if (count >= 11) throw new Exception("нет места в массиве");
 
         base.DriveBack();
     }
@@ -53,7 +53,7 @@ public class TransportSystemCity
                 count++;
             }
         }
-        if (count >= 11) throw new OurException("нет места в массиве");
+        if (count >= 11) throw new Exception("нет места в массиве");
 
         base.SwimHere();
     }
