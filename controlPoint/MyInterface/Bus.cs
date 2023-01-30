@@ -12,11 +12,11 @@ public Bus(string name,int number):base(name="автобус",number)
     }
     void DriveBack()
     {
-    Console.WriteLine("автобус {Number}приехал");
+    Console.WriteLine($"автобус {Number}приехал");
     }
 
 	public override Move()
 	{
-	Console.WriteLine("автобус {Number} едет");
+	Console.WriteLine($"автобус {Number} едет");
 	}
 }
