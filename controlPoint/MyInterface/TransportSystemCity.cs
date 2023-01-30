@@ -69,8 +69,8 @@ public class TransportSystemCity
             }
             else
             {
-                throw new OurException("нет элемента в массиве");
-                return null;
+                throw new Exception("нет элемента в массиве");
+                
             }
         }
     }
@@ -85,8 +85,8 @@ public class TransportSystemCity
             }
             else
             {
-                throw new OurException("нет элемента в массиве");
-                return null;
+                throw new Exception("нет элемента в массиве");
+              
             }
         }
     }
@@ -102,7 +102,7 @@ public class TransportSystemCity
             }
             else
             {
-                throw new OurException("нет элемента в массиве");
+                throw new Exception("нет элемента в массиве");
                 return null;
             }
         }
