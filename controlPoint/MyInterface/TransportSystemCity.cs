@@ -23,56 +23,57 @@ public class TransportSystemCity
                 plane.SitGround();
                 Transports[i] = plane;
                 CountPlane++;
-                
+                return;
             }
         }
     }
-    /*
+
     public void SetInBusStation(Bus bus)
     {
-        int count = 0;
-        for (int i = 0; i < Transport.Length; i++)
+        if (CountBus == 11) throw new Exception("нет места в массиве для автобуса");
+        for (int i = 0; i < Transports.Length; i++)
         {
-            if (Transport.Name == "автобус")
+            if (Transports[i] == null)
             {
-                count++;
+                bus.DriveBack();
+                Transports[i] = bus;
+                CountBus++;
+                return;
             }
         }
-        if (count >= 11) throw new Exception("нет места в массиве");
-
-        base.DriveBack();
     }
 
     public void SetInPort(Ship ship)
     {
-        int count = 0;
-        for (int i = 0; i < Transport.Length; i++)
+        if (CountShip == 11) throw new Exception("нет места в массиве для корабля");
+        for (int i = 0; i < Transports.Length; i++)
         {
-            if (Transport.Name == "корабль")
+            if (Transports[i] == null)
             {
-                count++;
+                ship.SwimHere();
+                Transports[i] = ship;
+                CountShip++;
+                return;
             }
         }
-        if (count >= 11) throw new Exception("нет места в массиве");
-
-        base.SwimHere();
     }
 
     public Plane GetFromAirPort(int number)
     {
-        for (int i = 0; i < Transport.Length; i++)
+        for (int i = 0; i < Transports.Length; i++)
         {
-            if (Transport.Name == "Plane" && Transport.Number == number)
+            var transport = Transports[i];
+            if (transport == null) continue;
+            if (transport is Plane plane && transport.Number == number)
             {
-                Transport[i] = default;
-                return base.FlyAway();
-            }
-            else
-            {
-                throw new Exception("нет элемента в массиве");
-
+                Transports[i] = null;
+                plane.FlyAway();
+                CountPlane--;
+                return plane;
             }
         }
+        throw new Exception("нет элемента в массиве");
+
     }
     public Bus GetFromBusStation(int number)
     {
@@ -103,7 +104,7 @@ public class TransportSystemCity
             else
             {
                 throw new Exception("нет элемента в массиве");
-                
+
             }
         }
     }
