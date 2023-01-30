@@ -2,6 +2,6 @@ namespace MyInterface;
 
 public interface IDrive
 {
-	void DriveAway();
-	void DriveBack();
+    void DriveAway();
+    void DriveBack();
 }

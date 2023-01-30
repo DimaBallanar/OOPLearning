@@ -10,7 +10,7 @@ public Ship(string name,int number):base(name="корабль",number)
     {
     Console.WriteLine($"корабль {Number} уплыл");
     }
-    void SwimHere()
+    public void SwimHere()
     {
     Console.WriteLine($"корабль {Number} приплыл");
     }

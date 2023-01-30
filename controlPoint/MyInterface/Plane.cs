@@ -10,7 +10,7 @@ public Plane(string name,int number):base(name="Plane",number)
     {
     Console.WriteLine($"Plane {Number} улетел");
     }
-    void SitGround()
+    public void SitGround()
     {
     Console.WriteLine($"Plane {Number} прилетел");
     }

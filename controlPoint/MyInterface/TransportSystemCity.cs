@@ -3,6 +3,7 @@ namespace MyInterface;
 public class TransportSystemCity
 {
     public Transport[] Transport;
+    // public Transport[] Ts=new Transport[];
 
     public TransportSystemCity()
     {
@@ -22,7 +23,9 @@ public class TransportSystemCity
         }
         if (count >= 11) throw new OurException("нет места в массиве");
 
-        base.SitDown();
+        // base.SitGround();
+        SitGround();
+        
     }
 
     public void SetInBusStation(Bus bus)
@@ -57,7 +60,7 @@ public class TransportSystemCity
 
     public Plane GetFromAirPort(int number)
     {
-        for (int i; i < Transport.Length; i++)
+        for (int i=0; i < Transport.Length; i++)
         {
             if (Transport.Name == "Plane" && Transport.Number == number)
             {
@@ -73,7 +76,7 @@ public class TransportSystemCity
     }
     public Bus GetFromBusStation(int number)
     {
-        for (int i; i < Transport.Length; i++)
+        for (int i=0; i < Transport.Length; i++)
         {
             if (Transport.Name == "автобус" && Transport.Number == number)
             {
