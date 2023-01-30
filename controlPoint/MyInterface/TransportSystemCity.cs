@@ -2,32 +2,32 @@ namespace MyInterface;
 
 public class TransportSystemCity
 {
-    public Transport[] Transport;
-    // public Transport[] Ts=new Transport[];
+    private Transport[] Transports;
+    private int CountShip;
+    private int CountBus;
+    private int CountPlane;
 
     public TransportSystemCity()
     {
-        Transport = new Transport[33];
-
+        Transports = new Transport[33];
     }
 
     public void SetInAirport(Plane plane)
     {
-        int count = 0;
-        for (int i = 0; i < Transport.Length; i++)
+        if (CountPlane == 11) throw new Exception("нет места в массиве для самолёта");
+
+        for (int i = 0; i < Transports.Length; i++)
         {
-            if (Transport.Name == "Plane")
+            if (Transports[i] == null)
             {
-                count++;
+                plane.SitGround();
+                Transports[i] = plane;
+                CountPlane++;
+                
             }
         }
-        if (count >= 11) throw new Exception("нет места в массиве");
-
-        // base.SitGround();
-        Transport.SitGround();
-        
     }
-
+    /*
     public void SetInBusStation(Bus bus)
     {
         int count = 0;
@@ -60,7 +60,7 @@ public class TransportSystemCity
 
     public Plane GetFromAirPort(int number)
     {
-        for (int i=0; i < Transport.Length; i++)
+        for (int i = 0; i < Transport.Length; i++)
         {
             if (Transport.Name == "Plane" && Transport.Number == number)
             {
@@ -70,13 +70,13 @@ public class TransportSystemCity
             else
             {
                 throw new Exception("нет элемента в массиве");
-                
+
             }
         }
     }
     public Bus GetFromBusStation(int number)
     {
-        for (int i=0; i < Transport.Length; i++)
+        for (int i = 0; i < Transport.Length; i++)
         {
             if (Transport.Name == "автобус" && Transport.Number == number)
             {
@@ -86,7 +86,7 @@ public class TransportSystemCity
             else
             {
                 throw new Exception("нет элемента в массиве");
-              
+
             }
         }
     }
@@ -103,8 +103,9 @@ public class TransportSystemCity
             else
             {
                 throw new Exception("нет элемента в массиве");
-                return null;
+                
             }
         }
     }
+    */
 }
