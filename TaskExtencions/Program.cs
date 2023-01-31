@@ -6,9 +6,9 @@ namespace MyApp // Note: actual namespace depends on the project name.
     {
         static void Main(string[] args)
         {
-            string text = "tr2324e2ddf";
-            int result = text.ToInt();
-            Console.WriteLine(result);
+            //string text = "tr2324e2ddf";
+           // int result = text.ToInt();
+           // Console.WriteLine(result);
 
         }
     }
