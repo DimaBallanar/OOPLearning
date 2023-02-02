@@ -81,10 +81,12 @@ public class TransportSystemCity
         {
             var transport=Transports[i];
             if (transport == null) continue;
-            if (Transport.Name == "автобус" && Transport.Number == number)
+            if (transport is Bus bus && transport.Number == number)
             {
-                Transport[i] = default;
-                return base.DriveAway();
+                Transports[i] = default;
+                bus.DriveAway();
+                CountBus--;
+                return bus;
             }
             else
             {
