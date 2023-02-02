@@ -10,7 +10,7 @@ namespace MyApp // Note: actual namespace depends on the project name.
     {
         static void Main(string[] args)
         {
-            Money dollar = new Money() { Code = 177, Name = "Dollar", Symbol = "$" ,LastUpdate=DateTime.Now};
+            Money dollar = new Money() { Code = 177, Name = "Dollar", Symbol = "$", LastUpdate = DateTime.Now };
             Money belRub = new Money() { Code = 667, Name = "BelRuble", Symbol = "Br" };
 
             Console.WriteLine(dollar.ToString());
@@ -29,17 +29,23 @@ namespace MyApp // Note: actual namespace depends on the project name.
             {
                 PropertyNamingPolicy = JsonNamingPolicy.CamelCase
             };
-            string json = "{\"code\":177,\"Name\":\"dollar\",\"Symbol\":\"$\"}";
+            string json = "{\"Name\":\"dollar\",\"Symbol\":\"$\"}";
             try
             {
-                Money test = System.Text.Json.JsonSerializer.Deserialize<Money>(json,serializeoptions);
+                Money test = System.Text.Json.JsonSerializer.Deserialize<Money>(json, serializeoptions);
                 Console.WriteLine(test);
             }
             catch (Exception ex)
             {
                 Console.WriteLine(ex);
             }
-
+            List<Money> money = new List<Money>();
+            money.Add(dollar);
+            money.Add(belRub);
+            string testSerialize = JsonSerializer.Serialize(money);
+            Console.WriteLine(testSerialize);
+            var moneyTest = JsonSerializer.Deserialize<List<Money>>(testSerialize);
+            moneyTest.ForEach(x => Console.WriteLine(x));
 
 
         }

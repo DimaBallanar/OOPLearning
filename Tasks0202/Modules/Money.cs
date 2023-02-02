@@ -9,6 +9,7 @@ namespace Tasks0202.Modules
 {
     public class Money
     {
+        [JsonInclude]
         public int Code { get; set; }
         public string Name { get; set; }
         public string Symbol { get; set; }
