@@ -1,4 +1,5 @@
-﻿using TaskExtencions.Extencions;
+﻿using System.Xml.Linq;
+using TaskExtencions.Extencions;
 
 namespace MyApp // Note: actual namespace depends on the project name.
 {
@@ -7,8 +8,10 @@ namespace MyApp // Note: actual namespace depends on the project name.
         static void Main(string[] args)
         {
             //string text = "tr2324e2ddf";
-           // int result = text.ToInt();
-           // Console.WriteLine(result);
+            // int result = text.ToInt();
+            // Console.WriteLine(result);
+            string text = "С:/ text / text /";
+            Console.WriteLine(text.FileName());
 
         }
     }
