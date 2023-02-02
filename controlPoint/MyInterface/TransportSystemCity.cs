@@ -79,7 +79,7 @@ public class TransportSystemCity
     {
         for (int i = 0; i < Transports.Length; i++)
         {
-            var transport=Transports[i];
+            var transport = Transports[i];
             if (transport == null) continue;
             if (transport is Bus bus && transport.Number == number)
             {
@@ -88,29 +88,26 @@ public class TransportSystemCity
                 CountBus--;
                 return bus;
             }
-            else
-            {
-                throw new Exception("нет элемента в массиве");
-
-            }
         }
+        throw new Exception("нет элемента в массиве");
     }
+}
 
-    public Ship GetFromPort(int number)
+public Ship GetFromPort(int number)
+{
+    for (int i; i < Transport.Length; i++)
     {
-        for (int i; i < Transport.Length; i++)
+        if (Transport.Name == "корабль" && Transport.Number == number)
         {
-            if (Transport.Name == "корабль" && Transport.Number == number)
-            {
-                Transport[i] = default;
-                return base.SwimAway();
-            }
-            else
-            {
-                throw new Exception("нет элемента в массиве");
+            Transport[i] = default;
+            return base.SwimAway();
+        }
+        else
+        {
+            throw new Exception("нет элемента в массиве");
 
-            }
         }
     }
+}
     */
 }
