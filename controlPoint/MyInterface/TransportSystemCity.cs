@@ -77,8 +77,10 @@ public class TransportSystemCity
     }
     public Bus GetFromBusStation(int number)
     {
-        for (int i = 0; i < Transport.Length; i++)
+        for (int i = 0; i < Transports.Length; i++)
         {
+            var transport=Transports[i];
+            if (transport == null) continue;
             if (Transport.Name == "автобус" && Transport.Number == number)
             {
                 Transport[i] = default;
