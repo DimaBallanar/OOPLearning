@@ -91,23 +91,26 @@ public class TransportSystemCity
         }
         throw new Exception("нет элемента в массиве");
     }
-}
 
-public Ship GetFromPort(int number)
-{
-    for (int i; i < Transport.Length; i++)
+
+    public Ship GetFromPort(int number)
     {
-        if (Transport.Name == "корабль" && Transport.Number == number)
+        for (int i = 0; i < Transports.Length; i++)
         {
-            Transport[i] = default;
-            return base.SwimAway();
-        }
-        else
-        {
-            throw new Exception("нет элемента в массиве");
+            var transport = Transports[i];
+            if (transport == null) continue;
+            if (transport is Ship ship && transport.Number == number)
+            {
+                Transports[i] = default;
+                ship.SwimAway();
+                CountShip--;
+                return ship;
+            }          
+               
 
+            
         }
+         throw new Exception("нет элемента в массиве");
     }
-}
-    */
+    
 }
