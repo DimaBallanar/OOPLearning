@@ -9,12 +9,12 @@ namespace TaskExtencions.Extencions
 {
     public static class ListExt
     {
-        public static int ListExt(this List<int> num)
-            {
+        public static int ListExtencion(this List<int> num)
+        {
             int count = 0;
-            foreach (int i in num) 
-            { 
-                if(i%2==0)
+            foreach (int i in num)
+            {
+                if (i % 2 == 0)
                 {
                     count += i;
                 }
