@@ -61,7 +61,7 @@ public class Account
         string? pass = Console.ReadLine();
         System.Console.WriteLine("введите почту");
         string? email = Console.ReadLine();
-        user = SearchSimple(name, pass, email);                
+        user = SearchSimple(name, pass, email);
         if (user != null)
         {
             Users[user.Id - 1] = user;
@@ -78,15 +78,6 @@ public class Account
             System.Console.WriteLine("error input");
             return null;
         }
-        // for (int i = 0; i < Users.Length; i++)
-        // {
-        //     if (Users[i].Email == email)//isnull
-        //     {
-        //         System.Console.WriteLine("This email not available");
-        //         return null;
-        //     }
-        // }
-        // System.Console.WriteLine($"{name},{password},{email},{NextIdUser}");
         return new User(NextIdUser++, name, password, email);
 
     }
