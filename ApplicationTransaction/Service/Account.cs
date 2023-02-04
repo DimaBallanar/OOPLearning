@@ -41,7 +41,6 @@ public class Account
             {
                 continue;
             }
-            //  if (user?.Email == email && user?.Password == pass)
             if (user.Email == email && user.Password == pass)
             {
                 System.Console.WriteLine("Login Succesful");
