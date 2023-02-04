@@ -64,8 +64,7 @@ public class Account
         if (user != null)
         {
             Users[user.Id - 1] = user;
-        }
-        // System.Console.WriteLine(string.Join(",", Users[5]));
+        }        
         return user != null;
 
     }
