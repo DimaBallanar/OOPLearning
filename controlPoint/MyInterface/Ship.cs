@@ -12,7 +12,7 @@ public Ship(string name,int number):base(name="корабль",number)
     }
     public void SwimHere()
     {
-    Console.WriteLine($"корабль {Number} приплыл");
+    Console.WriteLine($"корабль {Name} {Number} приплыл");
     }
 
 	public override void Move()
