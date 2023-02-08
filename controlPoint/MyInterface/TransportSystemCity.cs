@@ -105,12 +105,12 @@ public class TransportSystemCity
                 ship.SwimAway();
                 CountShip--;
                 return ship;
-            }          
-               
+            }
 
-            
+
+
         }
-         throw new Exception("нет элемента в массиве");
+        throw new Exception("нет элемента в массиве");
     }
-    
+
 }
