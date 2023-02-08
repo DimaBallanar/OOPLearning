@@ -9,11 +9,11 @@ public class Bus : Transport, IDrive
     }
     public override void Move()
     {
-        Console.WriteLine($"автобус {Number} едет");
+        Console.WriteLine($"автобус {Name} {Number} едет");
     }
     public void DriveAway()
     {
-        Console.WriteLine($"автобус {Number} уехал");
+        Console.WriteLine($"автобус {Name} {Number} уехал");
     }
     public void DriveBack()
     {
