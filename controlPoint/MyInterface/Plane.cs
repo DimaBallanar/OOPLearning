@@ -8,7 +8,7 @@ public Plane(string name,int number):base(name="Plane",number)
 }
     public void FlyAway()
     {
-    Console.WriteLine($"Plane {Number} улетел");
+    Console.WriteLine($"Plane {Name} {Number} улетел");
     }
     public void SitGround()
     {
