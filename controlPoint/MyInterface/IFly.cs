@@ -2,6 +2,6 @@ namespace MyInterface;
 
 public interface IFly
 {
-	void FlyAway();
-	void SitGround();
+    void Vzlet();
+    void Posadka();
 }

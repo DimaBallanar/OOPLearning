@@ -2,21 +2,21 @@ namespace MyInterface;
 
 public class Plane : Transport, IFly
 {
-    public Plane(string name, int number) : base(name, number)
-    { }
-    public void FlyAway()
+    public Plane(string name, int number, int countseats) : base(name, number, countseats)
     {
-        Console.WriteLine($"Plane {Name} {Number} улетел");
-    }
-    public void SitGround()
-    {
-        Console.WriteLine($"Plane  {Name} {Number} прилетел");
+
     }
 
+    public void Vzlet()
+    {
+        Console.WriteLine($"{Name} {NumberOfTransport} улетел");
+    }
+    public void Posadka()
+    {
+        Console.WriteLine($"{Name} {NumberOfTransport} прилетел");
+    }
     public override void Move()
     {
-        Console.WriteLine($"Plane {Name} {Number} летит");
+        Console.WriteLine($"{Name} {NumberOfTransport} летит");
     }
-
-
 }

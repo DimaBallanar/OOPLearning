@@ -1,24 +1,22 @@
 namespace MyInterface;
 
-public class Bus : Transport, IDrive
+public class Bus : Transport, IBus
 {
+    public Bus(string name, int number, int countSeats) : base(name, number, countSeats)
+    {
 
-    public Bus(string name, int number) : base(name, number)
-    { }
+    }
+
+    public void Poehal()
+    {
+        Console.WriteLine($"{Name} {NumberOfTransport} уехал");
+    }
+    public void Priehal()
+    {
+        Console.WriteLine($"{Name} {NumberOfTransport} приехал");
+    }
     public override void Move()
     {
-        Console.WriteLine($"автобус {Name} {Number} едет");
+        Console.WriteLine($"{Name} {NumberOfTransport} едет");
     }
-    public void DriveAway()
-    {
-        Console.WriteLine($"автобус {Name} {Number} уехал");
-    }
-    public void DriveBack()
-    {
-        Console.WriteLine($"автобус {Name} {Number}приехал");
-    }
-
-
-
-
 }

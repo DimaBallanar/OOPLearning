@@ -1,7 +1,7 @@
 namespace MyInterface;
 
-public interface IDrive
+public interface IBus
 {
-    void DriveAway();
-    void DriveBack();
+    void Poehal();
+    void Priehal();
 }
