@@ -17,6 +17,6 @@ public Ship(string name,int number):base(name="корабль",number)
 
 	public override void Move()
 	{
-	Console.WriteLine($"корабль {Number} плывет");
+	Console.WriteLine($"корабль {Name} {Number} плывет");
 	}
 }
