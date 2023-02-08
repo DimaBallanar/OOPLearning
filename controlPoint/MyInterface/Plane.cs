@@ -17,7 +17,7 @@ public Plane(string name,int number):base(name="Plane",number)
 
 	public override void Move()
 	{
-	Console.WriteLine($"Plane {Number} летит");
+	Console.WriteLine($"Plane {Name} {Number} летит");
 	}
 
   
