@@ -17,7 +17,7 @@ public class Bus : Transport, IDrive
     }
     public void DriveBack()
     {
-        Console.WriteLine($"автобус {Number}приехал");
+        Console.WriteLine($"автобус {Name} {Number}приехал");
     }
 
 
