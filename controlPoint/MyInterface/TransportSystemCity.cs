@@ -146,13 +146,9 @@ public class TransportSystemCity
                 {
                     aprove = false;
                     result = $"У транспорного средства осталось {transport.CountSeats} свободных мест";
-                    
-                }
-
-                
-            }
-
-            continue;
+                    return (aprove, result);
+                }                
+            }        
 
         }
         if (check == 0) throw new Exception("нет самолета на базе");
