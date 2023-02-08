@@ -2,7 +2,7 @@ namespace MyInterface;
 
 public class Plane : Transport, IFly
 {
-    public Plane(string name, int number) : base(name = "Plane", number)
+    public Plane(string name, int number) : base(name, number)
     { }
     public void FlyAway()
     {

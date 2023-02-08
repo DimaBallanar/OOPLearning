@@ -3,7 +3,7 @@ namespace MyInterface;
 public class Bus : Transport, IDrive
 {
 
-    public Bus(string name, int number) : base(name = "автобус", number)
+    public Bus(string name, int number) : base(name, number)
     { }
     public override void Move()
     {

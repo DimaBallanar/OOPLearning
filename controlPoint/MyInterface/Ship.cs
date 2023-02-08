@@ -2,7 +2,7 @@ namespace MyInterface;
 
 public class Ship : Transport, ISwim
 {
-    public Ship(string name, int number) : base(name = "корабль", number)
+    public Ship(string name, int number) : base(name , number)
     { }
     public void SwimAway()
     {
