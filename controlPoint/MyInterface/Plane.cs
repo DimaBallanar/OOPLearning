@@ -12,7 +12,7 @@ public Plane(string name,int number):base(name="Plane",number)
     }
     public void SitGround()
     {
-    Console.WriteLine($"Plane {Number} прилетел");
+    Console.WriteLine($"Plane  {Name} {Number} прилетел");
     }
 
 	public override void Move()
