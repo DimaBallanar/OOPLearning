@@ -2,19 +2,21 @@ namespace MyInterface;
 
 public class Ship : Transport, ISwim
 {
-    public Ship(string name, int number) : base(name , number)
-    { }
-    public void SwimAway()
+    public Ship(string name, int number, int countSeats) : base(name, number, countSeats)
     {
-        Console.WriteLine($"корабль {Name} {Number} уплыл");
-    }
-    public void SwimHere()
-    {
-        Console.WriteLine($"корабль {Name} {Number} приплыл");
+
     }
 
+    public void Poplil()
+    {
+        Console.WriteLine($"{Name} {NumberOfTransport} уплыл");
+    }
+    public void Priplil()
+    {
+        Console.WriteLine($"{Name} {NumberOfTransport} приплыл");
+    }
     public override void Move()
     {
-        Console.WriteLine($"корабль {Name} {Number} плывет");
+        Console.WriteLine($"{Name} {NumberOfTransport} плывет");
     }
 }
