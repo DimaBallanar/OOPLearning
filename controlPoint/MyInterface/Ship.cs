@@ -8,7 +8,7 @@ public Ship(string name,int number):base(name="корабль",number)
 }
     public void SwimAway()
     {
-    Console.WriteLine($"корабль {Number} уплыл");
+    Console.WriteLine($"корабль {Name} {Number} уплыл");
     }
     public void SwimHere()
     {
