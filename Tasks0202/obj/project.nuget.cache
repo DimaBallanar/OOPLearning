@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "7F8h1xjPDzAEimmNlOtc+i9RXN0862njJk662cAqPv+LZsxm+A2MPxgvT4ICZgsV2MDgFmqgr24cm1w8spvy2Q==",
+  "success": true,
+  "projectFilePath": "D:\\ДЗ С#\\hschool\\hschool_beggining_csh\\OOPLearning\\Tasks0202\\Tasks0202.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\37525\\.nuget\\packages\\newtonsoft.json\\12.0.1\\newtonsoft.json.12.0.1.nupkg.sha512",
+    "C:\\Users\\37525\\.nuget\\packages\\newtonsoft.json.bson\\1.0.2\\newtonsoft.json.bson.1.0.2.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,15 @@
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\InterfacePractic\bin\Debug\net6.0\InterfacePractic.exe
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\InterfacePractic\bin\Debug\net6.0\InterfacePractic.deps.json
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\InterfacePractic\bin\Debug\net6.0\InterfacePractic.runtimeconfig.json
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\InterfacePractic\bin\Debug\net6.0\InterfacePractic.dll
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\InterfacePractic\bin\Debug\net6.0\InterfacePractic.pdb
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\InterfacePractic\obj\Debug\net6.0\InterfacePractic.csproj.AssemblyReference.cache
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\InterfacePractic\obj\Debug\net6.0\InterfacePractic.GeneratedMSBuildEditorConfig.editorconfig
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\InterfacePractic\obj\Debug\net6.0\InterfacePractic.AssemblyInfoInputs.cache
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\InterfacePractic\obj\Debug\net6.0\InterfacePractic.AssemblyInfo.cs
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\InterfacePractic\obj\Debug\net6.0\InterfacePractic.csproj.CoreCompileInputs.cache
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\InterfacePractic\obj\Debug\net6.0\InterfacePractic.dll
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\InterfacePractic\obj\Debug\net6.0\refint\InterfacePractic.dll
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\InterfacePractic\obj\Debug\net6.0\InterfacePractic.pdb
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\InterfacePractic\obj\Debug\net6.0\InterfacePractic.genruntimeconfig.cache
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\InterfacePractic\obj\Debug\net6.0\ref\InterfacePractic.dll

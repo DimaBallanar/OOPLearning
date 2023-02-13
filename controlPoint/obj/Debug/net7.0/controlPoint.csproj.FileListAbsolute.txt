@@ -1,0 +1,15 @@
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\controlPoint\bin\Debug\net7.0\controlPoint.exe
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\controlPoint\bin\Debug\net7.0\controlPoint.deps.json
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\controlPoint\bin\Debug\net7.0\controlPoint.runtimeconfig.json
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\controlPoint\bin\Debug\net7.0\controlPoint.dll
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\controlPoint\bin\Debug\net7.0\controlPoint.pdb
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\controlPoint\obj\Debug\net7.0\controlPoint.csproj.AssemblyReference.cache
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\controlPoint\obj\Debug\net7.0\controlPoint.GeneratedMSBuildEditorConfig.editorconfig
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\controlPoint\obj\Debug\net7.0\controlPoint.AssemblyInfoInputs.cache
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\controlPoint\obj\Debug\net7.0\controlPoint.AssemblyInfo.cs
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\controlPoint\obj\Debug\net7.0\controlPoint.csproj.CoreCompileInputs.cache
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\controlPoint\obj\Debug\net7.0\controlPoint.dll
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\controlPoint\obj\Debug\net7.0\refint\controlPoint.dll
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\controlPoint\obj\Debug\net7.0\controlPoint.pdb
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\controlPoint\obj\Debug\net7.0\controlPoint.genruntimeconfig.cache
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\controlPoint\obj\Debug\net7.0\ref\controlPoint.dll

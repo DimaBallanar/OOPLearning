@@ -1,0 +1,15 @@
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\SubstitutionSolid\bin\Debug\net6.0\SubstitutionSolid.exe
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\SubstitutionSolid\bin\Debug\net6.0\SubstitutionSolid.deps.json
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\SubstitutionSolid\bin\Debug\net6.0\SubstitutionSolid.runtimeconfig.json
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\SubstitutionSolid\bin\Debug\net6.0\SubstitutionSolid.dll
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\SubstitutionSolid\bin\Debug\net6.0\SubstitutionSolid.pdb
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\SubstitutionSolid\obj\Debug\net6.0\SubstitutionSolid.csproj.AssemblyReference.cache
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\SubstitutionSolid\obj\Debug\net6.0\SubstitutionSolid.GeneratedMSBuildEditorConfig.editorconfig
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\SubstitutionSolid\obj\Debug\net6.0\SubstitutionSolid.AssemblyInfoInputs.cache
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\SubstitutionSolid\obj\Debug\net6.0\SubstitutionSolid.AssemblyInfo.cs
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\SubstitutionSolid\obj\Debug\net6.0\SubstitutionSolid.csproj.CoreCompileInputs.cache
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\SubstitutionSolid\obj\Debug\net6.0\SubstitutionSolid.dll
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\SubstitutionSolid\obj\Debug\net6.0\refint\SubstitutionSolid.dll
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\SubstitutionSolid\obj\Debug\net6.0\SubstitutionSolid.pdb
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\SubstitutionSolid\obj\Debug\net6.0\SubstitutionSolid.genruntimeconfig.cache
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\SubstitutionSolid\obj\Debug\net6.0\ref\SubstitutionSolid.dll

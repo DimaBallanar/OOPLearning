@@ -1,0 +1,15 @@
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\Solid0501\obj\Debug\net6.0\Solid0501.csproj.AssemblyReference.cache
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\Solid0501\obj\Debug\net6.0\Solid0501.GeneratedMSBuildEditorConfig.editorconfig
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\Solid0501\obj\Debug\net6.0\Solid0501.AssemblyInfoInputs.cache
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\Solid0501\obj\Debug\net6.0\Solid0501.AssemblyInfo.cs
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\Solid0501\obj\Debug\net6.0\Solid0501.csproj.CoreCompileInputs.cache
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\Solid0501\bin\Debug\net6.0\Solid0501.exe
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\Solid0501\bin\Debug\net6.0\Solid0501.deps.json
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\Solid0501\bin\Debug\net6.0\Solid0501.runtimeconfig.json
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\Solid0501\bin\Debug\net6.0\Solid0501.dll
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\Solid0501\bin\Debug\net6.0\Solid0501.pdb
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\Solid0501\obj\Debug\net6.0\Solid0501.dll
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\Solid0501\obj\Debug\net6.0\refint\Solid0501.dll
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\Solid0501\obj\Debug\net6.0\Solid0501.pdb
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\Solid0501\obj\Debug\net6.0\Solid0501.genruntimeconfig.cache
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\Solid0501\obj\Debug\net6.0\ref\Solid0501.dll

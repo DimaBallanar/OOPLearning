@@ -1,0 +1,15 @@
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\HomeWorkAbstract\bin\Debug\net6.0\HomeWorkAbstract.exe
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\HomeWorkAbstract\bin\Debug\net6.0\HomeWorkAbstract.deps.json
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\HomeWorkAbstract\bin\Debug\net6.0\HomeWorkAbstract.runtimeconfig.json
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\HomeWorkAbstract\bin\Debug\net6.0\HomeWorkAbstract.dll
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\HomeWorkAbstract\bin\Debug\net6.0\HomeWorkAbstract.pdb
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\HomeWorkAbstract\obj\Debug\net6.0\HomeWorkAbstract.csproj.AssemblyReference.cache
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\HomeWorkAbstract\obj\Debug\net6.0\HomeWorkAbstract.GeneratedMSBuildEditorConfig.editorconfig
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\HomeWorkAbstract\obj\Debug\net6.0\HomeWorkAbstract.AssemblyInfoInputs.cache
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\HomeWorkAbstract\obj\Debug\net6.0\HomeWorkAbstract.AssemblyInfo.cs
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\HomeWorkAbstract\obj\Debug\net6.0\HomeWorkAbstract.csproj.CoreCompileInputs.cache
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\HomeWorkAbstract\obj\Debug\net6.0\HomeWorkAbstract.dll
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\HomeWorkAbstract\obj\Debug\net6.0\refint\HomeWorkAbstract.dll
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\HomeWorkAbstract\obj\Debug\net6.0\HomeWorkAbstract.pdb
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\HomeWorkAbstract\obj\Debug\net6.0\HomeWorkAbstract.genruntimeconfig.cache
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\HomeWorkAbstract\obj\Debug\net6.0\ref\HomeWorkAbstract.dll

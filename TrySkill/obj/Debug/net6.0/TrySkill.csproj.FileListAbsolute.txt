@@ -1,0 +1,15 @@
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\TrySkill\bin\Debug\net6.0\TrySkill.exe
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\TrySkill\bin\Debug\net6.0\TrySkill.deps.json
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\TrySkill\bin\Debug\net6.0\TrySkill.runtimeconfig.json
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\TrySkill\bin\Debug\net6.0\TrySkill.dll
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\TrySkill\bin\Debug\net6.0\TrySkill.pdb
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\TrySkill\obj\Debug\net6.0\TrySkill.csproj.AssemblyReference.cache
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\TrySkill\obj\Debug\net6.0\TrySkill.GeneratedMSBuildEditorConfig.editorconfig
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\TrySkill\obj\Debug\net6.0\TrySkill.AssemblyInfoInputs.cache
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\TrySkill\obj\Debug\net6.0\TrySkill.AssemblyInfo.cs
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\TrySkill\obj\Debug\net6.0\TrySkill.csproj.CoreCompileInputs.cache
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\TrySkill\obj\Debug\net6.0\TrySkill.dll
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\TrySkill\obj\Debug\net6.0\refint\TrySkill.dll
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\TrySkill\obj\Debug\net6.0\TrySkill.pdb
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\TrySkill\obj\Debug\net6.0\TrySkill.genruntimeconfig.cache
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\TrySkill\obj\Debug\net6.0\ref\TrySkill.dll

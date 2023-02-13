@@ -1,0 +1,15 @@
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\SolveTasks26122022\bin\Debug\net6.0\SolveTasks26122022.exe
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\SolveTasks26122022\bin\Debug\net6.0\SolveTasks26122022.deps.json
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\SolveTasks26122022\bin\Debug\net6.0\SolveTasks26122022.runtimeconfig.json
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\SolveTasks26122022\bin\Debug\net6.0\SolveTasks26122022.dll
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\SolveTasks26122022\bin\Debug\net6.0\SolveTasks26122022.pdb
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\SolveTasks26122022\obj\Debug\net6.0\SolveTasks26122022.csproj.AssemblyReference.cache
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\SolveTasks26122022\obj\Debug\net6.0\SolveTasks26122022.GeneratedMSBuildEditorConfig.editorconfig
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\SolveTasks26122022\obj\Debug\net6.0\SolveTasks26122022.AssemblyInfoInputs.cache
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\SolveTasks26122022\obj\Debug\net6.0\SolveTasks26122022.AssemblyInfo.cs
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\SolveTasks26122022\obj\Debug\net6.0\SolveTasks26122022.csproj.CoreCompileInputs.cache
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\SolveTasks26122022\obj\Debug\net6.0\SolveTasks26122022.dll
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\SolveTasks26122022\obj\Debug\net6.0\refint\SolveTasks26122022.dll
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\SolveTasks26122022\obj\Debug\net6.0\SolveTasks26122022.pdb
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\SolveTasks26122022\obj\Debug\net6.0\SolveTasks26122022.genruntimeconfig.cache
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\SolveTasks26122022\obj\Debug\net6.0\ref\SolveTasks26122022.dll

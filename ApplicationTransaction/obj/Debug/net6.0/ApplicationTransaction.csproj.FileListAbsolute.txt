@@ -1,0 +1,15 @@
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\ApplicationTransaction\bin\Debug\net6.0\ApplicationTransaction.exe
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\ApplicationTransaction\bin\Debug\net6.0\ApplicationTransaction.deps.json
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\ApplicationTransaction\bin\Debug\net6.0\ApplicationTransaction.runtimeconfig.json
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\ApplicationTransaction\bin\Debug\net6.0\ApplicationTransaction.dll
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\ApplicationTransaction\bin\Debug\net6.0\ApplicationTransaction.pdb
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\ApplicationTransaction\obj\Debug\net6.0\ApplicationTransaction.csproj.AssemblyReference.cache
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\ApplicationTransaction\obj\Debug\net6.0\ApplicationTransaction.GeneratedMSBuildEditorConfig.editorconfig
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\ApplicationTransaction\obj\Debug\net6.0\ApplicationTransaction.AssemblyInfoInputs.cache
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\ApplicationTransaction\obj\Debug\net6.0\ApplicationTransaction.AssemblyInfo.cs
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\ApplicationTransaction\obj\Debug\net6.0\ApplicationTransaction.csproj.CoreCompileInputs.cache
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\ApplicationTransaction\obj\Debug\net6.0\ApplicationTransaction.dll
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\ApplicationTransaction\obj\Debug\net6.0\refint\ApplicationTransaction.dll
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\ApplicationTransaction\obj\Debug\net6.0\ApplicationTransaction.pdb
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\ApplicationTransaction\obj\Debug\net6.0\ApplicationTransaction.genruntimeconfig.cache
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\ApplicationTransaction\obj\Debug\net6.0\ref\ApplicationTransaction.dll

@@ -1,0 +1,15 @@
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\Work12.12\bin\Debug\net6.0\Work1212.exe
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\Work12.12\bin\Debug\net6.0\Work1212.deps.json
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\Work12.12\bin\Debug\net6.0\Work1212.runtimeconfig.json
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\Work12.12\bin\Debug\net6.0\Work1212.dll
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\Work12.12\bin\Debug\net6.0\Work1212.pdb
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\Work12.12\obj\Debug\net6.0\Work1212.csproj.AssemblyReference.cache
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\Work12.12\obj\Debug\net6.0\Work1212.GeneratedMSBuildEditorConfig.editorconfig
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\Work12.12\obj\Debug\net6.0\Work1212.AssemblyInfoInputs.cache
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\Work12.12\obj\Debug\net6.0\Work1212.AssemblyInfo.cs
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\Work12.12\obj\Debug\net6.0\Work1212.csproj.CoreCompileInputs.cache
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\Work12.12\obj\Debug\net6.0\Work1212.dll
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\Work12.12\obj\Debug\net6.0\refint\Work1212.dll
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\Work12.12\obj\Debug\net6.0\Work1212.pdb
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\Work12.12\obj\Debug\net6.0\Work1212.genruntimeconfig.cache
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\Work12.12\obj\Debug\net6.0\ref\Work1212.dll

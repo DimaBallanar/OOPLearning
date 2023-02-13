@@ -1,0 +1,15 @@
+D:\ДЗ С#\hschool\hschool_beggining_csh\hschool_beggining_csh\Work12.12\bin\Debug\net6.0\Work12.12.exe
+D:\ДЗ С#\hschool\hschool_beggining_csh\hschool_beggining_csh\Work12.12\bin\Debug\net6.0\Work12.12.deps.json
+D:\ДЗ С#\hschool\hschool_beggining_csh\hschool_beggining_csh\Work12.12\bin\Debug\net6.0\Work12.12.runtimeconfig.json
+D:\ДЗ С#\hschool\hschool_beggining_csh\hschool_beggining_csh\Work12.12\bin\Debug\net6.0\Work12.12.dll
+D:\ДЗ С#\hschool\hschool_beggining_csh\hschool_beggining_csh\Work12.12\bin\Debug\net6.0\Work12.12.pdb
+D:\ДЗ С#\hschool\hschool_beggining_csh\hschool_beggining_csh\Work12.12\obj\Debug\net6.0\Work12.12.csproj.AssemblyReference.cache
+D:\ДЗ С#\hschool\hschool_beggining_csh\hschool_beggining_csh\Work12.12\obj\Debug\net6.0\Work12.12.GeneratedMSBuildEditorConfig.editorconfig
+D:\ДЗ С#\hschool\hschool_beggining_csh\hschool_beggining_csh\Work12.12\obj\Debug\net6.0\Work12.12.AssemblyInfoInputs.cache
+D:\ДЗ С#\hschool\hschool_beggining_csh\hschool_beggining_csh\Work12.12\obj\Debug\net6.0\Work12.12.AssemblyInfo.cs
+D:\ДЗ С#\hschool\hschool_beggining_csh\hschool_beggining_csh\Work12.12\obj\Debug\net6.0\Work12.12.csproj.CoreCompileInputs.cache
+D:\ДЗ С#\hschool\hschool_beggining_csh\hschool_beggining_csh\Work12.12\obj\Debug\net6.0\Work12.12.dll
+D:\ДЗ С#\hschool\hschool_beggining_csh\hschool_beggining_csh\Work12.12\obj\Debug\net6.0\refint\Work12.12.dll
+D:\ДЗ С#\hschool\hschool_beggining_csh\hschool_beggining_csh\Work12.12\obj\Debug\net6.0\Work12.12.pdb
+D:\ДЗ С#\hschool\hschool_beggining_csh\hschool_beggining_csh\Work12.12\obj\Debug\net6.0\Work12.12.genruntimeconfig.cache
+D:\ДЗ С#\hschool\hschool_beggining_csh\hschool_beggining_csh\Work12.12\obj\Debug\net6.0\ref\Work12.12.dll

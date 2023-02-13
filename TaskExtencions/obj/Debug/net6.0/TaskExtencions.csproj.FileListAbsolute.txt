@@ -1,0 +1,15 @@
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\TaskExtencions\bin\Debug\net6.0\TaskExtencions.exe
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\TaskExtencions\bin\Debug\net6.0\TaskExtencions.deps.json
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\TaskExtencions\bin\Debug\net6.0\TaskExtencions.runtimeconfig.json
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\TaskExtencions\bin\Debug\net6.0\TaskExtencions.dll
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\TaskExtencions\bin\Debug\net6.0\TaskExtencions.pdb
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\TaskExtencions\obj\Debug\net6.0\TaskExtencions.csproj.AssemblyReference.cache
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\TaskExtencions\obj\Debug\net6.0\TaskExtencions.GeneratedMSBuildEditorConfig.editorconfig
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\TaskExtencions\obj\Debug\net6.0\TaskExtencions.AssemblyInfoInputs.cache
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\TaskExtencions\obj\Debug\net6.0\TaskExtencions.AssemblyInfo.cs
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\TaskExtencions\obj\Debug\net6.0\TaskExtencions.csproj.CoreCompileInputs.cache
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\TaskExtencions\obj\Debug\net6.0\TaskExtencions.dll
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\TaskExtencions\obj\Debug\net6.0\refint\TaskExtencions.dll
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\TaskExtencions\obj\Debug\net6.0\TaskExtencions.pdb
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\TaskExtencions\obj\Debug\net6.0\TaskExtencions.genruntimeconfig.cache
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\TaskExtencions\obj\Debug\net6.0\ref\TaskExtencions.dll

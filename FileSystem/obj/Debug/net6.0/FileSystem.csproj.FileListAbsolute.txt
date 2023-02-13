@@ -1,0 +1,15 @@
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\FileSystem\bin\Debug\net6.0\FileSystem.exe
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\FileSystem\bin\Debug\net6.0\FileSystem.deps.json
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\FileSystem\bin\Debug\net6.0\FileSystem.runtimeconfig.json
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\FileSystem\bin\Debug\net6.0\FileSystem.dll
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\FileSystem\bin\Debug\net6.0\FileSystem.pdb
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\FileSystem\obj\Debug\net6.0\FileSystem.csproj.AssemblyReference.cache
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\FileSystem\obj\Debug\net6.0\FileSystem.GeneratedMSBuildEditorConfig.editorconfig
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\FileSystem\obj\Debug\net6.0\FileSystem.AssemblyInfoInputs.cache
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\FileSystem\obj\Debug\net6.0\FileSystem.AssemblyInfo.cs
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\FileSystem\obj\Debug\net6.0\FileSystem.csproj.CoreCompileInputs.cache
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\FileSystem\obj\Debug\net6.0\FileSystem.dll
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\FileSystem\obj\Debug\net6.0\refint\FileSystem.dll
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\FileSystem\obj\Debug\net6.0\FileSystem.pdb
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\FileSystem\obj\Debug\net6.0\FileSystem.genruntimeconfig.cache
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\FileSystem\obj\Debug\net6.0\ref\FileSystem.dll

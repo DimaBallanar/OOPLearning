@@ -1,0 +1,15 @@
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\work1412\bin\Debug\net6.0\work1412.exe
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\work1412\bin\Debug\net6.0\work1412.deps.json
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\work1412\bin\Debug\net6.0\work1412.runtimeconfig.json
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\work1412\bin\Debug\net6.0\work1412.dll
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\work1412\bin\Debug\net6.0\work1412.pdb
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\work1412\obj\Debug\net6.0\work1412.csproj.AssemblyReference.cache
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\work1412\obj\Debug\net6.0\work1412.GeneratedMSBuildEditorConfig.editorconfig
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\work1412\obj\Debug\net6.0\work1412.AssemblyInfoInputs.cache
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\work1412\obj\Debug\net6.0\work1412.AssemblyInfo.cs
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\work1412\obj\Debug\net6.0\work1412.csproj.CoreCompileInputs.cache
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\work1412\obj\Debug\net6.0\work1412.dll
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\work1412\obj\Debug\net6.0\refint\work1412.dll
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\work1412\obj\Debug\net6.0\work1412.pdb
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\work1412\obj\Debug\net6.0\work1412.genruntimeconfig.cache
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\work1412\obj\Debug\net6.0\ref\work1412.dll
