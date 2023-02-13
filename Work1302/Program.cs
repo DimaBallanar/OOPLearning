@@ -27,9 +27,9 @@ namespace MyApp // Note: actual namespace depends on the project name.
         //    public  int Multiplication(int number1, int number2, int number3) { return number1 * number2 * number3; }
         //}
 
-       public delegate void CalculateValues(double number);
+        //public delegate void CalculateValues(double number);
         //delegate void UserDecorator(ref User user);
-        public delegate bool Filter<T>(T propertyT);
+        //public delegate bool Filter<T>(T propertyT);
 
         private static void Main(string[] args)
         {
@@ -66,13 +66,14 @@ namespace MyApp // Note: actual namespace depends on the project name.
             //decorator(ref user);
             //Console.WriteLine(user);
 
+
         }
-        public static void Test(CalculateValues test)
-        {
-            Console.WriteLine("введите число");
-            double x=Convert.ToDouble(Console.ReadLine());
-            test(x);
-        }
+        //public static void Test(CalculateValues test)
+        //{
+        //    Console.WriteLine("введите число");
+        //    double x=Convert.ToDouble(Console.ReadLine());
+        //    test(x);
+        //}
         //public static void CreateUser(ref User user)
         //{
         //    user = new User();
