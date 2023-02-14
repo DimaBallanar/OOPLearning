@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Security.Cryptography.X509Certificates;
 using Work1302;
+using static Work1302.Extension;
 
 namespace MyApp // Note: actual namespace depends on the project name.
 {
@@ -67,47 +68,75 @@ namespace MyApp // Note: actual namespace depends on the project name.
             //Console.WriteLine(user);
 
 
+
+            //public static void Test(CalculateValues test)
+            //{
+            //    Console.WriteLine("введите число");
+            //    double x=Convert.ToDouble(Console.ReadLine());
+            //    test(x);
+            //}
+            //public static void CreateUser(ref User user)
+            //{
+            //    user = new User();
+            //}
+            //public static void AddId(ref User user)
+            //{
+            //    if (user == null) { CreateUser(ref user); }
+            //    user.Id = 4;
+            //}
+            //public static void AddName(ref User user)
+            //{
+            //    if (user == null) { CreateUser(ref user); }
+            //    user.Name = "Tom";
+            //}
+            //public static void AddAge(ref User user)
+            //{
+            //    if (user == null) { CreateUser(ref user); }
+            //    user.Age = 1;
+            //}
+
+            //public static void Mult2(double x)
+            //{
+            //    Console.WriteLine($"Mult2 {x * 2}");
+            //}
+            //public static void Mult3(double x)
+            //{
+            //    Console.WriteLine($"Mult3 {x * 3}");
+            //}
+            //public static void Sqr(double x)
+            //{
+            //    Console.WriteLine($"Sqr {x * x}");
+            //}
+
+
+            Filter<int> method = delegate (int value)
+                {
+                    return value % 2 == 0;
+
+                };
+            List<int> newlist = lsit.FilterList(method);
+            //Console.ReadKey();
+            List<User> list = new List<User>();
+            Random rnd = new Random();
+            for (int i = 0; i < 10; i++)
+            {
+                User user = new User();
+                user.Id = i + 1;
+                user.Name = $"{user.Id} + Name";
+                user.Age = rnd.Next(10, 25);
+                list.Add(user);
+            }
+            Filter<User> filt = (User user) => user.Id % 3 == 0;
+            List<User> newlist2 = list.FilterList(filt);
+            foreach (var item in newlist2)
+            {
+                Console.WriteLine(item);
+            }
+            Console.ReadKey();
+
+
+
+
         }
-        //public static void Test(CalculateValues test)
-        //{
-        //    Console.WriteLine("введите число");
-        //    double x=Convert.ToDouble(Console.ReadLine());
-        //    test(x);
-        //}
-        //public static void CreateUser(ref User user)
-        //{
-        //    user = new User();
-        //}
-        //public static void AddId(ref User user)
-        //{
-        //    if (user == null) { CreateUser(ref user); }
-        //    user.Id = 4;
-        //}
-        //public static void AddName(ref User user)
-        //{
-        //    if (user == null) { CreateUser(ref user); }
-        //    user.Name = "Tom";
-        //}
-        //public static void AddAge(ref User user)
-        //{
-        //    if (user == null) { CreateUser(ref user); }
-        //    user.Age = 1;
-        //}
-
-        //public static void Mult2(double x)
-        //{
-        //    Console.WriteLine($"Mult2 {x * 2}");
-        //}
-        //public static void Mult3(double x)
-        //{
-        //    Console.WriteLine($"Mult3 {x * 3}");
-        //}
-        //public static void Sqr(double x)
-        //{
-        //    Console.WriteLine($"Sqr {x * x}");
-        //}
-
-
-
     }
 }
