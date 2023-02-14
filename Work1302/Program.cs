@@ -107,7 +107,14 @@ namespace MyApp // Note: actual namespace depends on the project name.
             //{
             //    Console.WriteLine($"Sqr {x * x}");
             //}
-
+            //List<int> lsit = new List<int>();
+            //lsit.Add(1);
+            //lsit.Add(2);
+            //lsit.Add(3);
+            //lsit.Add(4);
+            //lsit.Add(5);
+            //lsit.Add(6);
+            //lsit.Add(7);
 
             Filter<int> method = delegate (int value)
                 {
