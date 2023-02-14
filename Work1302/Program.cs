@@ -115,11 +115,9 @@ namespace MyApp // Note: actual namespace depends on the project name.
             lsit.Add(5);
             lsit.Add(6);
             lsit.Add(7);
-
             Filter<int> method = delegate (int value)
                 {
                     return value % 2 == 0;
-
                 };
             List<int> newlist = lsit.FilterList(method);
             //Console.ReadKey();
