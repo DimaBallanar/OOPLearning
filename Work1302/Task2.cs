@@ -16,14 +16,16 @@ using System.Threading.Tasks;
 namespace Work1302
 {
     delegate double MethodCifr(double x);
-    public class Task2
+    public  class Task2
     {
-        public static void Methodica(double a,double b, double c)
+        public static MethodCifr Methodica(double a,double b, double c)
         {
-            MethodCifr cifr= x=>a*x*x+b*x+c;
+            MethodCifr cifr = (double x) => a* x*x + b * x + c ;
+            return cifr ;            
         }
-        public static void Main()
+        public  void Main(double a, double b, double c)
         {
+            Console.WriteLine( Methodica(a, b, c));
 
         }
 

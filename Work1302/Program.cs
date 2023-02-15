@@ -138,17 +138,19 @@ namespace MyApp // Note: actual namespace depends on the project name.
             //    Console.WriteLine(item);
             //}
             //Console.ReadKey();
-            Task1 part=new Task1();
-            part.Main();
-            part.Main();
-            part.Main();
-            part.Main();
-            part.Main();
-            part.Main();
-            part.Main();
-            part.Main();
-            part.Main();
-            part.Main();
+            //Task1 part=new Task1();
+            //part.Main();
+            //part.Main();
+            //part.Main();
+            //part.Main();
+            //part.Main();
+            //part.Main();
+            //part.Main();
+            //part.Main();
+            //part.Main();
+            //part.Main();
+            Task2 part2=new Task2();
+            part2.Methodica(2,3,4);
 
 
 
