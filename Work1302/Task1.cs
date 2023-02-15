@@ -10,17 +10,17 @@ namespace Work1302
     public class Task1
     {
         public static int Num = 0;
-        public void Main() { 
-        NextDay azaza = delegate ()
-            {
-                Console.WriteLine($"{Enum.GetName(typeof(WeekDay), Num++)}");
-                if (Num == 7)
+        public void Main()
+        {
+            NextDay azaza = delegate ()
                 {
-                    Num = 0;
-                }
-            };
-        azaza();
+                    Console.WriteLine($"{Enum.GetName(typeof(WeekDay), Num++)}");
+                    if (Num == 7)
+                    {
+                        Num = 0;
+                    }
+                };
+            azaza();
         }
-
     }
 }
