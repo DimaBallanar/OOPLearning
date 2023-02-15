@@ -6,16 +6,19 @@ using System.Threading.Tasks;
 
 namespace Work1302
 {
-    delegate string NextDay();
+    delegate void NextDay();
     public class Task1
-
     {
-
         public static int Num = 0;
-        NextDay output = delegate ()
+        NextDay azaza = delegate ()
             {
                 Console.WriteLine($"{Enum.GetName(typeof(WeekDay), Num++)}");
+                if (Num == 7)
+                {
+                    Num = 0;
+                }
             };
+        azaza();
 
     }
 }
