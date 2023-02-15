@@ -10,6 +10,7 @@ namespace Work1302
     public class Task1
     {
         public static int Num = 0;
+        public void Main() { 
         NextDay azaza = delegate ()
             {
                 Console.WriteLine($"{Enum.GetName(typeof(WeekDay), Num++)}");
@@ -19,6 +20,7 @@ namespace Work1302
                 }
             };
         azaza();
+        }
 
     }
 }

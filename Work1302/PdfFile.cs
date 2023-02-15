@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Work1302
 {
-    internal class PDFFile : ICustomFile
+    internal class PDFFile : IСustomFile
     {
         string path;
         public void Create(string name)

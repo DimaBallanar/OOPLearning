@@ -107,37 +107,39 @@ namespace MyApp // Note: actual namespace depends on the project name.
             //{
             //    Console.WriteLine($"Sqr {x * x}");
             //}
-            List<int> lsit = new List<int>();
-            lsit.Add(1);
-            lsit.Add(2);
-            lsit.Add(3);
-            lsit.Add(4);
-            lsit.Add(5);
-            lsit.Add(6);
-            lsit.Add(7);
-            Filter<int> method = delegate (int value)
-                {
-                    return value % 2 == 0;
-                };
-            List<int> newlist = lsit.FilterList(method);
+            //List<int> lsit = new List<int>();
+            //lsit.Add(1);
+            //lsit.Add(2);
+            //lsit.Add(3);
+            //lsit.Add(4);
+            //lsit.Add(5);
+            //lsit.Add(6);
+            //lsit.Add(7);
+            //Filter<int> method = delegate (int value)
+            //    {
+            //        return value % 2 == 0;
+            //    };
+            //List<int> newlist = lsit.FilterList(method);
+            ////Console.ReadKey();
+            //List<User> list = new List<User>();
+            //Random rnd = new Random();
+            //for (int i = 0; i < 10; i++)
+            //{
+            //    User user = new User();
+            //    user.Id = i + 1;
+            //    user.Name = $"{user.Id} + Name";
+            //    user.Age = rnd.Next(10, 25);
+            //    list.Add(user);
+            //}
+            //Filter<User> filt = (User user) => user.Id % 3 == 0;
+            //List<User> newlist2 = list.FilterList(filt);
+            //foreach (var item in newlist2)
+            //{
+            //    Console.WriteLine(item);
+            //}
             //Console.ReadKey();
-            List<User> list = new List<User>();
-            Random rnd = new Random();
-            for (int i = 0; i < 10; i++)
-            {
-                User user = new User();
-                user.Id = i + 1;
-                user.Name = $"{user.Id} + Name";
-                user.Age = rnd.Next(10, 25);
-                list.Add(user);
-            }
-            Filter<User> filt = (User user) => user.Id % 3 == 0;
-            List<User> newlist2 = list.FilterList(filt);
-            foreach (var item in newlist2)
-            {
-                Console.WriteLine(item);
-            }
-            Console.ReadKey();
+            Task1 part=new Task1();
+            part.Main();
 
 
 
