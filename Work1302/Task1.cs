@@ -7,9 +7,15 @@ using System.Threading.Tasks;
 namespace Work1302
 {
     delegate string NextDay();
-    public static class Task1
+    public class Task1
+
     {
 
+        public static int Num = 0;
+        NextDay output = delegate ()
+            {
+                Console.WriteLine($"{Enum.GetName(typeof(WeekDay), Num++)}");
+            };
 
     }
 }
