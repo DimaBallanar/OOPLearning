@@ -140,6 +140,15 @@ namespace MyApp // Note: actual namespace depends on the project name.
             //Console.ReadKey();
             Task1 part=new Task1();
             part.Main();
+            part.Main();
+            part.Main();
+            part.Main();
+            part.Main();
+            part.Main();
+            part.Main();
+            part.Main();
+            part.Main();
+            part.Main();
 
 
 
