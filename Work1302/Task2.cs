@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -14,10 +15,14 @@ using System.Threading.Tasks;
 
 namespace Work1302
 {
-    delegate double MethodCifr(double num);
+    delegate double MethodCifr(double x);
     public class Task2
     {
-        public static double Methodica(double a,double b, double c)
+        public static void Methodica(double a,double b, double c)
+        {
+            MethodCifr cifr= x=>a*x*x+b*x+c;
+        }
+        public static void Main()
         {
 
         }
