@@ -10,5 +10,6 @@ namespace Work1302
     public static class Task1
     {
 
+
     }
 }
