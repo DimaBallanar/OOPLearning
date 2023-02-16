@@ -138,7 +138,7 @@ namespace MyApp // Note: actual namespace depends on the project name.
             //    Console.WriteLine(item);
             //}
             //Console.ReadKey();
-            //Task1 part=new Task1();
+            //Task1 part = new Task1();
             //part.Main();
             //part.Main();
             //part.Main();
@@ -149,8 +149,14 @@ namespace MyApp // Note: actual namespace depends on the project name.
             //part.Main();
             //part.Main();
             //part.Main();
-            Task2 part2=new Task2();
-            part2.Methodica(2,3,4);
+            //part.Main();
+            //part.Main();
+            //part.Main();
+            //part.Main();
+            //Task2 part2 = new Task2();
+            //part2.Main(2, 3, 4);
+            
+            string text = "This will check over each node in the data and see if the rowIndex is 0, when it is, it uses the node object to set the selected attribute";
 
 
 

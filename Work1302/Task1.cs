@@ -16,16 +16,30 @@ namespace Work1302
     delegate void NextDay();
     public class Task1
     {
-        public static int Num = 0;
+        Dictionary<int, string> keyValuePairs = new Dictionary<int, string>()
+        {
+            [0] = "понедельник",
+            [1] = "вторник",
+            [2] = "среда",
+            [3] = "четверг",
+            [4] = "пятница",
+            [7] = "суббота",
+            [6] = "воскресенье"
+        };
+
+        public static int Num = -1;
         public void Main()
         {
+
             NextDay azaza = delegate ()
                 {
-                    Console.WriteLine($"{Enum.GetName(typeof(WeekDay), Num++)}");
-                    if (Num == 7)
+                    //Console.WriteLine($"{keyValuePairs.TryGetValue(++Num % 7, out string value)=>value}");
+                    if (keyValuePairs.TryGetValue(++Num % 7, out string value))
                     {
-                        Num = 0;
+                        Console.WriteLine(value);
                     }
+
+                    //Console.WriteLine($"{Enum.GetName(typeof(WeekDay), ++Num%7)}");                  
                 };
             azaza();
         }
