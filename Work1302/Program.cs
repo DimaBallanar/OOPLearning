@@ -156,28 +156,25 @@ namespace MyApp // Note: actual namespace depends on the project name.
             //part.Main();
             //Task2 part2 = new Task2();
             //part2.Main(2, 3, 4);
-            List<string> list = new List<string>();
+            List<(string, int)> list = new List<(string, int)>();
             string text = "This will check over each node in the data and see if the rowIndex is 0, when it is, it uses the node object to set the selected attribute";
             string[] array = text.Split(" ");
             string array2 = "aeyuoi";
-
             for (int i = 0; i < array.Length; i++)
             {
                 int count = 0;
-                foreach (char c in array[i])
+                foreach (char c in array[i].ToLower())
                 {
 
-                    if (array2.Contains(array[i]))
+                    if (array2.Contains(c))
                     {
                         count++;
                     }
                 }
-                list.Add()
+                list.Add((array[i], count));
             }
-
-
-
-
+            list.Sort((x, y) => x.Item2 - y.Item2);
+            foreach (var item in list) { Console.Write($"{item.Item1.ToString()} "); }
         }
     }
 }
