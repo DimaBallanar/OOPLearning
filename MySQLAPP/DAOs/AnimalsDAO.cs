@@ -13,10 +13,11 @@ namespace MySQLAPP.DAOs
 {
     public class AnimalsDAO
     {
-        private readonly string ConnectionString = "server=localhost;database=studies;uid=root;password=123qwe4r5t6YY;";      
+        private readonly string ConnectionString = "server=localhost;database=studies;uid=root;password=123qwe4r5t6YY;";
         private readonly string SQL_insertItem = "insert into animals(`name`, `type`) values {0};";
         private readonly string SQL_selectItems = "select id, name,type from animals;";
         private readonly string SQL_selectCode = "select*from animals where id={0};";
+        private readonly string SQL_SelectParametrs = "select*from animals where type={0} and id between {1} and {4} ;";
         public int Add(Animals animal)
         {
 
@@ -80,8 +81,7 @@ namespace MySQLAPP.DAOs
             if (connection == null) throw new Exception("connection error");
             try
             {
-                MySqlCommand command = new MySqlCommand(string.Format(SQL_selectCode,num), connection);
-                //List<Animals> animals = new List<Animals>();
+                MySqlCommand command = new MySqlCommand(string.Format(SQL_selectCode, num), connection);
                 MySqlDataReader reader = command.ExecuteReader();
                 while (reader.Read())
                 {
@@ -91,12 +91,11 @@ namespace MySQLAPP.DAOs
                         animal.ID = reader.GetInt32(0);
                         animal.Name = reader.GetString(1);
                         animal.Type = reader.GetString(2);
-                        //animals.Add(animal);
                         return animal;
                     }
                 }
                 return null;
-                
+
             }
             catch (MySqlException ex)
             {
@@ -111,7 +110,7 @@ namespace MySQLAPP.DAOs
         }
         public List<Animals> GetAll()
         {
-            
+
             MySqlConnection connection = Connection();
             if (connection == null) throw new Exception("connection error");
             try
