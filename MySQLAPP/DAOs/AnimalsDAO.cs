@@ -139,21 +139,21 @@ namespace MySQLAPP.DAOs
                 connection.Close();
             }
         }
-        public List<Animals> GetAnimals() 
+        public List<Animals> GetAnimals()
         {
-            
+
             MySqlConnection connection = Connection();
             if (connection == null) throw new Exception("connection error");
             try
             {
                 MySqlCommand command = new MySqlCommand(SQL_selectItems, connection);
                 List<Animals> animals = new List<Animals>();
-                MySqlDataReader reader= command.ExecuteReader(); 
-                while (reader.Read()) 
+                MySqlDataReader reader = command.ExecuteReader();
+                while (reader.Read())
                 {
                     Animals animal = new Animals();
                     animal.ID = reader.GetInt32(0);
-                    animal.Name= reader.GetString(1);
+                    animal.Name = reader.GetString(1);
                     animal.Type = reader.GetString(2);
                     animals.Add(animal);
                 }
@@ -170,6 +170,35 @@ namespace MySQLAPP.DAOs
             }
 
         }
+        public List<Animals> GetAll()
+        {
+            List<Animals> animals = new List<Animals>();
+            MySqlConnection connection = Connection();
+            if (connection == null) throw new Exception("connection error");
+            try
+            {
+                MySqlCommand command = new MySqlCommand(SQL_selectItems, connection);
+                MySqlDataReader reader = command.ExecuteReader();
+                while (reader.Read())
+                {
+                    Animals animal = new Animals();
+                    animal.ID = reader.GetInt32(0);
+                    animal.Name = reader.GetString(1);
+                    animal.Type = reader.GetString(2);
+                    animals.Add(animal);
+                }
+                return animals;
+            }
+            catch (MySqlException ex)
+            {
+                Console.WriteLine(ex);
+                throw ex;
+            }
+            finally
+            {
+                connection.Close();
+            }
+        }
         private MySqlConnection Connection()
         {
             try
@@ -184,7 +213,9 @@ namespace MySQLAPP.DAOs
             }
         }
     }
-
-
 }
+
+
+
+
 
