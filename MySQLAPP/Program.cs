@@ -22,11 +22,12 @@ namespace MySQLAPP // Note: actual namespace depends on the project name.
             //};
             //query.AddRange(list);
 
-            //Console.ReadKey();
+            //Console.ReadKey();            
             foreach (var item in query.GetAll())
             {
                 Console.WriteLine(item);
             }
+
         }
     }
 }
