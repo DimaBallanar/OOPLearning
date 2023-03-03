@@ -27,7 +27,12 @@ namespace MySQLAPP // Note: actual namespace depends on the project name.
             //{
             //    Console.WriteLine(item);
             //}
-            Console.WriteLine(query.GetAnimal(66));
+            //Console.WriteLine(query.GetAnimal(66));
+            string text = "млекопитающее";
+            foreach (var item in query.GetAnimal(text))
+            {
+                Console.WriteLine(item);
+            }
 
         }
     }
