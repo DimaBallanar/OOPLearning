@@ -1,6 +1,7 @@
 ﻿using MySql.Data.MySqlClient;
 using MySQLAPP.Models;
 using Mysqlx.Crud;
+using Org.BouncyCastle.Utilities.Collections;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,6 +16,7 @@ namespace MySQLAPP.DAOs
         private readonly string ConnectionString = "server=localhost;database=studies;uid=root;password=123qwe4r5t6YY;";      
         private readonly string SQL_insertItem = "insert into animals(`name`, `type`) values {0};";
         private readonly string SQL_selectItems = "select id, name,type from animals;";
+        private readonly string SQL_selectCode = "select*from animals where id={0};";
         public int Add(Animals animal)
         {
 
@@ -71,37 +73,42 @@ namespace MySQLAPP.DAOs
                 connection.Close();
             }
         }
-        //public List<Animals> GetAnimals()
-        //{
+        public Animals GetAnimal(int num)
+        {
 
-        //    MySqlConnection connection = Connection();
-        //    if (connection == null) throw new Exception("connection error");
-        //    try
-        //    {
-        //        MySqlCommand command = new MySqlCommand(SQL_selectItems, connection);
-        //        List<Animals> animals = new List<Animals>();
-        //        MySqlDataReader reader = command.ExecuteReader();
-        //        while (reader.Read())
-        //        {
-        //            Animals animal = new Animals();
-        //            animal.ID = reader.GetInt32(0);
-        //            animal.Name = reader.GetString(1);
-        //            animal.Type = reader.GetString(2);
-        //            animals.Add(animal);
-        //        }
-        //        return animals;
-        //    }
-        //    catch (MySqlException ex)
-        //    {
-        //        Console.WriteLine(ex);
-        //        throw ex;
-        //    }
-        //    finally
-        //    {
-        //        connection.Close();
-        //    }
+            MySqlConnection connection = Connection();
+            if (connection == null) throw new Exception("connection error");
+            try
+            {
+                MySqlCommand command = new MySqlCommand(string.Format(SQL_selectCode,num), connection);
+                //List<Animals> animals = new List<Animals>();
+                MySqlDataReader reader = command.ExecuteReader();
+                while (reader.Read())
+                {
+                    if (num == reader.GetInt32(0))
+                    {
+                        Animals animal = new Animals();
+                        animal.ID = reader.GetInt32(0);
+                        animal.Name = reader.GetString(1);
+                        animal.Type = reader.GetString(2);
+                        //animals.Add(animal);
+                        return animal;
+                    }
+                }
+                return null;
+                
+            }
+            catch (MySqlException ex)
+            {
+                Console.WriteLine(ex);
+                throw ex;
+            }
+            finally
+            {
+                connection.Close();
+            }
 
-        //}
+        }
         public List<Animals> GetAll()
         {
             

@@ -9,7 +9,7 @@ namespace MySQLAPP // Note: actual namespace depends on the project name.
     {
         static void Main(string[] args)
         {
-         AnimalsDAO query= new AnimalsDAO();
+            AnimalsDAO query = new AnimalsDAO();
             //Animals animal = new Animals() { Name = "орел", Type = "птица" };
             //Console.WriteLine(query.Add(animal));
             //List<Animals> list = new List<Animals>
@@ -23,10 +23,11 @@ namespace MySQLAPP // Note: actual namespace depends on the project name.
             //query.AddRange(list);
 
             //Console.ReadKey();            
-            foreach (var item in query.GetAll())
-            {
-                Console.WriteLine(item);
-            }
+            //foreach (var item in query.GetAll())
+            //{
+            //    Console.WriteLine(item);
+            //}
+            Console.WriteLine(query.GetAnimal(8));
 
         }
     }
