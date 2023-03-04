@@ -18,6 +18,8 @@ namespace MySQLAPP.DAOs
         private readonly string SQL_selectItems = "select id, name,type from animals;";
         private readonly string SQL_selectCode = "select*from animals where {0}={1};";
         private readonly string SQL_SelectParametrs = "select*from animals where type='{0}' and id between {1} and {2} ;";
+        private readonly string SQL_DeleteParametrs = "delete from animals where Id={0};";
+        private readonly string SQL_UpdateParametrs = "UPDATE Animals Set Id=@id, Name=@name, Type=@type";
         public int Add(Animals animal)
         {
 
@@ -82,7 +84,7 @@ namespace MySQLAPP.DAOs
             try
             {
                 List<Animals> animals = new List<Animals>();
-                MySqlCommand command = new MySqlCommand(string.Format(SQL_selectCode, "Id",num), connection);
+                MySqlCommand command = new MySqlCommand(string.Format(SQL_selectCode, "Id", num), connection);
                 MySqlDataReader reader = command.ExecuteReader();
                 while (reader.Read())
                 {
@@ -109,6 +111,57 @@ namespace MySQLAPP.DAOs
             }
 
         }
+        public void DeleteAnimal(int num)
+        {
+
+            MySqlConnection connection = Connection();
+            if (connection == null) throw new Exception("connection error");
+            try
+            {
+                MySqlCommand command = new MySqlCommand(string.Format(SQL_DeleteParametrs, "Id", num), connection);
+                command.Parameters.AddWithValue("@Id", num);
+                command.ExecuteNonQuery();
+
+            }
+            catch (MySqlException ex)
+            {
+                Console.WriteLine(ex);
+                throw ex;
+            }
+            finally
+            {
+                connection.Close();
+            }
+
+        }
+        public List<Animals> UpdateAnimal(string name, string type, int id)
+        {
+
+            MySqlConnection connection = Connection();
+            if (connection == null) throw new Exception("connection error");
+            try
+            {
+                List<Animals> animals = new List<Animals>();
+                MySqlCommand command = new MySqlCommand(SQL_UpdateParametrs, connection);
+                command.Parameters.AddWithValue("@Id", id);
+                command.Parameters.AddWithValue("@name", name);
+                command.Parameters.AddWithValue("@Type", type);
+                command.ExecuteNonQuery();
+
+                return animals;
+
+            }
+            catch (MySqlException ex)
+            {
+                Console.WriteLine(ex);
+                throw ex;
+            }
+            finally
+            {
+                connection.Close();
+            }
+
+        }
         public List<Animals> GetAnimal(string type)
         {
 
@@ -117,7 +170,7 @@ namespace MySQLAPP.DAOs
             try
             {
                 List<Animals> animals = new List<Animals>();
-                MySqlCommand command = new MySqlCommand(string.Format(SQL_selectCode,"Type",type), connection);
+                MySqlCommand command = new MySqlCommand(string.Format(SQL_selectCode, "Type", type), connection);
                 MySqlDataReader reader = command.ExecuteReader();
                 while (reader.Read())
                 {
@@ -144,7 +197,7 @@ namespace MySQLAPP.DAOs
             }
 
         }
-        public List<Animals> GetAnimal(string type,int numStart,int numEnd)
+        public List<Animals> GetAnimal(string type, int numStart, int numEnd)
         {
 
             MySqlConnection connection = Connection();
@@ -152,17 +205,17 @@ namespace MySQLAPP.DAOs
             try
             {
                 List<Animals> animals = new List<Animals>();
-                MySqlCommand command = new MySqlCommand(string.Format(SQL_SelectParametrs,type, numStart,numEnd), connection);
+                MySqlCommand command = new MySqlCommand(string.Format(SQL_SelectParametrs, type, numStart, numEnd), connection);
                 MySqlDataReader reader = command.ExecuteReader();
                 while (reader.Read())
                 {
-                    if (type==reader.GetString(2) && numStart >= reader.GetInt32(0)&& numEnd <= reader.GetInt32(0))
+                    if (type == reader.GetString(2) && numStart >= reader.GetInt32(0) && numEnd <= reader.GetInt32(0))
                     {
                         Animals animal = new Animals();
                         animal.ID = reader.GetInt32(0);
                         animal.Name = reader.GetString(1);
                         animal.Type = reader.GetString(2);
-                       animals.Add(animal);
+                        animals.Add(animal);
                     }
                 }
                 return animals;
