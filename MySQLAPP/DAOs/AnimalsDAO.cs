@@ -18,7 +18,7 @@ namespace MySQLAPP.DAOs
         private readonly string SQL_selectItems = "select id, name,type from animals;";
         private readonly string SQL_selectCode = "select*from animals where {0}={1};";
         private readonly string SQL_SelectParametrs = "select*from animals where type='{0}' and id between {1} and {2} ;";
-        private readonly string SQL_DeleteParametrs = "delete from animals where Id={0};";
+        private readonly string SQL_DeleteParametrs = "delete from animals where Id=@id;";
         private readonly string SQL_UpdateParametrs = "UPDATE Animals Set Id=@id, Name=@name, Type=@type";
         public int Add(Animals animal)
         {
@@ -118,8 +118,8 @@ namespace MySQLAPP.DAOs
             if (connection == null) throw new Exception("connection error");
             try
             {
-                MySqlCommand command = new MySqlCommand(string.Format(SQL_DeleteParametrs, "Id", num), connection);
-                command.Parameters.AddWithValue("@Id", num);
+                MySqlCommand command = new MySqlCommand(SQL_DeleteParametrs, connection);
+                command.Parameters.AddWithValue("@id", num);               
                 command.ExecuteNonQuery();
 
             }
