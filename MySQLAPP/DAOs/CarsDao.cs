@@ -29,7 +29,15 @@ namespace MySQLAPP.DAOs
                 command.Parameters.AddWithValue("@mileage1", car.Mileage);
                 command.ExecuteNonQuery();
                 return (int)command.LastInsertedId;
-
+            }
+            catch(MySqlException ex)
+            {
+                Console.WriteLine(ex);
+                throw ex;
+            }
+            finally
+            {
+                connection.Close();
             }
         }
 
