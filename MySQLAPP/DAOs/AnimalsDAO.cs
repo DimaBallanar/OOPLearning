@@ -92,7 +92,40 @@ namespace MySQLAPP.DAOs
                     {
                         animal.ID = reader.GetInt32(0);
                         animal.Name = reader.GetString(1);
-                        animal.Type = reader.GetString(2);                        /
+                        animal.Type = reader.GetString(2);                        
+                    }
+                }
+                return animal;
+
+            }
+            catch (MySqlException ex)
+            {
+                Console.WriteLine(ex);
+                throw ex;
+            }
+            finally
+            {
+                connection.Close();
+            }
+
+        }
+        public Animals GetAnimal(string type)
+        {
+
+            MySqlConnection connection = Connection();
+            if (connection == null) throw new Exception("connection error");
+            try
+            {
+                Animals animal = new Animals();
+                MySqlCommand command = new MySqlCommand(string.Format(SQL_selectCode, "Type", type), connection);
+                MySqlDataReader reader = command.ExecuteReader();
+                while (reader.Read())
+                {
+                    if (type == reader.GetString(2))
+                    {
+                        animal.ID = reader.GetInt32(0);
+                        animal.Name = reader.GetString(1);
+                        animal.Type = reader.GetString(2);
                     }
                 }
                 return animal;
@@ -160,41 +193,7 @@ namespace MySQLAPP.DAOs
             }
 
         }
-        public List<Animals> GetAnimal(string type)
-        {
-
-            MySqlConnection connection = Connection();
-            if (connection == null) throw new Exception("connection error");
-            try
-            {
-                List<Animals> animals = new List<Animals>();
-                MySqlCommand command = new MySqlCommand(string.Format(SQL_selectCode, "Type", type), connection);
-                MySqlDataReader reader = command.ExecuteReader();
-                while (reader.Read())
-                {
-                    if (type == reader.GetString(2))
-                    {
-                        Animals animal = new Animals();
-                        animal.ID = reader.GetInt32(0);
-                        animal.Name = reader.GetString(1);
-                        animal.Type = reader.GetString(2);
-                        animals.Add(animal);
-                    }
-                }
-                return animals;
-
-            }
-            catch (MySqlException ex)
-            {
-                Console.WriteLine(ex);
-                throw ex;
-            }
-            finally
-            {
-                connection.Close();
-            }
-
-        }
+       
         public List<Animals> GetAnimal(string type, int numStart, int numEnd)
         {
 
