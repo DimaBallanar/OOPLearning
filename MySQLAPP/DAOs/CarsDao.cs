@@ -11,7 +11,7 @@ namespace MySQLAPP.DAOs
     public class CarsDao
     {
         private readonly string ConnectionString = "server=localhost;database=studies;uid=root;password=123qwe4r5t6YY;";
-        private readonly string SQL_AddItem = "insert into Car ('name','color','datecreate','type','mileage') values {0};";
+        private readonly string SQL_AddItem = "insert into Car ('code','name','color','datecreate','type','mileage');";
         
         public int Add(Car car)
         {
@@ -20,7 +20,16 @@ namespace MySQLAPP.DAOs
             if(connection==null) throw new Exception("Connection Error");
             try
             {
-                MySqlCommand command=new MySqlCommand(string.Format(SQL_AddItem,"(@name1, @color1, @datacreate1, @type1, @mileage)"), connection);
+                MySqlCommand command=new MySqlCommand(string.Format(SQL_AddItem,"(@code1, @name1, @color1, @datacreate1, @type1, @mileage)"), connection);
+                command.Parameters.AddWithValue("@code1", command.LastInsertedId-1);
+                command.Parameters.AddWithValue("@name1", car.Name);
+                command.Parameters.AddWithValue("@color1", car.Color);
+                command.Parameters.AddWithValue("@datecreate1", car.TimeCreate);
+                command.Parameters.AddWithValue("@type1", car.Type);
+                command.Parameters.AddWithValue("@mileage1", car.Mileage);
+                command.ExecuteNonQuery();
+                return (int)command.LastInsertedId;
+
             }
         }
 
