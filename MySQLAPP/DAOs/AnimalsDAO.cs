@@ -76,28 +76,26 @@ namespace MySQLAPP.DAOs
                 connection.Close();
             }
         }
-        public List<Animals> GetAnimal(int num)
+        public Animals GetAnimal(int num)
         {
 
             MySqlConnection connection = Connection();
             if (connection == null) throw new Exception("connection error");
             try
             {
-                List<Animals> animals = new List<Animals>();
+                Animals animal = new Animals();
                 MySqlCommand command = new MySqlCommand(string.Format(SQL_selectCode, "Id", num), connection);
                 MySqlDataReader reader = command.ExecuteReader();
                 while (reader.Read())
                 {
                     if (num == reader.GetInt32(0))
                     {
-                        Animals animal = new Animals();
                         animal.ID = reader.GetInt32(0);
                         animal.Name = reader.GetString(1);
-                        animal.Type = reader.GetString(2);
-                        animals.Add(animal);
+                        animal.Type = reader.GetString(2);                        /
                     }
                 }
-                return animals;
+                return animal;
 
             }
             catch (MySqlException ex)
@@ -119,7 +117,7 @@ namespace MySQLAPP.DAOs
             try
             {
                 MySqlCommand command = new MySqlCommand(SQL_DeleteParametrs, connection);
-                command.Parameters.AddWithValue("@id", num);               
+                command.Parameters.AddWithValue("@id", num);
                 command.ExecuteNonQuery();
 
             }

@@ -33,7 +33,8 @@ namespace MySQLAPP // Note: actual namespace depends on the project name.
             //{
             //    Console.WriteLine(item);
             //}
-            query.DeleteAnimal(2);
+            //query.DeleteAnimal(2);
+           Console.WriteLine(query.GetAnimal(3));
 
         }
     }
