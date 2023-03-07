@@ -10,6 +10,7 @@ namespace MySQLAPP // Note: actual namespace depends on the project name.
         static void Main(string[] args)
         {
             //AnimalsDAO query = new AnimalsDAO();
+            //query.GetAll();
             //Animals animal = new Animals() { Name = "орел", Type = "птица" };
             //Console.WriteLine(query.Add(animal));
             //List<Animals> list = new List<Animals>
@@ -34,13 +35,13 @@ namespace MySQLAPP // Note: actual namespace depends on the project name.
             //    Console.WriteLine(item);
             //}
             //query.DeleteAnimal(2);
-           //Console.WriteLine(query.GetAnimal("птица"));
+            //Console.WriteLine(query.GetAnimal("птица"));
 
 
-           CarsDao query= new CarsDao();
-            Car car = new Car() { Code=4,Name = "VW", Color = "#112233", TimeCreate = "2008-10-23 10:37:22", Type = "bus", Mileage = 11 };
+            //CarsDao query= new CarsDao();
+            //Car car = new Car() { Code=4,Name = "VW", Color = "#112233", TimeCreate = "2008-10-23 10:37:22", Type = "bus", Mileage = 11 };
             //Car car = new Car() { Code = 4, Name = "VW", Color = "#112233", Type = "bus", Mileage = 11.00 };
-            Console.WriteLine(query.Add(car));
+            //Console.WriteLine(query.Add(car));
             //foreach (var item in query.GetCars())
             //{
             //    Console.WriteLine(item);

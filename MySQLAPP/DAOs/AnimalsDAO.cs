@@ -226,14 +226,15 @@ namespace MySQLAPP.DAOs
             }
 
         }
-        public List<Animals> GetAll()
-        {
+        //public List<Animals> GetAll()
+        public void GetAll()
 
+        {
             MySqlConnection connection = Connection();
             if (connection == null) throw new Exception("connection error");
             try
             {
-                List<Animals> animals = new List<Animals>();
+                //List<Animals> animals = new List<Animals>();
                 MySqlCommand command = new MySqlCommand(SQL_selectItems, connection);
                 MySqlDataReader reader = command.ExecuteReader();
                 while (reader.Read())
@@ -242,9 +243,10 @@ namespace MySQLAPP.DAOs
                     animal.ID = reader.GetInt32(0);
                     animal.Name = reader.GetString(1);
                     animal.Type = reader.GetString(2);
-                    animals.Add(animal);
+                    //animals.Add(animal);
+                    Console.WriteLine(animal);
                 }
-                return animals;
+                //return animals;
             }
             catch (MySqlException ex)
             {
