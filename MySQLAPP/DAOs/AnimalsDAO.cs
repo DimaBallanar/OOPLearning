@@ -165,21 +165,18 @@ namespace MySQLAPP.DAOs
             }
 
         }
-        public List<Animals> UpdateAnimal(string name, string type, int id)
+        public void UpdateAnimal(string name, string type, int id)
         {
 
             MySqlConnection connection = Connection();
             if (connection == null) throw new Exception("connection error");
             try
-            {
-                List<Animals> animals = new List<Animals>();
+            {               
                 MySqlCommand command = new MySqlCommand(SQL_UpdateParametrs, connection);
                 command.Parameters.AddWithValue("@Id", id);
                 command.Parameters.AddWithValue("@name", name);
                 command.Parameters.AddWithValue("@Type", type);
-                command.ExecuteNonQuery();
-
-                return animals;
+                command.ExecuteNonQuery();               
 
             }
             catch (MySqlException ex)

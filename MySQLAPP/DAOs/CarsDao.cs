@@ -1,4 +1,5 @@
-﻿using MySql.Data.MySqlClient;
+﻿using Google.Protobuf.WellKnownTypes;
+using MySql.Data.MySqlClient;
 using MySQLAPP.Models;
 using System;
 using System.Collections;
@@ -13,9 +14,9 @@ namespace MySQLAPP.DAOs
     {
         private readonly string ConnectionString = "server=localhost;database=studies;uid=root;password=123qwe4r5t6YY;";
         //private readonly string SQL_AddItem = "insert into Car ('code','name','color','datecreate','type','mileage') values {0};";
-        private readonly string SQL_AddItem = "insert into Car ('code','name','color','type','mileage') values (@code1, @name1, @color1, @type1, @mileage);";
+        private readonly string SQL_AddItem = "insert into Car (code,name,color,type,mileage) values (@code1, @name1, @color1, @type1, @mileage);";
         private readonly string SQL_selectItems = "select code,name,color,datecreate,type,mileage from car;";
-
+        private readonly string SQL_DeleteParametrs = "delete from car where Code=@code;";
         public int Add(Car car)
         {
             if (car == null) throw new ArgumentNullException(nameof(car));
@@ -28,7 +29,7 @@ namespace MySQLAPP.DAOs
                 command.Parameters.AddWithValue("@code1", car.Code);
                 command.Parameters.AddWithValue("@name1", car.Name);
                 command.Parameters.AddWithValue("@color1", car.Color);
-                command.Parameters.AddWithValue("@datecreate1", car.TimeCreate);
+                //command.Parameters.AddWithValue("@datecreate1", car.TimeCreate);
                 command.Parameters.AddWithValue("@type1", car.Type);
                 command.Parameters.AddWithValue("@mileage1", (double)car.Mileage);
                 command.ExecuteNonQuery();
@@ -79,13 +80,28 @@ namespace MySQLAPP.DAOs
             }
         }
 
-        public void Show(CarsDao cars)
+        public void Delete(int code)
         {
-            foreach (var item in cars.GetCars())
+            MySqlConnection connection = Connection();
+            if (connection == null) throw new Exception("connection error");
+            try
             {
-                Console.WriteLine(item);
+                MySqlCommand command = new MySqlCommand(SQL_DeleteParametrs, connection);
+                command.Parameters.AddWithValue("@id", code);
+                command.ExecuteNonQuery();
             }
+            catch (MySqlException ex)
+            {
+                Console.WriteLine(ex);
+                throw ex;
+            }
+            finally
+            {
+                connection.Close();
+            }
+
         }
+
 
 
 
