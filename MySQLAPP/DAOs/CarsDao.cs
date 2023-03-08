@@ -13,7 +13,7 @@ namespace MySQLAPP.DAOs
     public class CarsDao
     {
         private readonly string ConnectionString = "server=localhost;database=studies;uid=root;password=123qwe4r5t6YY;";
-        //private readonly string SQL_AddItem = "insert into Car ('code','name','color','datecreate','type','mileage') values {0};";
+        private readonly string SQL_AddItems = "insert into Car (name,color,datecreate,type,mileage) values {0};";
         private readonly string SQL_AddItem = "insert into Car (code,name,color,datecreate,type,mileage) values (@code1, @name1, @color1,@datecreate1, @type1, @mileage1);";
         private readonly string SQL_selectItems = "select code,name,color,datecreate,type,mileage from car;";
         private readonly string SQL_DeleteParametrs = "delete from car where Code=@code;";
@@ -21,7 +21,7 @@ namespace MySQLAPP.DAOs
         {
             if (car == null) throw new ArgumentNullException(nameof(car));
             MySqlConnection connection = Connection();
-            if(connection==null) throw new Exception("Connection Error");
+            if (connection == null) throw new Exception("Connection Error");
             try
             {
                 //MySqlCommand command=new MySqlCommand(string.Format(SQL_AddItem,"(@code1, @name1, @color1, @datacreate1, @type1, @mileage)"), connection);
@@ -35,7 +35,7 @@ namespace MySQLAPP.DAOs
                 command.ExecuteNonQuery();
                 return (int)command.LastInsertedId;
             }
-            catch(MySqlException ex)
+            catch (MySqlException ex)
             {
                 Console.WriteLine(ex);
                 throw ex;
@@ -56,20 +56,20 @@ namespace MySQLAPP.DAOs
                 string[] insert = new string[cars.Count];
                 for (int i = 0; i < cars.Count; i++)
                 {
-                    insert[i] = $"(@code1{i}, @name1{i}, @color1{i},@datecreate1{i}, @type1{i}, @mileage1{i})";
+                    insert[i] = $"(@name1{i}, @color1{i},@datecreate1{i}, @type1{i}, @mileage1{i})";
                 }
                 //MySqlCommand command=new MySqlCommand(string.Format(SQL_AddItem,"(@code1, @name1, @color1, @datacreate1, @type1, @mileage)"), connection);
-                MySqlCommand command = new MySqlCommand(SQL_AddItem, connection);
+                MySqlCommand command = new MySqlCommand(string.Format(SQL_AddItems, string.Join(",", insert)), connection);
                 for (int i = 0; i < cars.Count; i++)
                 {
                     var car = cars[i];
-                    command.Parameters.AddWithValue("@code1", car.Code);
-                    command.Parameters.AddWithValue("@name1", car.Name);
-                    command.Parameters.AddWithValue("@color1", car.Color);
-                    command.Parameters.AddWithValue("@datecreate1", car.TimeCreate);
-                    command.Parameters.AddWithValue("@type1", car.Type);
-                    command.Parameters.AddWithValue("@mileage1", car.Mileage);
-                }               
+                    //command.Parameters.AddWithValue("@code1", car.Code);
+                    command.Parameters.AddWithValue($"@name1{i}", car.Name);
+                    command.Parameters.AddWithValue($"@color1{i}", car.Color);
+                    command.Parameters.AddWithValue($"@datecreate1{i}", car.TimeCreate);
+                    command.Parameters.AddWithValue($"@type1{i}", car.Type);
+                    command.Parameters.AddWithValue($"@mileage1{i}", car.Mileage);
+                }
                 command.ExecuteNonQuery();
                 return (int)command.LastInsertedId;
             }
@@ -100,7 +100,7 @@ namespace MySQLAPP.DAOs
                     car.Code = reader.GetInt32(0);
                     car.Name = reader.GetString(1);
                     car.Color = reader.GetString(2);
-                    car.TimeCreate=reader.GetDateTime(3);
+                    car.TimeCreate = reader.GetDateTime(3);
                     car.Type = reader.GetString(4);
                     car.Mileage = reader.GetDouble(5);
                     cars.Add(car);
@@ -152,15 +152,16 @@ namespace MySQLAPP.DAOs
 
 
 
+
         private MySqlConnection Connection()
         {
             try
             {
-                MySqlConnection connection=new MySqlConnection(ConnectionString);
+                MySqlConnection connection = new MySqlConnection(ConnectionString);
                 connection.Open();
                 return connection;
             }
-            catch(MySqlException ex)
+            catch (MySqlException ex)
             {
                 return null;
             }
