@@ -46,6 +46,44 @@ namespace MySQLAPP.DAOs
             }
         }
 
+        public int AddFew(List<Car> cars)
+        {
+            if (cars == null) throw new ArgumentNullException(nameof(cars));
+            MySqlConnection connection = Connection();
+            if (connection == null) throw new Exception("Connection Error");
+            try
+            {
+                string[] insert = new string[cars.Count];
+                for (int i = 0; i < cars.Count; i++)
+                {
+                    insert[i] = $"(@code1{i}, @name1{i}, @color1{i},@datecreate1{i}, @type1{i}, @mileage1{i})";
+                }
+                //MySqlCommand command=new MySqlCommand(string.Format(SQL_AddItem,"(@code1, @name1, @color1, @datacreate1, @type1, @mileage)"), connection);
+                MySqlCommand command = new MySqlCommand(SQL_AddItem, connection);
+                for (int i = 0; i < cars.Count; i++)
+                {
+                    var car = cars[i];
+                    command.Parameters.AddWithValue("@code1", car.Code);
+                    command.Parameters.AddWithValue("@name1", car.Name);
+                    command.Parameters.AddWithValue("@color1", car.Color);
+                    command.Parameters.AddWithValue("@datecreate1", car.TimeCreate);
+                    command.Parameters.AddWithValue("@type1", car.Type);
+                    command.Parameters.AddWithValue("@mileage1", car.Mileage);
+                }               
+                command.ExecuteNonQuery();
+                return (int)command.LastInsertedId;
+            }
+            catch (MySqlException ex)
+            {
+                Console.WriteLine(ex);
+                throw ex;
+            }
+            finally
+            {
+                connection.Close();
+            }
+        }
+
         public List<Car> GetCars()
         {
 
