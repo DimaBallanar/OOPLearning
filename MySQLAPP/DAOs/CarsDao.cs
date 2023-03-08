@@ -5,8 +5,10 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.ConstrainedExecution;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 
 namespace MySQLAPP.DAOs
@@ -18,6 +20,7 @@ namespace MySQLAPP.DAOs
         private readonly string SQL_AddItem = "insert into Car (code,name,color,datecreate,type,mileage) values (@code1, @name1, @color1,@datecreate1, @type1, @mileage1);";
         private readonly string SQL_selectItems = "select code,name,color,datecreate,type,mileage from car;";
         private readonly string SQL_selectItem = "select code,name,color,datecreate,type,mileage from car where Code=@code;";
+        private readonly string SQL_UpdateParametrs = "UPDATE Car Set Name=@name, color=@color,datecreate=@datecreate,Type=@type,mileage=@mileage where Code={0}";
 
         private readonly string SQL_DeleteParametrs = "delete from car where Code=@code;";
         public int Add(Car car)
@@ -176,9 +179,36 @@ namespace MySQLAPP.DAOs
             {
                 connection.Close();
             }
-
         }
+        public void UpdateCar(int code)
+        {
+            MySqlConnection connection = Connection();
+            if (connection == null) throw new Exception("connection error");
+            try
+            {
+                MySqlCommand command = new MySqlCommand(string.Join(SQL_UpdateParametrs,code), connection);
+                Console.WriteLine("введите название марки машины");
+                command.Parameters.AddWithValue($"@name1",Convert.ToString(Console.ReadLine()));
+                Console.WriteLine("введите цвет машины");
+                command.Parameters.AddWithValue($"@color", Convert.ToString(Console.ReadLine()));                
+                command.Parameters.AddWithValue($"@datecreate", DateTime.Now);
+                Console.WriteLine("введите тип машины");
+                command.Parameters.AddWithValue($"@type", Convert.ToString(Console.ReadLine()));
+                Console.WriteLine("введите пробег машины");
+                command.Parameters.AddWithValue($"@mileage", Convert.ToDouble(Console.ReadLine()));
+                command.ExecuteNonQuery();
 
+            }
+            catch (MySqlException ex)
+            {
+                Console.WriteLine(ex);
+                throw ex;
+            }
+            finally
+            {
+                connection.Close();
+            }
+        }
 
 
 
