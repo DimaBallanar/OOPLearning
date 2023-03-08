@@ -38,10 +38,10 @@ namespace MySQLAPP // Note: actual namespace depends on the project name.
             //Console.WriteLine(query.GetAnimal("птица"));
 
 
-            //CarsDao query= new CarsDao();
-            //Car car = new Car() { Code=4,Name = "VW", Color = "#112233", TimeCreate = "2008-10-23 10:37:22", Type = "bus", Mileage = 11 };
+            CarsDao query= new CarsDao();
+            Car car = new Car() { Code=4, Name = "VW", Color = "#112233", TimeCreate = DateTime.Now, Type = "bus", Mileage = 11 };
             //Car car = new Car() { Code = 4, Name = "VW", Color = "#112233", Type = "bus", Mileage = 11.00 };
-            //Console.WriteLine(query.Add(car));
+            Console.WriteLine(query.Add(car));
             //foreach (var item in query.GetCars())
             //{
             //    Console.WriteLine(item);
