@@ -11,7 +11,7 @@ namespace MySQLAPP.Models
         public int Code { get; set; }
         public string Name { get; set; }
         public string Color { get; set; }
-        public string TimeCreate { get; set; }
+        public DateTime TimeCreate { get; set; }
         public string Type { get; set; }
         public double Mileage { get; set; }
 
