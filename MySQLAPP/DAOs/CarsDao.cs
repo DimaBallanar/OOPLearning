@@ -14,7 +14,7 @@ namespace MySQLAPP.DAOs
     {
         private readonly string ConnectionString = "server=localhost;database=studies;uid=root;password=123qwe4r5t6YY;";
         //private readonly string SQL_AddItem = "insert into Car ('code','name','color','datecreate','type','mileage') values {0};";
-        private readonly string SQL_AddItem = "insert into Car (code,name,color,type,mileage) values (@code1, @name1, @color1, @type1, @mileage);";
+        private readonly string SQL_AddItem = "insert into Car (code,name,color,datecreate,type,mileage) values (@code1, @name1, @color1,@datecreate1, @type1, @mileage1);";
         private readonly string SQL_selectItems = "select code,name,color,datecreate,type,mileage from car;";
         private readonly string SQL_DeleteParametrs = "delete from car where Code=@code;";
         public int Add(Car car)
@@ -29,9 +29,9 @@ namespace MySQLAPP.DAOs
                 command.Parameters.AddWithValue("@code1", car.Code);
                 command.Parameters.AddWithValue("@name1", car.Name);
                 command.Parameters.AddWithValue("@color1", car.Color);
-                //command.Parameters.AddWithValue("@datecreate1", car.TimeCreate);
+                command.Parameters.AddWithValue("@datecreate1", car.TimeCreate);
                 command.Parameters.AddWithValue("@type1", car.Type);
-                command.Parameters.AddWithValue("@mileage1", (double)car.Mileage);
+                command.Parameters.AddWithValue("@mileage1", car.Mileage);
                 command.ExecuteNonQuery();
                 return (int)command.LastInsertedId;
             }
@@ -62,7 +62,7 @@ namespace MySQLAPP.DAOs
                     car.Code = reader.GetInt32(0);
                     car.Name = reader.GetString(1);
                     car.Color = reader.GetString(2);
-                    car.TimeCreate=reader.GetString(3);
+                    car.TimeCreate=reader.GetDateTime(3);
                     car.Type = reader.GetString(4);
                     car.Mileage = reader.GetDouble(5);
                     cars.Add(car);
@@ -79,7 +79,6 @@ namespace MySQLAPP.DAOs
                 connection.Close();
             }
         }
-
         public void Delete(int code)
         {
             MySqlConnection connection = Connection();
