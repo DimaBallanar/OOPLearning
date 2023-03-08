@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace MySQLAPP.DAOs
 {
     public class CarsDao
@@ -16,6 +17,8 @@ namespace MySQLAPP.DAOs
         private readonly string SQL_AddItems = "insert into Car (name,color,datecreate,type,mileage) values {0};";
         private readonly string SQL_AddItem = "insert into Car (code,name,color,datecreate,type,mileage) values (@code1, @name1, @color1,@datecreate1, @type1, @mileage1);";
         private readonly string SQL_selectItems = "select code,name,color,datecreate,type,mileage from car;";
+        private readonly string SQL_selectItem = "select code,name,color,datecreate,type,mileage from car where Code=@code;";
+
         private readonly string SQL_DeleteParametrs = "delete from car where Code=@code;";
         public int Add(Car car)
         {
@@ -106,6 +109,43 @@ namespace MySQLAPP.DAOs
                     cars.Add(car);
                 }
                 return cars;
+            }
+            catch (MySqlException ex)
+            {
+                Console.WriteLine(ex);
+                throw ex;
+            }
+            finally
+            {
+                connection.Close();
+            }
+        }
+
+        public Car GetCar(int id)
+        {
+
+            MySqlConnection connection = Connection();
+            if (connection == null) throw new Exception("connection error");
+            try
+            {
+                Car car = new Car();
+                MySqlCommand command = new MySqlCommand(SQL_selectItem, connection);
+                command.Parameters.AddWithValue("@Code", id);
+                MySqlDataReader reader = command.ExecuteReader();
+                while (reader.Read())
+                {
+                    if (id == reader.GetInt32(0))
+                    {
+                       
+                        car.Code = reader.GetInt32(0);
+                        car.Name = reader.GetString(1);
+                        car.Color = reader.GetString(2);
+                        car.TimeCreate = reader.GetDateTime(3);
+                        car.Type = reader.GetString(4);
+                        car.Mileage = reader.GetDouble(5);
+                    } 
+                }
+                return car;
             }
             catch (MySqlException ex)
             {
