@@ -57,7 +57,7 @@ namespace MySQLAPP // Note: actual namespace depends on the project name.
 
 
 
-            UserDAO quer = new UserDAO();
+            //UserDAO quer = new UserDAO();
             //User user = new User() { Name="Антонио", Password="вфв312йй", Email="antonion@gmail.com",LastLogin= DateTime.Now,Money= 812.2 };
             //Console.WriteLine( quer.Add(user));
             //List<User> users = new List<User>
@@ -71,7 +71,10 @@ namespace MySQLAPP // Note: actual namespace depends on the project name.
             //{
             //    Console.WriteLine(item);
             //}
-            Console.WriteLine(quer.GetUser(3));
+            //Console.WriteLine(quer.GetUser(3));
+            //quer.Delete(2);
+
+
 
         }
     }
