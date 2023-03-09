@@ -66,7 +66,12 @@ namespace MySQLAPP // Note: actual namespace depends on the project name.
             //     new User(){ Name="Чили", Password="вфв312йй", Email="chili@gmail.com",LastLogin= DateTime.Now,Money= 812.2 },
             //      new User(){ Name="Паприка", Password="вфв312йй", Email="paprika@gmail.com",LastLogin= DateTime.Now,Money= 812.2 }
             //};
-            //quer.AddFew(users);
+            //quer.AddFew(users);            
+            //foreach (var item in quer.GetUsers())
+            //{
+            //    Console.WriteLine(item);
+            //}
+            Console.WriteLine(quer.GetUser(3));
 
         }
     }
