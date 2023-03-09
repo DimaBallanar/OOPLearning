@@ -45,28 +45,28 @@ namespace MySQLAPP.DAOs
             }
         }
 
-        public int AddFew(List<User> user)
+        public int AddFew(List<User> users)
         {
-            if (user == null) throw new ArgumentNullException(nameof(user));
+            if (users == null) throw new ArgumentNullException(nameof(users));
             MySqlConnection connection = Connection();
             if (connection == null) throw new Exception("Connection Error");
             try
             {
-                string[] insert = new string[user.Count];
-                for (int i = 0; i < user.Count; i++)
+                string[] insert = new string[users.Count];
+                for (int i = 0; i < users.Count; i++)
                 {
                     insert[i] = $"(@name{i}, @password{i},@email{i}, @lastlogin{i}, @money{i})";
                 }                
                 MySqlCommand command = new MySqlCommand(string.Format(SQL_AddItems, string.Join(",", insert)), connection);
-                for (int i = 0; i < user.Count; i++)
+                for (int i = 0; i < users.Count; i++)
                 {
-                    var car = user[i];
+                    var user = users[i];
                     //command.Parameters.AddWithValue("@code1", car.Code);
-                    command.Parameters.AddWithValue($"@name{i}", car.Name);
-                    command.Parameters.AddWithValue($"@password{i}", car.Password);
-                    command.Parameters.AddWithValue($"@email{i}", car.Email);
-                    command.Parameters.AddWithValue($"@lastlogin{i}", car.LastLogin);
-                    command.Parameters.AddWithValue($"@money{i}", car.Money);
+                    command.Parameters.AddWithValue($"@name{i}", user.Name);
+                    command.Parameters.AddWithValue($"@password{i}", user.Password);
+                    command.Parameters.AddWithValue($"@email{i}", user.Email);
+                    command.Parameters.AddWithValue($"@lastlogin{i}", user.LastLogin);
+                    command.Parameters.AddWithValue($"@money{i}", user.Money);
                 }
                 command.ExecuteNonQuery();
                 return (int)command.LastInsertedId;

@@ -2,6 +2,7 @@
 
 using MySQLAPP.DAOs;
 using MySQLAPP.Models;
+using System.Xml.Linq;
 
 namespace MySQLAPP // Note: actual namespace depends on the project name.
 {
@@ -75,6 +76,22 @@ namespace MySQLAPP // Note: actual namespace depends on the project name.
             //quer.Delete(2);
 
 
+            MarketDAO query = new MarketDAO();
+            //Market newItem = new Market() { Name = "Burger", Adress = "Жудро 14", Phone = "+375255218570", CountPlace = 5, TimeFrom = DateTime.Now, TimeTo = DateTime.Now.AddDays(7) };
+            //Console.WriteLine(query.Add(newItem));
+            //List<Market> markets = new List<Market>
+            //{
+            //    new Market() { Name = "McDonalds", Adress = "Жудро 14", Phone = "+375255287654", CountPlace = 5, TimeFrom = DateTime.Now, TimeTo = DateTime.Now.AddDays(7) },
+            //    new Market() { Name = "Oma", Adress = "Князева 14", Phone = "+375255244570", CountPlace = 3, TimeFrom = DateTime.Now, TimeTo = DateTime.Now.AddDays(7) },
+            //    new Market() { Name = "Evroopt", Adress = "Олешева 14", Phone = "+375265218570", CountPlace = 9, TimeFrom = DateTime.Now, TimeTo = DateTime.Now.AddDays(7) }
+            //};
+            //query.AddFew(markets);
+            //foreach (var item in query.GetMarkets())
+            //{
+            //    Console.WriteLine(item);
+            //}
+            //Console.WriteLine( query.GetMarket(3));
+            //query.Delete(2);
 
         }
     }
