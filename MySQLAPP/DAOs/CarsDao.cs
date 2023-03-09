@@ -210,19 +210,6 @@ namespace MySQLAPP.DAOs
             }
         }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
         private MySqlConnection Connection()
         {
             try

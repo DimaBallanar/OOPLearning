@@ -38,7 +38,7 @@ namespace MySQLAPP // Note: actual namespace depends on the project name.
             //Console.WriteLine(query.GetAnimal("птица"));
 
 
-            CarsDao query= new CarsDao();
+            //CarsDao query= new CarsDao();
             //List<Car> cars = new List<Car>
             //{
             //    new Car() {  Name = "Zaporogec", Color = "#112233", TimeCreate = DateTime.Now, Type = "bus", Mileage = 11 },
@@ -53,8 +53,20 @@ namespace MySQLAPP // Note: actual namespace depends on the project name.
             //{
             //    Console.WriteLine(item);
             //}
-            Console.WriteLine(query.GetCar(2));
-            
+            //Console.WriteLine(query.GetCar(2));
+
+
+
+            UserDAO quer = new UserDAO();
+            //User user = new User() { Name="Антонио", Password="вфв312йй", Email="antonion@gmail.com",LastLogin= DateTime.Now,Money= 812.2 };
+            //Console.WriteLine( quer.Add(user));
+            //List<User> users = new List<User>
+            //{
+            //    new User(){ Name="Марк", Password="вфв312йй", Email="Mark@gmail.com",LastLogin= DateTime.Now,Money= 812.2 },
+            //     new User(){ Name="Чили", Password="вфв312йй", Email="chili@gmail.com",LastLogin= DateTime.Now,Money= 812.2 },
+            //      new User(){ Name="Паприка", Password="вфв312йй", Email="paprika@gmail.com",LastLogin= DateTime.Now,Money= 812.2 }
+            //};
+            //quer.AddFew(users);
 
         }
     }
