@@ -167,7 +167,7 @@ namespace MySQLAPP.DAOs
             try
             {
                 MySqlCommand command = new MySqlCommand(SQL_DeleteParametrs, connection);
-                command.Parameters.AddWithValue("@id", code);
+                command.Parameters.AddWithValue("@code", code);
                 command.ExecuteNonQuery();
             }
             catch (MySqlException ex)
@@ -180,6 +180,7 @@ namespace MySQLAPP.DAOs
                 connection.Close();
             }
         }
+
         public void UpdateCar(int code)
         {
             MySqlConnection connection = Connection();
