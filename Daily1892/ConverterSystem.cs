@@ -10,13 +10,35 @@ namespace Daily1892
     {
         public static string ConvertBinary(this int value)
         {
-            List<object> result = new List<object>();            
+           
             object[] array = { 0, 1 };
-            int binary = array.Length;
+
+            return Converter(value, array);
+        }
+
+        public static string ConvertOctal(this int value)
+        {
+           
+            object[] array = { 0, 1, 2, 3, 4, 5, 6, 7 };
+
+            return Converter(value, array);
+        }
+        public static string ConvertDec(this int value)
+        {
+            
+            object[] array = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, "A", "B", "C", "D", "E", "F" };
+           
+            return Converter(value,array);
+        }
+
+        private static string Converter( long value,object[] array)
+        {
+            List<object> result = new List<object>();           
+            int baseSys = array.Length;
             while (value > 0)
             {
-                result.Add(array[value % binary]);
-                value /= binary;
+                result.Add(array[value % baseSys]);
+                value /= baseSys;
             }
             result.Reverse();
             return string.Join("", result);
