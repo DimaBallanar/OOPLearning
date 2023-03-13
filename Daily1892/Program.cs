@@ -60,11 +60,19 @@ namespace MyApp // Note: actual namespace depends on the project name.
             //var groupBy = users.GroupBy(user => user.Name).ToDictionary(x=>x.Key,x=>x.ToList());
             //Console.ReadKey();
 
-            Matrix part = new Matrix(3, 4);
-            part.Zapolnenie();
-            Console.WriteLine();
-            part.Reverse();
-           
+            //Matrix part = new Matrix(3, 4);
+            //part.Zapolnenie();
+            //Console.WriteLine();
+            //part.Reverse();
+
+            int num = 24;
+            
+            Console.WriteLine(num.ConvertBinary());
+            Console.WriteLine(num.ConvertOctal());
+            Console.WriteLine(num.ConvertDec());
+
+
+
 
         }
     }
