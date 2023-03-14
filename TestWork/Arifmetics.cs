@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace TestWork
 {
-    public static class Arifmetics
+    public  class Arifmetics
     {
-        public static double Sum(string x, string y)
+        public double Sum(string x, string y)
         {
             if (double.TryParse(x, out double resultX) && double.TryParse(y, out double resultY))
             {
