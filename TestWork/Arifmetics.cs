@@ -37,8 +37,21 @@ namespace TestWork
         {
             double.TryParse(x, out double resultX);
             double.TryParse(y, out double resultY);
-            return (resultX + resultY)/2;
+            return (resultX + resultY) / 2;
         }
 
+        //        4. Напишите программу, которая запрашивает у пользователя длину и ширину
+        //прямоугольника, а затем выводит его площадь.
+
+        public double Square()
+        {
+            Console.Write("Введите длину прямоугольника: ");
+            double.TryParse(Console.ReadLine(), out double resultX);
+            Console.Write("Введите ширину прямоугольника: ");
+            double.TryParse(Console.ReadLine(), out double resultY);
+            Console.Write("Площадь прямоугольника равна ");
+            return resultX * resultY;
+
+        }
     }
 }
