@@ -117,7 +117,7 @@ namespace TestWork
         //        9. Напишите программу, которая запрашивает у пользователя два числа и находит
         //их наибольший общий делитель
 
-        public int NOD() 
+        public int NOD()
         {
             Console.Write("введите число а: ");
             int.TryParse(Console.ReadLine(), out int a);
@@ -132,5 +132,33 @@ namespace TestWork
             return a;
         }
 
+        //        10. Напишите программу, которая генерирует случайное число от 1 до 100 и
+        //предлагает пользователю угадать это число, давая подсказки(больше/меньше),
+        //если введенное число не совпадает с загаданным.
+
+        public void FindNumber()
+        {
+            Random rnd = new Random();
+            int x = rnd.Next(0, 100);
+            Console.WriteLine(x);
+            while(true)
+            {
+                Console.Write("введите загаданное число: ");
+                int number = Convert.ToInt32(Console.ReadLine());
+                if (number == x)
+                {
+                    Console.WriteLine("вы угадали!");
+                    break;
+                }
+                else if (number > x)
+                {
+                    Console.WriteLine("загаданное число меньше");
+                }
+                else
+                {
+                    Console.WriteLine("загаданное число больше");
+                }
+            }
+        }
     }
 }

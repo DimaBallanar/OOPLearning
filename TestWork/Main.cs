@@ -17,7 +17,8 @@ using TestWork;
         //Console.WriteLine(prop.Max());
         //Console.WriteLine(prop.NumGlas());
         //Console.WriteLine(prop.Age());
-        Console.WriteLine(prop.NOD());
+        //Console.WriteLine(prop.NOD());
+        prop.FindNumber();
 
 
 
