@@ -114,7 +114,23 @@ namespace TestWork
             return DateTime.Now.Year - x;
         }
 
+        //        9. Напишите программу, которая запрашивает у пользователя два числа и находит
+        //их наибольший общий делитель
 
+        public int NOD() 
+        {
+            Console.Write("введите число а: ");
+            int.TryParse(Console.ReadLine(), out int a);
+            Console.Write("введите число b: ");
+            int.TryParse(Console.ReadLine(), out int b);
+            while (b != 0)
+            {
+                var t = b;
+                b = a % b;
+                a = t;
+            }
+            return a;
+        }
 
     }
 }

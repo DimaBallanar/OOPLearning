@@ -16,7 +16,9 @@ using TestWork;
         //Console.WriteLine(prop.Palindrom());
         //Console.WriteLine(prop.Max());
         //Console.WriteLine(prop.NumGlas());
-        Console.WriteLine(prop.Age());
+        //Console.WriteLine(prop.Age());
+        Console.WriteLine(prop.NOD());
+
 
 
 
