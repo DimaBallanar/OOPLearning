@@ -92,18 +92,28 @@ namespace TestWork
         public int NumGlas()
         {
             Console.Write("ВВедите текст: ");
-            string text=Console.ReadLine();
+            string text = Console.ReadLine();
             string glasnie = "аиеёоуыэюяАИЕЁОУЫЭЮЯ";
             int num = 0;
-            foreach(char c in text)
+            foreach (char c in text)
             {
-                if(glasnie.Contains(c))
+                if (glasnie.Contains(c))
                 {
                     num++;
                 }
             }
             return num;
         }
+
+        //        8. Напишите программу, которая запрашивает у пользователя год рождения и
+        //выводит его возраст на текущую дату.
+        public int Age()
+        {
+            Console.Write("Введите год своего рождения: ");
+            int.TryParse(Console.ReadLine(), out int x);
+            return DateTime.Now.Year - x;
+        }
+
 
 
     }
