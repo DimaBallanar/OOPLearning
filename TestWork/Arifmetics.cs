@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,11 +24,21 @@ namespace TestWork
         public bool Chetnoe(string x)
         {
             double.TryParse(x, out double resultX);
-            if(resultX%2==0)
+            if (resultX % 2 == 0)
             {
                 return true;
             }
             return false;
         }
+        //        Напишите программу, которая находит среднее арифметическое двух чисел,
+        //введенных пользователем.
+
+        public double SrAr(string x, string y)
+        {
+            double.TryParse(x, out double resultX);
+            double.TryParse(y, out double resultY);
+            return (resultX + resultY)/2;
+        }
+
     }
 }
