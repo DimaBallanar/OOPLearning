@@ -69,5 +69,24 @@ namespace TestWork
             return $"{text} - не палиндром";
         }
 
+        //        Напишите программу, которая запрашивает у пользователя три числа и выводит
+        //на экран наименьшее из них.
+
+        public string Max()
+        {
+            Console.Write("введите число а: ");
+            double.TryParse(Console.ReadLine(), out double a);
+            Console.Write("введите число b: ");
+            double.TryParse(Console.ReadLine(), out double b);
+            Console.Write("введите число c: ");
+            double.TryParse(Console.ReadLine(), out double c);
+            if(Math.Max(a,b)>c)
+            {
+                return $"{Math.Max(a, b)}";
+            }
+            return $"{c}";
+
+        }
+
     }
 }
