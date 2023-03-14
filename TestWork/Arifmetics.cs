@@ -51,7 +51,23 @@ namespace TestWork
             double.TryParse(Console.ReadLine(), out double resultY);
             Console.Write("Площадь прямоугольника равна ");
             return resultX * resultY;
-
         }
+
+        //        Напишите программу, которая проверяет, является ли введенная строка
+        //палиндромом(слово или фраза, которые читаются одинаково слева направо и
+        //справа налево).
+
+        public string Palindrom()
+        {
+            Console.Write("введите текст: ");
+            string text = Console.ReadLine();
+            //string[] temp = text.ToCharArray();
+            if (text.ToLower() == string.Join("",text.Split("").Reverse()).ToLower())
+            {
+                return $"{text} - палиндром";
+            }
+            return $"{text} - не палиндром";
+        }
+
     }
 }
