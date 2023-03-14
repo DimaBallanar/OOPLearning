@@ -62,7 +62,7 @@ namespace TestWork
             Console.Write("введите текст: ");
             string text = Console.ReadLine();
             //string[] temp = text.ToCharArray();
-            if (text.ToLower() == string.Join("",text.Split("").Reverse()).ToLower())
+            if (text.ToLower() == string.Join("", text.Split("").Reverse()).ToLower())
             {
                 return $"{text} - палиндром";
             }
@@ -80,13 +80,31 @@ namespace TestWork
             double.TryParse(Console.ReadLine(), out double b);
             Console.Write("введите число c: ");
             double.TryParse(Console.ReadLine(), out double c);
-            if(Math.Max(a,b)>c)
+            if (Math.Max(a, b) > c)
             {
                 return $"{Math.Max(a, b)}";
             }
             return $"{c}";
-
         }
+
+        //        7. Напишите программу, которая запрашивает у пользователя строку и выводит на
+        //экран количество гласных букв в этой строке.
+        public int NumGlas()
+        {
+            Console.Write("ВВедите текст: ");
+            string text=Console.ReadLine();
+            string glasnie = "аиеёоуыэюяАИЕЁОУЫЭЮЯ";
+            int num = 0;
+            foreach(char c in text)
+            {
+                if(glasnie.Contains(c))
+                {
+                    num++;
+                }
+            }
+            return num;
+        }
+
 
     }
 }

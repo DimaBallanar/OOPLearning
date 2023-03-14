@@ -14,9 +14,11 @@ using TestWork;
         Arifmetics prop= new Arifmetics();
         //Console.WriteLine(prop.Sum("22", "22"));
         //Console.WriteLine(prop.Palindrom());
-        Console.WriteLine(prop.Max());
+        //Console.WriteLine(prop.Max());
+        Console.WriteLine(prop.NumGlas());
 
 
 
-        }
+
     }
+}
