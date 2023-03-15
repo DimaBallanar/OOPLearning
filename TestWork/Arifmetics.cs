@@ -263,10 +263,32 @@ namespace TestWork
 
         //        19. Напишите программу, которая определяет, является ли заданная строка
         //палиндромом.
+        public string PalindromString()
+        {
+            Console.Write("введите текст: ");
+            string text = Console.ReadLine();
+            string[] result = text.Split(" ", StringSplitOptions.RemoveEmptyEntries);
+            string check = "";
+            for (int i = result.Length - 1; i >= 0; i--)
+            {
+                check += result[i] + " ";
+            }
+            if(text.Trim()==check.Trim())
+            {
+                return "палиндром";
+            }
+            return "не палиндром";
 
+        }
 
         //        20.Напишите программу, которая удаляет все пробелы из заданной строки.
-
+        public string DeleteProbel()
+        {
+            Console.Write("введите текст: ");
+            string text = Console.ReadLine();
+            string[] result = text.Split(" ", StringSplitOptions.RemoveEmptyEntries);
+            return string.Join(' ', result);
+        }
 
         //21. Напишите программу, которая заменяет все пробелы в заданной строке
         //символом подчеркивания.
