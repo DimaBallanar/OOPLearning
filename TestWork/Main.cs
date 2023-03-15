@@ -22,7 +22,7 @@ using TestWork;
         //Console.WriteLine(prop.FindProst());
         //int[] array = { 1, 2, 3, 4, 5, 3, 4, 5, 8, 8 };
         //Console.WriteLine(prop.Posled(array));
-
+        Console.WriteLine(prop.ReverseString());
 
 
 
