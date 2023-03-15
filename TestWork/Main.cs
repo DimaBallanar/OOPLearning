@@ -19,7 +19,9 @@ using TestWork;
         //Console.WriteLine(prop.Age());
         //Console.WriteLine(prop.NOD());
         //prop.FindNumber();
-        Console.WriteLine(prop.FindProst());
+        //Console.WriteLine(prop.FindProst());
+        //int[] array = { 1, 2, 3, 4, 5, 3, 4, 5, 8, 8 };
+        //Console.WriteLine(prop.Posled(array));
 
 
 

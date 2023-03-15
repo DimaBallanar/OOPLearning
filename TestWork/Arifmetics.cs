@@ -169,22 +169,77 @@ namespace TestWork
             Console.Write("ВВедите число от 2 до бесконечности: ");
             int.TryParse(Console.ReadLine(), out int number);
             string result = "";
-            for(int i=2;i<=number;i++)
+            for (int i = 2; i <= number; i++)
             {
                 int counter = 0;
-                for(int j=2;j<i;j++)
+                for (int j = 2; j < i; j++)
                 {
-                    if(i%j==0)
+                    if (i % j == 0)
                     {
                         counter++;
                     }
                 }
-                if(counter<1)
+                if (counter < 1)
                 {
                     result += i + ",";
                 }
             }
             return result;
         }
+
+        //        12. Напишите программу, которая находит наибольшую возрастающую
+        //последовательность в массиве целых чисел.
+
+        public string Posled(int[] massiv)  // доделать
+        {
+            string result = "";
+            string temp = "";
+            for (int i = 1; i < massiv.Length; i++)
+            {
+                if (massiv[i] > massiv[i - 1])
+                {
+                    temp += massiv[i - 1] + ",";
+                }
+                else if (massiv[i] <= massiv[--i])
+                {
+                    result += temp + " ";
+                    temp = "";
+                }
+            }
+            string[] charge = result.Split(" ");
+            string finish = "";
+            for (int i = 0; i < charge.Length - 1; i++)
+            {
+                if (charge.Length == 1)
+                {
+                    finish = charge[i];
+                    continue;
+                }
+                else if (charge[i].Length > charge[i + 1].Length)
+                {
+                    finish = charge[i];
+                }
+
+            }
+
+            return finish;
+        }
+
+        //        13. Напишите программу, которая реализует алгоритм сортировки слиянием для
+        //массива целых чисел.
+
+
+
+//        14. Напишите программу, которая находит наименьшее количество монет,
+//необходимых для выдачи сдачи пользователю при покупке товара.У вас есть
+//монеты номиналом 1, 5, 10, 25 и 50 центов.
+
+//        15. Напишите программу, которая реализует алгоритм поиска в ширину для графа,
+//представленного в виде списка смежности.
+
+
+//        16. Напишите программу, которая реализует алгоритм быстрой сортировки для
+//массива целых чисел.
+
     }
 }
