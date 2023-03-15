@@ -141,7 +141,7 @@ namespace TestWork
             Random rnd = new Random();
             int x = rnd.Next(0, 100);
             Console.WriteLine(x);
-            while(true)
+            while (true)
             {
                 Console.Write("введите загаданное число: ");
                 int number = Convert.ToInt32(Console.ReadLine());
@@ -159,6 +159,32 @@ namespace TestWork
                     Console.WriteLine("загаданное число больше");
                 }
             }
+        }
+
+        //        11. Напишите программу, которая находит все простые числа от 2 до N, где N - число,
+        //введенное пользователем.
+
+        public string FindProst()
+        {
+            Console.Write("ВВедите число от 2 до бесконечности: ");
+            int.TryParse(Console.ReadLine(), out int number);
+            string result = "";
+            for(int i=2;i<=number;i++)
+            {
+                int counter = 0;
+                for(int j=2;j<i;j++)
+                {
+                    if(i%j==0)
+                    {
+                        counter++;
+                    }
+                }
+                if(counter<1)
+                {
+                    result += i + ",";
+                }
+            }
+            return result;
         }
     }
 }

@@ -18,8 +18,8 @@ using TestWork;
         //Console.WriteLine(prop.NumGlas());
         //Console.WriteLine(prop.Age());
         //Console.WriteLine(prop.NOD());
-        prop.FindNumber();
-
+        //prop.FindNumber();
+        Console.WriteLine(prop.FindProst());
 
 
 
