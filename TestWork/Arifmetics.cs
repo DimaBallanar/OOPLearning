@@ -388,7 +388,7 @@ namespace TestWork
         {
             Console.Write("введите текст: ");
             string text = Console.ReadLine();
-            Dictionary<char, int> values = new Dictionary<char, int>();         
+            Dictionary<char, int> values = new Dictionary<char, int>();
             char x;
             for (int i = 0; i < text.Length; i++)
             {
@@ -552,8 +552,8 @@ namespace TestWork
             foreach (var t in temp)
             {
                 if (t.Count() > count)
-                { count = t.Count(); }            
-                
+                { count = t.Count(); }
+
             }
             foreach (var t in temp)
             {
@@ -562,10 +562,10 @@ namespace TestWork
                     Console.WriteLine($"{t.Key}");
                 }
             }
-            
+
         }
 
-        //35. Напишите программу, которая объединяет два списка в один.                                           не то сделал
+        //35. Напишите программу, которая объединяет два списка в один.                                          
         public void MergeNum()
         {
             Console.Write("введите количество элементов первого массива: ");
@@ -585,7 +585,7 @@ namespace TestWork
                 lists2.Add(Console.ReadLine());
             }
             lists1.AddRange(lists2);
-            foreach(string t in lists1)
+            foreach (string t in lists1)
             {
                 Console.WriteLine(t);
             }
@@ -616,51 +616,246 @@ namespace TestWork
         //37. Напишите программу, которая находит все элементы, удовлетворяющие
         //заданному условию в списке.
 
-        //public string SearchElem()
-        //{
+        public void SearchElem()
 
-        //}
+        {
+            Console.Write("введите количество элементов: ");
+            int.TryParse(Console.ReadLine(), out int num);
+            List<string> lists = new List<string>();
+            for (int i = 0; i < num; i++)
+            {
+                Console.Write($"задайте {i} значение: ");
+                lists.Add(Console.ReadLine());
+            }
+
+        }
 
 
         //38.Напишите запрос, который находит все строки в заданном массиве строк,
         //содержащие заданную подстроку. (linq)
-
+        public void SearchElem1()
+        {
+            Console.Write("введите количество элементов: ");
+            int.TryParse(Console.ReadLine(), out int num);
+            List<string> lists = new List<string>();
+            for (int i = 0; i < num; i++)
+            {
+                Console.Write($"задайте {i} значение: ");
+                lists.Add(Console.ReadLine());
+            }
+            Console.WriteLine("введите подстроку:");
+            string kusok = Console.ReadLine();
+            foreach (string list in lists)
+            {
+                if (list.Contains(kusok))
+                {
+                    Console.WriteLine(list);
+                }
+            }
+        }
 
         //39. Напишите запрос, который находит все числа в заданном массиве чисел,
         //большие заданного значения. (linq)
-
+        public void SearchElemNum()
+        {
+            Console.Write("введите количество элементов: ");
+            int.TryParse(Console.ReadLine(), out int num);
+            List<int> lists = new List<int>();
+            for (int i = 0; i < num; i++)
+            {
+                Console.Write($"задайте {i} значение: ");
+                int.TryParse(Console.ReadLine(), out int x);
+                lists.Add(x);
+            }
+            Console.WriteLine("введите подстроку:");
+            int kusok = Convert.ToInt32(Console.ReadLine());
+            foreach (int list in lists)
+            {
+                if (list > kusok)
+                {
+                    Console.WriteLine(list);
+                }
+            }
+        }
 
         //40.Напишите запрос, который находит все строки в заданном массиве строк, длина
         //которых больше заданного значения. (linq)
-
+        public void SearchElem2()
+        {
+            Console.Write("введите количество элементов: ");
+            int.TryParse(Console.ReadLine(), out int num);
+            List<string> lists = new List<string>();
+            for (int i = 0; i < num; i++)
+            {
+                Console.Write($"задайте {i} значение: ");
+                lists.Add(Console.ReadLine());
+            }
+            Console.WriteLine("введите длину строки:");
+            int kusokLength = Convert.ToInt32(Console.ReadLine());
+            List<string> newList = lists.FindAll(p => p.Length >= kusokLength);
+            foreach (string list in newList)
+            {
+                Console.WriteLine(list);
+            }
+        }
 
         //41. Напишите запрос, который находит сумму всех чисел в заданном массиве чисел.
         //(linq)
-
+        public int SumDiapazone()
+        {
+            Console.Write("введите количество элементов: ");
+            int.TryParse(Console.ReadLine(), out int num);
+            List<int> lists = new List<int>();
+            for (int i = 0; i < num; i++)
+            {
+                Console.Write($"задайте {i} значение: ");
+                int.TryParse(Console.ReadLine(), out int x);
+                lists.Add(x);
+            }
+            Console.WriteLine("введите начальный индекс:");
+            int start = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("введите конечный индекс:");
+            int end = Convert.ToInt32(Console.ReadLine());
+            var range = lists.GetRange(start, end);
+            return range.Sum();
+        }
 
         //42.Напишите запрос, который находит среднее арифметическое всех чисел в
         //заданном массиве чисел. (linq)
-
+        public int ArifmeticRange()
+        {
+            Console.Write("введите количество элементов: ");
+            int.TryParse(Console.ReadLine(), out int num);
+            List<int> lists = new List<int>();
+            for (int i = 0; i < num; i++)
+            {
+                Console.Write($"задайте {i} значение: ");
+                int.TryParse(Console.ReadLine(), out int x);
+                lists.Add(x);
+            }
+            Console.WriteLine("введите начальный индекс:");
+            int start = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("введите конечный индекс:");
+            int end = Convert.ToInt32(Console.ReadLine());
+            var range = lists.GetRange(start, end);
+            return range.Sum() / range.Count;
+        }
 
         //43.Напишите запрос, который находит максимальный элемент в заданном массиве
         //чисел. (linq)
-
+        public int MaxListEle()
+        {
+            Console.Write("введите количество элементов: ");
+            int.TryParse(Console.ReadLine(), out int num);
+            List<int> lists = new List<int>();
+            for (int i = 0; i < num; i++)
+            {
+                Console.Write($"задайте {i} значение: ");
+                int.TryParse(Console.ReadLine(), out int x);
+                lists.Add(x);
+            }
+            return lists.Max();
+        }
 
         //44.Напишите запрос, который находит все элементы в заданном массиве чисел,
         //удовлетворяющие заданному условию. (linq)
-
+        public void FindRangeIndex()
+        {
+            Console.Write("введите количество элементов: ");
+            int.TryParse(Console.ReadLine(), out int num);
+            List<int> lists = new List<int>();
+            for (int i = 0; i < num; i++)
+            {
+                Console.Write($"задайте {i} значение: ");
+                int.TryParse(Console.ReadLine(), out int x);
+                lists.Add(x);
+            }
+            Console.WriteLine("введите начальный индекс:");
+            int start = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("введите конечный индекс:");
+            int end = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("введите значение:");
+            int check = Convert.ToInt32(Console.ReadLine());
+            //Console.WriteLine("введите знак:");
+            //string znak = Console.ReadLine();
+            var range = lists.FindAll(p => p > check);
+            foreach (var a in range)
+            {
+                Console.WriteLine(a);
+            }
+        }
 
         //45.Напишите запрос, который находит первый элемент в заданном массиве чисел,
         //удовлетворяющий заданному условию. (linq)
-
+        public void FindFirstNum()
+        {
+            Console.Write("введите количество элементов: ");
+            int.TryParse(Console.ReadLine(), out int num);
+            List<int> lists = new List<int>();
+            for (int i = 0; i < num; i++)
+            {
+                Console.Write($"задайте {i} значение: ");
+                int.TryParse(Console.ReadLine(), out int x);
+                lists.Add(x);
+            }
+            Console.WriteLine("введите значение:");
+            int check = Convert.ToInt32(Console.ReadLine());
+            //Console.WriteLine("введите знак:");
+            string znak = Console.ReadLine();
+            if (znak == ">")
+            {
+                var range = lists.Find(p => p > check);
+                Console.WriteLine(range);
+            }
+            else if (znak == "<")
+            {
+                var range = lists.Find(p => p < check);
+                Console.WriteLine(range);
+            }
+        }
 
         //46.Напишите запрос, который находит количество элементов в заданном массиве
         //строк, начинающихся с заданной буквы. (linq)
+        public void FindEleString()
 
-
+        {
+            Console.Write("введите количество элементов: ");
+            int.TryParse(Console.ReadLine(), out int num);
+            List<string> lists = new List<string>();
+            for (int i = 0; i < num; i++)
+            {
+                Console.Write($"задайте {i} значение: ");
+                lists.Add(Console.ReadLine());
+            }
+            Console.WriteLine("введите букву:");
+            char liter = Convert.ToChar(Console.ReadLine());
+            List<string> newList = lists.FindAll(p => p.Trim().StartsWith(liter));
+            Console.WriteLine($"количество элементов = {newList.Count}");
+        }
         //47.Напишите запрос, который находит наиболее часто встречающийся элемент в
         //заданном массиве. (linq)
-
+        public void FindEveryItem()
+        {
+            Console.Write("введите количество элементов: ");
+            int.TryParse(Console.ReadLine(), out int num);
+            List<string> lists = new List<string>();
+            for (int i = 0; i < num; i++)
+            {
+                Console.Write($"задайте {i} значение: ");
+                lists.Add(Console.ReadLine());
+            }
+            string elem = "";
+            int count = 0;
+            foreach(string item in lists)
+            {
+                if (count < lists.FindAll(p => p==item).Count)
+                {
+                    count = lists.FindAll(p => p == item).Count;
+                    elem= item;
+                }
+            }
+            Console.WriteLine(elem);
+        }
 
         //48.Создайте класс для хранения информации о студенте, включающей имя,
         //фамилию, возраст и номер группы. Реализуйте интерфейс IComparable для

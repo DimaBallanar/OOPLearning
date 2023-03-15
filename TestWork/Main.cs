@@ -39,6 +39,9 @@ using TestWork;
         //prop.DeleteDublicat();
         //prop.SearchUnique();
         //prop.SearchMaxCheck();
+        //Console.WriteLine(prop.SumDiapazone());
+        //prop.FindEleString();
+        prop.FindEveryItem();
 
 
 
