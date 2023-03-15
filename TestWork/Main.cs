@@ -24,7 +24,9 @@ using TestWork;
         //Console.WriteLine(prop.Posled(array));
         //Console.WriteLine(prop.ReverseString());
         //Console.WriteLine(prop.PalindromString());
-        Console.WriteLine(prop.DeleteProbel());
+        //Console.WriteLine(prop.DeleteProbel());
+        //Console.WriteLine(prop.ChangeTrim());
+        Console.WriteLine(prop.CountGlas());
 
 
     }

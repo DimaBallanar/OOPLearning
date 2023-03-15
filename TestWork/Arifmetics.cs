@@ -4,6 +4,7 @@ using System.Data;
 using System.Linq;
 using System.Security.Principal;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace TestWork
@@ -292,10 +293,39 @@ namespace TestWork
 
         //21. Напишите программу, которая заменяет все пробелы в заданной строке
         //символом подчеркивания.
-
+        public string ChangeTrim()
+        {
+            Console.Write("введите текст: ");
+            string text = Console.ReadLine();
+            string result = "";
+           foreach(char c in text)
+            {
+                if(c==' ')
+                {
+                    result += '_';
+                }
+                else
+                {
+                    result += c;
+                }
+            }
+            return result;
+        }
 
         //22. Напишите программу, которая находит количество гласных букв в заданной
         //строке.
+        public int CountGlas()
+        {
+            Console.Write("введите текст: ");
+            string text = Console.ReadLine();
+            int count = 0;
+            string glas = "ёуеыаоэяию";
+            foreach(char c in glas)
+            {
+                count += Regex.Matches(text.ToLower(), c.ToString()).Count();
+            }
+            return count;
+        }
 
 
         //23. Напишите программу, которая находит количество слов в заданной строке.
