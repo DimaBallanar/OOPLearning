@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -446,9 +447,48 @@ namespace TestWork
 
         //30.Напишите программу, которая удаляет все дубликаты из списка.
 
-
+        public void DeleteDublicat()
+        {
+            Console.Write("введите количество элементов: ");
+            int.TryParse(Console.ReadLine(), out int num);
+            List<string> lists = new List<string>();
+            for (int i = 0; i < num; i++)
+            {
+                Console.Write($"задайте {i} значение: ");
+                lists.Add(Console.ReadLine());
+            }
+            IEnumerable<string> distinctItems= lists.Distinct();
+            foreach(string items in distinctItems)
+            {
+                Console.WriteLine(items);
+            }
+        }
 
         //31. Напишите программу, которая находит все уникальные элементы в списке.
+        public void SearchUnique()
+        {
+            Console.Write("введите количество элементов: ");
+            int.TryParse(Console.ReadLine(), out int num);
+            List<string> lists = new List<string>();
+            for (int i = 0; i < num; i++)
+            {
+                Console.Write($"задайте {i} значение: ");
+                lists.Add(Console.ReadLine());
+            }
+            List<string> newList = new List<string>();
+
+            foreach (string items in lists)
+            {
+                if(lists.IndexOf(items)==lists.LastIndexOf(items))
+                {
+                    newList.Add(items);
+                }
+            }
+            foreach(string j in newList)
+            {
+                Console.WriteLine(j);
+            }
+        }
 
 
         //32. Напишите программу, которая находит среднее арифметическое всех элементов
@@ -469,6 +509,23 @@ namespace TestWork
 
 
         //33. Напишите программу, которая сортирует список чисел по возрастанию.
+        public void SortList()
+        {
+            Console.Write("Введите количество элементов: ");
+            int.TryParse(Console.ReadLine(), out int number);
+            List<int > lists= new List<int>();
+            for (int i = 0; i < number; i++)
+            {
+                Console.Write($"задайте {i} значение: ");
+                int.TryParse(Console.ReadLine(), out int numberLine);
+                lists.Add(numberLine);
+            }
+            lists.Sort();
+            foreach(int item in lists)
+            {
+                Console.WriteLine(item);
+            }
+        }
 
 
         //34.Напишите программу, которая находит наиболее часто встречающийся элемент в
@@ -476,14 +533,44 @@ namespace TestWork
 
 
         //35. Напишите программу, которая объединяет два списка в один.
+        public string MergeNum()
+        {
+            Console.Write("введите первое число: ");
+            int.TryParse(Console.ReadLine(), out int a);
+            Console.Write("введите второе число: ");
+            int.TryParse(Console.ReadLine(), out int b);
+            return $"{a}{b}";
+        }
 
 
         //36. Напишите программу, которая находит элемент, находящийся на заданной
         //позиции в списке.
-
+        public string TakeElement()
+        {
+            Console.Write("введите количество элементов: ");
+            int.TryParse(Console.ReadLine(), out int num);
+            List<string> lists = new List<string>();
+            for (int i = 0; i < num; i++)
+            {
+                Console.Write($"задайте {i} значение: ");               
+                lists.Add(Console.ReadLine());
+            }
+            Console.Write("какой элемент массива вы хотите вернуть? ");
+            int.TryParse(Console.ReadLine(), out int numberLine);
+            if(numberLine<=lists.Count)
+            {
+                return lists[numberLine];
+            }
+            return "ошибка ввода";
+        }
 
         //37. Напишите программу, которая находит все элементы, удовлетворяющие
         //заданному условию в списке.
+
+        //public string SearchElem()
+        //{
+
+        //}
 
 
         //38.Напишите запрос, который находит все строки в заданном массиве строк,

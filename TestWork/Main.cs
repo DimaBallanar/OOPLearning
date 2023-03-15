@@ -32,7 +32,15 @@ using TestWork;
         //Console.WriteLine(prop.CheckInt());
         //Console.WriteLine(prop.FirstIndex());
         //Console.WriteLine(prop.IndexCount());
-        Console.WriteLine(prop.MaxValueNum());
+        //Console.WriteLine(prop.MaxValueNum());
+        //Console.WriteLine(prop.MergeNum());
+        //Console.WriteLine(prop.TakeElement());
+        //prop.SortList();
+        //prop.DeleteDublicat();
+        prop.SearchUnique();
+
+
+
 
 
 
