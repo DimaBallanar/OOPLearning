@@ -28,7 +28,15 @@ using TestWork;
         //Console.WriteLine(prop.ChangeTrim());
         //Console.WriteLine(prop.CountGlas());
         //Console.WriteLine(prop.CountWords());
-        Console.WriteLine(prop.LongWord());
+        //Console.WriteLine(prop.LongWord());
+        //Console.WriteLine(prop.CheckInt());
+        //Console.WriteLine(prop.FirstIndex());
+        //Console.WriteLine(prop.IndexCount());
+        Console.WriteLine(prop.MaxValueNum());
+
+
+
+
 
 
 

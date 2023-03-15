@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Security.Principal;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -355,22 +356,96 @@ namespace TestWork
 
         //25. Напишите программу, которая проверяет, является ли заданная строка числом.
 
+        public bool CheckInt()
+        {
+            Console.Write("введите текст: ");
+            string text = Console.ReadLine();
+            if(int.TryParse(text,out int x))
+            {
+                return true;
+            }
+            return false;
+        }
+
+
 
         //26. Напишите программу, которая находит индекс первого вхождения заданного
         //символа в строке.
+        public int FirstIndex()
+        {
+            Console.Write("введите текст: ");
+            string text = Console.ReadLine();
+            Console.Write("введите символ для поиска: ");
+            char a = Convert.ToChar(Console.ReadLine());
+            return text.ToLower().IndexOf(a);
+        }
 
 
-        //27. Напишите программу, которая находит наиболее часто встречающийся символ в
+        //27. Напишите программу, которая находит наиболее часто встречающийся символ в                      не сделал
         //заданной строке.
+        public char IndexCount()
+        {
+            Console.Write("введите текст: ");
+            string text = Console.ReadLine();
+            Dictionary<int, char> values = new Dictionary<int, char>();
+        //    class Chars
+        //{
+        //    public int Index;
+        //    public char Char;
+        //}
+
+        //List<Chars[]> array=new List<Chars[]>();
+            char x;
+            for(int i=0;i<text.Length;i++)
+            {
+                x = text[i];
+                int count;
+                if (x != ' ')
+                {
+                     count = Regex.Matches(text.ToLower(), x.ToString()).Count();
+                    values.Add(count, x);
+                }
+                text = text.Replace(x, ' ');                
+            }
+            
+            return values[values.Keys.Max()];
+        }
 
 
         //28.Напишите программу, которая находит максимальный элемент в списке чисел.
 
+        public int MaxValueNum()
+        {
+            Console.Write("введите количество элементов: ");
+            int.TryParse(Console.ReadLine(),out int num);
+            List<int> lists = new List<int>();
+            for(int i=0;i<num;i++)
+            { 
+                Console.Write($"введите {i} число: ");
+                int.TryParse(Console.ReadLine(), out int number);
+                lists.Add(number);
+            }
+            return lists.Max();
+
+        }
 
         //29. Напишите программу, которая находит сумму всех элементов в списке чисел.
 
+        public double SumArrayNum()
+        {
+            Console.Write("Введите количество элементов: ");
+            int.TryParse(Console.ReadLine(), out int number);
+            double counter = 0;
+            for(int i=0;i<number;i++)
+            {
+                double.TryParse(Console.ReadLine(), out double x);
+                counter += x;
+            }
+            return counter;
+        }
 
         //30.Напишите программу, которая удаляет все дубликаты из списка.
+
 
 
         //31. Напишите программу, которая находит все уникальные элементы в списке.
@@ -378,6 +453,19 @@ namespace TestWork
 
         //32. Напишите программу, которая находит среднее арифметическое всех элементов
         //в списке чисел.
+
+        public double SrArifmetic()
+        {
+            Console.Write("Введите количество элементов: ");
+            int.TryParse(Console.ReadLine(), out int number);
+            double counter = 0;
+            for (int i = 0; i < number; i++)
+            {
+                double.TryParse(Console.ReadLine(), out double x);
+                counter += x;
+            }
+            return counter/number;
+        }
 
 
         //33. Напишите программу, которая сортирует список чисел по возрастанию.
