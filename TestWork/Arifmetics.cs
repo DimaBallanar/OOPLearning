@@ -254,9 +254,9 @@ namespace TestWork
         {
             Console.Write("введите текст: ");
             string text = Console.ReadLine();
-            string[] result= text.Split(" ", StringSplitOptions.RemoveEmptyEntries);
+            string[] result = text.Split(" ", StringSplitOptions.RemoveEmptyEntries);
             string check = "";
-            for(int i=result.Length-1; i>=0;i--)
+            for (int i = result.Length - 1; i >= 0; i--)
             {
                 check += result[i] + " ";
             }
@@ -276,7 +276,7 @@ namespace TestWork
             {
                 check += result[i] + " ";
             }
-            if(text.Trim()==check.Trim())
+            if (text.Trim() == check.Trim())
             {
                 return "палиндром";
             }
@@ -300,9 +300,9 @@ namespace TestWork
             Console.Write("введите текст: ");
             string text = Console.ReadLine();
             string result = "";
-           foreach(char c in text)
+            foreach (char c in text)
             {
-                if(c==' ')
+                if (c == ' ')
                 {
                     result += '_';
                 }
@@ -322,7 +322,7 @@ namespace TestWork
             string text = Console.ReadLine();
             int count = 0;
             string glas = "ёуеыаоэяию";
-            foreach(char c in glas)
+            foreach (char c in glas)
             {
                 count += Regex.Matches(text.ToLower(), c.ToString()).Count();
             }
@@ -347,7 +347,7 @@ namespace TestWork
             string text = Console.ReadLine();
             string[] array = text.Split(" ", StringSplitOptions.RemoveEmptyEntries);
             List<int> ints = new List<int>();
-            for(int i=0;i<array.Length;i++)
+            for (int i = 0; i < array.Length; i++)
             {
                 ints.Add(array[i].Length);
             }
@@ -361,7 +361,7 @@ namespace TestWork
         {
             Console.Write("введите текст: ");
             string text = Console.ReadLine();
-            if(int.TryParse(text,out int x))
+            if (int.TryParse(text, out int x))
             {
                 return true;
             }
@@ -384,32 +384,38 @@ namespace TestWork
 
         //27. Напишите программу, которая находит наиболее часто встречающийся символ в                      не сделал
         //заданной строке.
-        public char IndexCount()
+        public void IndexCount()
         {
             Console.Write("введите текст: ");
             string text = Console.ReadLine();
-            Dictionary<int, char> values = new Dictionary<int, char>();
-        //    class Chars
-        //{
-        //    public int Index;
-        //    public char Char;
-        //}
-
-        //List<Chars[]> array=new List<Chars[]>();
+            Dictionary<char, int> values = new Dictionary<char, int>();         
             char x;
-            for(int i=0;i<text.Length;i++)
+            for (int i = 0; i < text.Length; i++)
             {
                 x = text[i];
                 int count;
                 if (x != ' ')
                 {
-                     count = Regex.Matches(text.ToLower(), x.ToString()).Count();
-                    values.Add(count, x);
+                    count = Regex.Matches(text.ToLower(), x.ToString()).Count();
+                    values.Add(x, count);
                 }
-                text = text.Replace(x, ' ');                
+                text = text.Replace(x, ' ');
             }
-            
-            return values[values.Keys.Max()];
+            int counter = 0;
+            var temp = values;
+            foreach (var t in values)
+            {
+                if (t.Value > counter)
+                { counter = t.Key; }
+
+            }
+            foreach (var t in temp)
+            {
+                if (t.Value == counter)
+                {
+                    Console.WriteLine($"{t.Key}");
+                }
+            }
         }
 
 
@@ -418,10 +424,10 @@ namespace TestWork
         public int MaxValueNum()
         {
             Console.Write("введите количество элементов: ");
-            int.TryParse(Console.ReadLine(),out int num);
+            int.TryParse(Console.ReadLine(), out int num);
             List<int> lists = new List<int>();
-            for(int i=0;i<num;i++)
-            { 
+            for (int i = 0; i < num; i++)
+            {
                 Console.Write($"введите {i} число: ");
                 int.TryParse(Console.ReadLine(), out int number);
                 lists.Add(number);
@@ -437,7 +443,7 @@ namespace TestWork
             Console.Write("Введите количество элементов: ");
             int.TryParse(Console.ReadLine(), out int number);
             double counter = 0;
-            for(int i=0;i<number;i++)
+            for (int i = 0; i < number; i++)
             {
                 double.TryParse(Console.ReadLine(), out double x);
                 counter += x;
@@ -457,8 +463,8 @@ namespace TestWork
                 Console.Write($"задайте {i} значение: ");
                 lists.Add(Console.ReadLine());
             }
-            IEnumerable<string> distinctItems= lists.Distinct();
-            foreach(string items in distinctItems)
+            IEnumerable<string> distinctItems = lists.Distinct();
+            foreach (string items in distinctItems)
             {
                 Console.WriteLine(items);
             }
@@ -479,12 +485,12 @@ namespace TestWork
 
             foreach (string items in lists)
             {
-                if(lists.IndexOf(items)==lists.LastIndexOf(items))
+                if (lists.IndexOf(items) == lists.LastIndexOf(items))
                 {
                     newList.Add(items);
                 }
             }
-            foreach(string j in newList)
+            foreach (string j in newList)
             {
                 Console.WriteLine(j);
             }
@@ -504,7 +510,7 @@ namespace TestWork
                 double.TryParse(Console.ReadLine(), out double x);
                 counter += x;
             }
-            return counter/number;
+            return counter / number;
         }
 
 
@@ -513,7 +519,7 @@ namespace TestWork
         {
             Console.Write("Введите количество элементов: ");
             int.TryParse(Console.ReadLine(), out int number);
-            List<int > lists= new List<int>();
+            List<int> lists = new List<int>();
             for (int i = 0; i < number; i++)
             {
                 Console.Write($"задайте {i} значение: ");
@@ -521,7 +527,7 @@ namespace TestWork
                 lists.Add(numberLine);
             }
             lists.Sort();
-            foreach(int item in lists)
+            foreach (int item in lists)
             {
                 Console.WriteLine(item);
             }
@@ -530,16 +536,59 @@ namespace TestWork
 
         //34.Напишите программу, которая находит наиболее часто встречающийся элемент в
         //списке.
-
-
-        //35. Напишите программу, которая объединяет два списка в один.
-        public string MergeNum()
+        public void SearchMaxCheck()
         {
-            Console.Write("введите первое число: ");
-            int.TryParse(Console.ReadLine(), out int a);
-            Console.Write("введите второе число: ");
-            int.TryParse(Console.ReadLine(), out int b);
-            return $"{a}{b}";
+            Console.Write("введите количество элементов: ");
+            int.TryParse(Console.ReadLine(), out int num);
+            List<string> lists = new List<string>();
+            for (int i = 0; i < num; i++)
+            {
+                Console.Write($"задайте {i} значение: ");
+                lists.Add(Console.ReadLine());
+            }
+            string myDear = "";
+            int count = 0;
+            var temp = lists.GroupBy(e => e);
+            foreach (var t in temp)
+            {
+                if (t.Count() > count)
+                { count = t.Count(); }            
+                
+            }
+            foreach (var t in temp)
+            {
+                if (t.Count() == count)
+                {
+                    Console.WriteLine($"{t.Key}");
+                }
+            }
+            
+        }
+
+        //35. Напишите программу, которая объединяет два списка в один.                                           не то сделал
+        public void MergeNum()
+        {
+            Console.Write("введите количество элементов первого массива: ");
+            int.TryParse(Console.ReadLine(), out int num1);
+            List<string> lists1 = new List<string>();
+            for (int i = 0; i < num1; i++)
+            {
+                Console.Write($"задайте {i} значение: ");
+                lists1.Add(Console.ReadLine());
+            }
+            Console.Write("введите количество элементов второго массива: ");
+            int.TryParse(Console.ReadLine(), out int num2);
+            List<string> lists2 = new List<string>();
+            for (int i = 0; i < num2; i++)
+            {
+                Console.Write($"задайте {i} значение: ");
+                lists2.Add(Console.ReadLine());
+            }
+            lists1.AddRange(lists2);
+            foreach(string t in lists1)
+            {
+                Console.WriteLine(t);
+            }
         }
 
 
@@ -552,12 +601,12 @@ namespace TestWork
             List<string> lists = new List<string>();
             for (int i = 0; i < num; i++)
             {
-                Console.Write($"задайте {i} значение: ");               
+                Console.Write($"задайте {i} значение: ");
                 lists.Add(Console.ReadLine());
             }
             Console.Write("какой элемент массива вы хотите вернуть? ");
             int.TryParse(Console.ReadLine(), out int numberLine);
-            if(numberLine<=lists.Count)
+            if (numberLine <= lists.Count)
             {
                 return lists[numberLine];
             }
