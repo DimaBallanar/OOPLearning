@@ -339,6 +339,18 @@ namespace TestWork
 
         //24.Напишите программу, которая находит длину самого длинного слова в заданной
         //строке.
+        public int LongWord()
+        {
+            Console.Write("введите текст: ");
+            string text = Console.ReadLine();
+            string[] array = text.Split(" ", StringSplitOptions.RemoveEmptyEntries);
+            List<int> ints = new List<int>();
+            for(int i=0;i<array.Length;i++)
+            {
+                ints.Add(array[i].Length);
+            }
+            return ints.Max();
+        }
 
 
         //25. Напишите программу, которая проверяет, является ли заданная строка числом.

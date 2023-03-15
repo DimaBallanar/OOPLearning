@@ -27,7 +27,8 @@ using TestWork;
         //Console.WriteLine(prop.DeleteProbel());
         //Console.WriteLine(prop.ChangeTrim());
         //Console.WriteLine(prop.CountGlas());
-        Console.WriteLine(prop.CountWords());
+        //Console.WriteLine(prop.CountWords());
+        Console.WriteLine(prop.LongWord());
 
 
 
