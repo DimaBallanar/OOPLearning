@@ -329,7 +329,13 @@ namespace TestWork
 
 
         //23. Напишите программу, которая находит количество слов в заданной строке.
-
+        public int CountWords()
+        {
+            Console.Write("введите текст: ");
+            string text = Console.ReadLine();
+            int count = text.Split(" ", StringSplitOptions.RemoveEmptyEntries).Count();
+            return count;
+        }
 
         //24.Напишите программу, которая находит длину самого длинного слова в заданной
         //строке.
