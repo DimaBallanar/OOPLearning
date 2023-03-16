@@ -204,29 +204,35 @@ namespace TestWork
                 {
                     temp += massiv[i - 1] + ",";
                 }
-                else if (massiv[i] <= massiv[--i])
+                //else if (massiv[i] <= massiv[--i])
+                //{
+                //    result += temp + " ";
+                //    temp = "";
+                //}
+                else if (massiv[i] <= massiv[i-1] && temp.Length>result.Length)
                 {
-                    result += temp + " ";
-                    temp = "";
+                    result = temp;
+                    temp ="";
                 }
             }
-            string[] charge = result.Split(" ");
-            string finish = "";
-            for (int i = 0; i < charge.Length - 1; i++)
-            {
-                if (charge.Length == 1)
-                {
-                    finish = charge[i];
-                    continue;
-                }
-                else if (charge[i].Length > charge[i + 1].Length)
-                {
-                    finish = charge[i];
-                }
+            return result;
+            //string[] charge = result.Split(" ");
+            //string finish = "";
+            //for (int i = 0; i < charge.Length - 1; i++)
+            //{
+            //    if (charge.Length == 1)
+            //    {
+            //        finish = charge[i];
+            //        continue;
+            //    }
+            //    else if (charge[i].Length > charge[i + 1].Length)
+            //    {
+            //        finish = charge[i];
+            //    }
 
-            }
+            //}
 
-            return finish;
+
         }
 
         //        13. Напишите программу, которая реализует алгоритм сортировки слиянием для
@@ -234,9 +240,34 @@ namespace TestWork
 
 
 
-        //        14. Напишите программу, которая находит наименьшее количество монет,
+        //        14. Напишите программу, которая находит наименьшее количество монет,                                 ******** **** бесконечный цикл 
         //необходимых для выдачи сдачи пользователю при покупке товара.У вас есть
         //монеты номиналом 1, 5, 10, 25 и 50 центов.
+        public void Sdacha()
+        {
+            Console.Write("на какую сумму взял товара покупатель? ");
+            double price = Convert.ToDouble(Console.ReadLine());
+            Console.Write("на какую сумму взял товара покупатель? ");
+            double moneyUser = Convert.ToDouble(Console.ReadLine());
+            int[] coins = { 50, 25, 10, 5, 1 };
+            int result = Convert.ToInt32((moneyUser - price) * 100);
+            List<int> list = new List<int>();
+            for (int i = 0; i < coins.Length; i++)
+            {
+                while (result % coins[i] == 0)
+                {
+                    list.Add(coins[i]);
+                    result-= coins[i];
+                }
+            }
+            var array = list.GroupBy(list => list);
+            foreach(var ar in array)
+            {
+                Console.WriteLine($"{ar.Key} надо {ar.Count()}");
+            }
+
+
+        }
 
         //        15. Напишите программу, которая реализует алгоритм поиска в ширину для графа,
         //представленного в виде списка смежности.
@@ -382,7 +413,7 @@ namespace TestWork
         }
 
 
-        //27. Напишите программу, которая находит наиболее часто встречающийся символ в                      не сделал
+        //27. Напишите программу, которая находит наиболее часто встречающийся символ в                     
         //заданной строке.
         public void IndexCount()
         {
@@ -846,20 +877,18 @@ namespace TestWork
             }
             string elem = "";
             int count = 0;
-            foreach(string item in lists)
+            foreach (string item in lists)
             {
-                if (count < lists.FindAll(p => p==item).Count)
+                if (count < lists.FindAll(p => p == item).Count)
                 {
                     count = lists.FindAll(p => p == item).Count;
-                    elem= item;
+                    elem = item;
                 }
             }
             Console.WriteLine(elem);
         }
 
-        //48.Создайте класс для хранения информации о студенте, включающей имя,
-        //фамилию, возраст и номер группы. Реализуйте интерфейс IComparable для
-        //сравнения студентов по возрасту.
+
 
 
         //49.Создайте класс для работы с геометрическими фигурами, включающий методы

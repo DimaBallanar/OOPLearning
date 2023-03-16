@@ -20,8 +20,8 @@ using TestWork;
         //Console.WriteLine(prop.NOD());
         //prop.FindNumber();
         //Console.WriteLine(prop.FindProst());
-        //int[] array = { 1, 2, 3, 4, 5, 3, 4, 5, 8, 8 };
-        //Console.WriteLine(prop.Posled(array));
+        int[] array = { 5, 2, 3, 4, 7, 1, 2, 3, 4, 5, 8, 3, 6, 2 };
+        Console.WriteLine(prop.Posled(array));
         //Console.WriteLine(prop.ReverseString());
         //Console.WriteLine(prop.PalindromString());
         //Console.WriteLine(prop.DeleteProbel());
@@ -41,8 +41,8 @@ using TestWork;
         //prop.SearchMaxCheck();
         //Console.WriteLine(prop.SumDiapazone());
         //prop.FindEleString();
-        prop.FindEveryItem();
-
+        //prop.FindEveryItem();
+        //prop.Sdacha();
 
 
 
