@@ -211,12 +211,7 @@ namespace TestWork
                     temp ="";
                 }
             }
-            return result;
-            //string[] charge = result.Split(" ");
-            //string finish = "";
-            //for (int i = 0; i < charge.Length - 1; i++)
-            
-            
+            return result;           
 
 
         }
