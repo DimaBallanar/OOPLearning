@@ -203,12 +203,8 @@ namespace TestWork
                 if (massiv[i] > massiv[i - 1])
                 {
                     temp += massiv[i - 1] + ",";
-                }
-                //else if (massiv[i] <= massiv[--i])
-                //{
-                //    result += temp + " ";
-                //    temp = "";
-                //}
+                }               
+             
                 else if (massiv[i] <= massiv[i-1] && temp.Length>result.Length)
                 {
                     result = temp;

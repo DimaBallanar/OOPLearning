@@ -1,0 +1,15 @@
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\TestWork\obj\Debug\net7.0\TestWork.csproj.AssemblyReference.cache
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\TestWork\obj\Debug\net7.0\TestWork.GeneratedMSBuildEditorConfig.editorconfig
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\TestWork\obj\Debug\net7.0\TestWork.AssemblyInfoInputs.cache
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\TestWork\obj\Debug\net7.0\TestWork.AssemblyInfo.cs
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\TestWork\obj\Debug\net7.0\TestWork.csproj.CoreCompileInputs.cache
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\TestWork\bin\Debug\net7.0\TestWork.exe
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\TestWork\bin\Debug\net7.0\TestWork.deps.json
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\TestWork\bin\Debug\net7.0\TestWork.runtimeconfig.json
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\TestWork\bin\Debug\net7.0\TestWork.dll
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\TestWork\bin\Debug\net7.0\TestWork.pdb
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\TestWork\obj\Debug\net7.0\TestWork.dll
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\TestWork\obj\Debug\net7.0\refint\TestWork.dll
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\TestWork\obj\Debug\net7.0\TestWork.pdb
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\TestWork\obj\Debug\net7.0\TestWork.genruntimeconfig.cache
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\TestWork\obj\Debug\net7.0\ref\TestWork.dll
