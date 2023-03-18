@@ -215,18 +215,8 @@ namespace TestWork
             //string[] charge = result.Split(" ");
             //string finish = "";
             //for (int i = 0; i < charge.Length - 1; i++)
-            //{
-            //    if (charge.Length == 1)
-            //    {
-            //        finish = charge[i];
-            //        continue;
-            //    }
-            //    else if (charge[i].Length > charge[i + 1].Length)
-            //    {
-            //        finish = charge[i];
-            //    }
-
-            //}
+            
+            
 
 
         }
