@@ -203,34 +203,15 @@ namespace TestWork
                 if (massiv[i] > massiv[i - 1])
                 {
                     temp += massiv[i - 1] + ",";
-                }
-                //else if (massiv[i] <= massiv[--i])
-                //{
-                //    result += temp + " ";
-                //    temp = "";
-                //}
+                }               
+             
                 else if (massiv[i] <= massiv[i-1] && temp.Length>result.Length)
                 {
                     result = temp;
                     temp ="";
                 }
             }
-            return result;
-            //string[] charge = result.Split(" ");
-            //string finish = "";
-            //for (int i = 0; i < charge.Length - 1; i++)
-            //{
-            //    if (charge.Length == 1)
-            //    {
-            //        finish = charge[i];
-            //        continue;
-            //    }
-            //    else if (charge[i].Length > charge[i + 1].Length)
-            //    {
-            //        finish = charge[i];
-            //    }
-
-            //}
+            return result;           
 
 
         }
