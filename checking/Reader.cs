@@ -15,6 +15,7 @@ namespace checking
 {
     public class Reader
     {
+        string mypath = "D:\\ДЗ С#\\hschool\\hschool_beggining_csh\\OOPLearning\\checking\\Scripts";
         private readonly string ConnectionString = "server=localhost;database=studies;uid=root;password=123qwe4r5t6YY;";
         private readonly string SQL_AddDataBase = "create database if not exists Scripts;";
         private readonly string SQL_UseDatabase= "use Scripts;";
@@ -51,7 +52,7 @@ namespace checking
         // метод считывания названий файлов в папке
         public List<string> ListNames()
         {
-            string mypath = "D:\\ДЗ С#\\hschool\\hschool_beggining_csh\\OOPLearning\\checking\\Scripts";
+            
             List<string> listAllFileNames = new List<string>();
             listAllFileNames.AddRange(Directory.GetFiles(mypath, "*.sql", SearchOption.TopDirectoryOnly));
             return listAllFileNames;
@@ -104,7 +105,7 @@ namespace checking
         // метод считывания файла(скрипта) с папки и далее выполнение всех команд
         public void readSQLFile(string fileDirectory)
         {
-            string[] result=File.ReadAllText(fileDirectory).Split(';');
+            string[] result=File.ReadAllText($"{mypath}\\{fileDirectory}").Split(';');
            foreach(string res in result)
             {
                 ProcessLoader(res);
