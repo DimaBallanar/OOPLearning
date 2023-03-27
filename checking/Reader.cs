@@ -1,18 +1,14 @@
 ﻿using Google.Protobuf.WellKnownTypes;
 using MySql.Data.MySqlClient;
-using MySqlConnector;
+//using MySQLAPP.Models;
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Linq;
 using System.Runtime.ConstrainedExecution;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
-using MySqlConnection = MySqlConnector.MySqlConnection;
-using MySqlException = MySqlConnector.MySqlException;
-
 namespace checking
 {
     public class Reader
@@ -21,8 +17,41 @@ namespace checking
         private readonly string SQL_AddDataBase = "create database if not exists Scripts;";
         private readonly string SQL_UseDatabase= "use Scripts;";
         private readonly string SQL_CreateTable= "create table if not exists TableScripts (\r\n Id INT auto_increment not null,\r\n Name varchar(55) not null,\r\n primary key(id)\r\n );";
+        private readonly string SQL_selectItems = "select name from TableScripts;";
+
+        // метод, который считает все названия скриптов
+        public List<string> GetScripts()
+        {
+            MySqlConnection connection = Connection();
+            if (connection == null) throw new Exception("connection error");
+            try
+            {
+                List<string> scripts = new List<string>();
+                MySqlCommand command = new MySqlCommand(SQL_selectItems, connection);
+                MySqlDataReader reader = command.ExecuteReader();
+                while (reader.Read())
+                {                                    
+                     scripts.Add( reader.GetString(0));                   
+                }
+                return scripts;
+            }
+            catch (MySqlException ex)
+            {
+                Console.WriteLine(ex);
+                throw ex;
+            }
+            finally
+            {
+                connection.Close();
+            }
+        }
+
+        // метод, который сравнит названия,если нет его в списке,то вызывает метод считывания и его выполнение, затем добавление записи в базу данных
 
 
+
+
+        //
         public void ChekerScript(string path, string fileChecker)
         {
             List<string> list = new List<string>();
