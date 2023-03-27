@@ -16,15 +16,28 @@ namespace checking
     public class Reader
     {
         string mypath = "D:\\ДЗ С#\\hschool\\hschool_beggining_csh\\OOPLearning\\checking\\Scripts";
-        private readonly string ConnectionString = "server=localhost;database=studies;uid=root;password=123qwe4r5t6YY;";
+        private readonly string ConnectionString = "server=localhost;database=Scripts;uid=root;password=123qwe4r5t6YY;";
         private readonly string SQL_AddDataBase = "create database if not exists Scripts;";
-        private readonly string SQL_UseDatabase= "use Scripts;";
-        private readonly string SQL_CreateTable= "create table if not exists TableScripts (\r\n Id INT auto_increment not null,\r\n Name varchar(255) not null,\r\n primary key(id)\r\n );";
+        private readonly string SQL_UseDatabase = "use Scripts;";
+        private readonly string SQL_CreateTable = "create table if not exists TableScripts (\r\n Id INT auto_increment not null,\r\n Name varchar(255) not null,\r\n primary key(id)\r\n );";
         private readonly string SQL_selectItems = "select name from TableScripts;";
         private readonly string SQL_AddItem = "insert into TableScripts (name) values (@name1);";
 
         // метод, который считает все названия скриптов с базы данных
-        public List<string> GetScriptsName()
+        public void Start()
+        {
+            MySqlConnection connection = Connection();
+            MySqlCommand command = new MySqlCommand(SQL_AddDataBase, connection);
+            command.CommandText = SQL_UseDatabase;
+            command.CommandText = SQL_CreateTable;
+            connection.Close();
+            //GetScriptsName();    // названия скриптов с БД
+            //ListNames();     //названия файлов с папки
+            CheckFileNames(ListNames(), GetScriptsName());
+
+
+        }
+        private List<string> GetScriptsName()   // тянем  все названия скриптов с базы данных
         {
             MySqlConnection connection = Connection();
             if (connection == null) throw new Exception("connection error");
@@ -34,8 +47,8 @@ namespace checking
                 MySqlCommand command = new MySqlCommand(SQL_selectItems, connection);
                 MySqlDataReader reader = command.ExecuteReader();
                 while (reader.Read())
-                {                                    
-                     scripts.Add( reader.GetString(0));                   
+                {
+                    scripts.Add(reader.GetString(0));
                 }
                 return scripts;
             }
@@ -50,35 +63,40 @@ namespace checking
             }
         }
         // метод считывания названий файлов в папке
-        public List<string> ListNames()
+        private List<string> ListNames()
         {
-            
+
             List<string> listAllFileNames = new List<string>();
-            listAllFileNames.AddRange(Directory.GetFiles(mypath, "*.sql", SearchOption.TopDirectoryOnly));
+            //listAllFileNames.AddRange(Directory.GetFiles(mypath, "*.sql", SearchOption.TopDirectoryOnly));
+            string[] fileAll=Directory.GetFiles(mypath, "*.sql", SearchOption.TopDirectoryOnly);
+            foreach(string str in fileAll)
+            {
+                listAllFileNames.Add(Path.GetFileName(str));
+                //Console.WriteLine(Path.GetFileName(str));
+            }
             return listAllFileNames;
         }
 
-        
+
 
         // метод, который сравнит названия,если нет его в списке,то вызывает метод считывания и его выполнение, затем добавление записи в базу данных
-        void CheckFileNames(string[] files,List<string> lists)
+        private void CheckFileNames(List<string> files, List<string> lists)
         {
-            foreach(string st in files)
+            foreach (var st in files)
             {
-                if(!lists.Contains(st))
+                if (!lists.Contains(st))
                 {
                     //метод считывания файла с командами и отработка
                     readSQLFile(st);
+                    Console.WriteLine(st);
 
                     //метод добавления названия скрипта в БД
                     AddScriptInTable(st);
                 }
             }
-
         }
-
         //метод добавления записи в базу данных
-        void AddScriptInTable(string scr)
+       private void AddScriptInTable(string scr)
         {
             if (scr == null) throw new ArgumentNullException(nameof(scr));
             MySqlConnection connection = Connection();
@@ -88,7 +106,7 @@ namespace checking
                 MySqlCommand command = new MySqlCommand(SQL_AddItem, connection);
                 command.Parameters.AddWithValue("@name1", scr);
                 command.ExecuteNonQuery();
-               
+
             }
             catch (MySqlException ex)
             {
@@ -100,26 +118,26 @@ namespace checking
                 connection.Close();
             }
         }
-
-
         // метод считывания файла(скрипта) с папки и далее выполнение всех команд
-        public void readSQLFile(string fileDirectory)
+        private void readSQLFile(string fileDirectory)
         {
-            string[] result=File.ReadAllText($"{mypath}\\{fileDirectory}").Split(';');
-           foreach(string res in result)
+            //string[] result = File.ReadAllText($"{mypath}\\{fileDirectory}").Split(';');
+            string[] result = File.ReadAllText(mypath+"\\"+fileDirectory).Split(';');
+
+            foreach (string res in result)
             {
                 ProcessLoader(res);
             }
         }
         // метод выполнения команд со считанного файла
-        public void ProcessLoader(string text)
+        private void ProcessLoader(string text)
         {
             if (text == null) throw new ArgumentNullException(nameof(text));
             MySqlConnection connection = Connection();
             if (connection == null) throw new Exception("Connection Error");
             try
             {
-                MySqlCommand command = new MySqlCommand(text, connection);               
+                MySqlCommand command = new MySqlCommand(text, connection);
                 //command.ExecuteNonQuery();
 
             }
@@ -132,11 +150,7 @@ namespace checking
             {
                 connection.Close();
             }
-
         }
-
-
-
         private MySqlConnection Connection()
         {
             try
@@ -150,8 +164,6 @@ namespace checking
                 return null;
             }
         }
-
-
         //static void ChekerScript(string path, string fileChecker)
         //{
         //    List<string> list = new List<string>();
@@ -187,5 +199,5 @@ namespace checking
         //}
 
     }
-    
+
 }
