@@ -38,7 +38,7 @@ namespace checking
                 {
                     //запуск этого скрипта к выполнению
                     //добавление названия скрипта в файл со списком скриптов Files.txt
-                    File.AppendAllText(fileChecker, line);                                // открывает наш файл, добавляет в него строку
+                   // File.AppendAllText(fileChecker, line);                                // открывает наш файл, добавляет в него строку
 
                 }
 
