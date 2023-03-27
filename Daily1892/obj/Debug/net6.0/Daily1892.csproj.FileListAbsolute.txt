@@ -1,0 +1,15 @@
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\Daily1892\bin\Debug\net6.0\Daily1892.exe
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\Daily1892\bin\Debug\net6.0\Daily1892.deps.json
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\Daily1892\bin\Debug\net6.0\Daily1892.runtimeconfig.json
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\Daily1892\bin\Debug\net6.0\Daily1892.dll
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\Daily1892\bin\Debug\net6.0\Daily1892.pdb
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\Daily1892\obj\Debug\net6.0\Daily1892.csproj.AssemblyReference.cache
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\Daily1892\obj\Debug\net6.0\Daily1892.GeneratedMSBuildEditorConfig.editorconfig
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\Daily1892\obj\Debug\net6.0\Daily1892.AssemblyInfoInputs.cache
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\Daily1892\obj\Debug\net6.0\Daily1892.AssemblyInfo.cs
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\Daily1892\obj\Debug\net6.0\Daily1892.csproj.CoreCompileInputs.cache
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\Daily1892\obj\Debug\net6.0\Daily1892.dll
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\Daily1892\obj\Debug\net6.0\refint\Daily1892.dll
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\Daily1892\obj\Debug\net6.0\Daily1892.pdb
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\Daily1892\obj\Debug\net6.0\Daily1892.genruntimeconfig.cache
+D:\ДЗ С#\hschool\hschool_beggining_csh\OOPLearning\Daily1892\obj\Debug\net6.0\ref\Daily1892.dll
