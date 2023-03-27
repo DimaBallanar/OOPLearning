@@ -1,15 +1,25 @@
-﻿using System;
+﻿using Google.Protobuf.WellKnownTypes;
+using MySql.Data.MySqlClient;
+
+using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.IO;
 using System.Linq;
+using System.Runtime.ConstrainedExecution;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace checking
 {
     public class Reader
     {
+        private readonly string ConnectionString = "server=localhost;database=studies;uid=root;password=123qwe4r5t6YY;";
+        private readonly string SQL_AddDataBase = "create database if not exists Scripts;";
+        private readonly string SQL_UseDatabase= "use Scripts;";
+        private readonly string SQL_CreateTable= "create table if not exists TableScripts (\r\n Id INT auto_increment not null,\r\n Name varchar(55) not null,\r\n primary key(id)\r\n );";
+
 
         public void ChekerScript(string path, string fileChecker)
         {
@@ -44,5 +54,19 @@ namespace checking
                 Process.Start(filename);
             }
         }
+        private MySqlConnection Connection()
+        {
+            try
+            {
+                MySqlConnection connection = new MySqlConnection(ConnectionString);
+                connection.Open();
+                return connection;
+            }
+            catch (MySqlException ex)
+            {
+                return null;
+            }
+        }
     }
+    
 }
