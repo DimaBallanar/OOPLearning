@@ -4,6 +4,7 @@ using MySql.Data.MySqlClient;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Runtime.ConstrainedExecution;
@@ -59,6 +60,21 @@ namespace checking
         
 
         // метод, который сравнит названия,если нет его в списке,то вызывает метод считывания и его выполнение, затем добавление записи в базу данных
+        void CheckFileNames(string[] files,List<string> lists)
+        {
+            foreach(string st in files)
+            {
+                if(!lists.Contains(st))
+                {
+                    //метод считывания файла с командами и отработка
+                    readSQLFile(st);
+
+                    //метод добавления названия скрипта в БД
+                    AddScriptInTable(st);
+                }
+            }
+
+        }
 
         //метод добавления записи в базу данных
         void AddScriptInTable(string scr)
@@ -85,40 +101,41 @@ namespace checking
         }
 
 
-
-        static void ChekerScript(string path, string fileChecker)
+        // метод считывания файла(скрипта) с папки и далее выполнение всех команд
+        public void readSQLFile(string fileDirectory)
         {
-            List<string> list = new List<string>();
-            //Directory.GetFiles(mypath, "*.txt", SearchOption.TopDirectoryOnly).ToList().ForEach(f => Console.WriteLine(Path.GetFileName(f)));
-            string[] allfiles = Directory.GetFiles(path, "*.sql", SearchOption.TopDirectoryOnly);
-            foreach (string filename in allfiles)
+            string[] result=File.ReadAllText(fileDirectory).Split(';');
+           foreach(string res in result)
             {
-                list.Add(Path.GetFileName(filename));
-                
-            }
-            string[] listec = File.ReadAllLines(fileChecker);
-            foreach (string line in listec)
-            {
-                if (!list.Contains(line))
-                {
-                    //запуск этого скрипта к выполнению
-                    //добавление названия скрипта в файл со списком скриптов Files.txt
-                   // File.AppendAllText(fileChecker, line);                                // открывает наш файл, добавляет в него строку
-
-                }
-
+                ProcessLoader(res);
             }
         }
-            public void LoaderApp(string str)
+        // метод выполнения команд со считанного файла
+        public void ProcessLoader(string text)
         {
-            List<string> list = new List<string>();            
-            string[] allfiles = Directory.GetFiles(str, "*.txt", SearchOption.TopDirectoryOnly);
-            foreach (string filename in allfiles)
+            if (text == null) throw new ArgumentNullException(nameof(text));
+            MySqlConnection connection = Connection();
+            if (connection == null) throw new Exception("Connection Error");
+            try
             {
-                list.Add(Path.GetFileName(filename));
-                Process.Start(filename);
+                MySqlCommand command = new MySqlCommand(text, connection);               
+                //command.ExecuteNonQuery();
+
             }
+            catch (MySqlException ex)
+            {
+                Console.WriteLine(ex);
+                throw ex;
+            }
+            finally
+            {
+                connection.Close();
+            }
+
         }
+
+
+
         private MySqlConnection Connection()
         {
             try
@@ -132,6 +149,42 @@ namespace checking
                 return null;
             }
         }
+
+
+        //static void ChekerScript(string path, string fileChecker)
+        //{
+        //    List<string> list = new List<string>();
+        //    //Directory.GetFiles(mypath, "*.txt", SearchOption.TopDirectoryOnly).ToList().ForEach(f => Console.WriteLine(Path.GetFileName(f)));
+        //    string[] allfiles = Directory.GetFiles(path, "*.sql", SearchOption.TopDirectoryOnly);
+        //    foreach (string filename in allfiles)
+        //    {
+        //        list.Add(Path.GetFileName(filename));
+
+        //    }
+        //    string[] listec = File.ReadAllLines(fileChecker);
+        //    foreach (string line in listec)
+        //    {
+        //        if (!list.Contains(line))
+        //        {
+        //            //запуск этого скрипта к выполнению
+        //            //добавление названия скрипта в файл со списком скриптов Files.txt
+        //           // File.AppendAllText(fileChecker, line);                                // открывает наш файл, добавляет в него строку
+
+        //        }
+
+        //    }
+        //}
+        //    public void LoaderApp(string str)
+        //{
+        //    List<string> list = new List<string>();            
+        //    string[] allfiles = Directory.GetFiles(str, "*.txt", SearchOption.TopDirectoryOnly);
+        //    foreach (string filename in allfiles)
+        //    {
+        //        list.Add(Path.GetFileName(filename));
+        //        Process.Start(filename);
+        //    }
+        //}
+
     }
     
 }
