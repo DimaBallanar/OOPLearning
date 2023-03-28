@@ -17,20 +17,22 @@ namespace checking
     {
         string mypath = "D:\\ДЗ С#\\hschool\\hschool_beggining_csh\\OOPLearning\\checking\\Scripts";
         private readonly string ConnectionString = "server=localhost;database=Scripts;uid=root;password=123qwe4r5t6YY;";
-        private readonly string SQL_AddDataBase = "create database if not exists Scripts;";
-        private readonly string SQL_UseDatabase = "use Scripts;";
-        private readonly string SQL_CreateTable = "create table if not exists TableScripts (\r\n Id INT auto_increment not null,\r\n Name varchar(255) not null,\r\n primary key(id)\r\n );";
+        private readonly string SQL_CreateTable = @"create table if not exists TableScripts (
+                                                     Id INT auto_increment not null, 
+                                                     Name varchar(255) not null, 
+                                                     primary key(id) 
+                                                   );";                                                   
         private readonly string SQL_selectItems = "select name from TableScripts;";
         private readonly string SQL_AddItem = "insert into TableScripts (name) values (@name1);";
 
         // метод, который считает все названия скриптов с базы данных
         public void Start()
         {
-            MySqlConnection connection = Connection();
-            MySqlCommand command = new MySqlCommand(SQL_AddDataBase, connection);
-            command.CommandText = SQL_UseDatabase;
-            command.CommandText = SQL_CreateTable;
-            connection.Close();
+            //MySqlConnection connection = Connection();
+            //MySqlCommand command = new MySqlCommand(SQL_AddDataBase, connection);
+            //command.CommandText = SQL_UseDatabase;
+            //command.CommandText = SQL_CreateTable;
+            //connection.Close();
             //GetScriptsName();    // названия скриптов с БД
             //ListNames();     //названия файлов с папки
             CheckFileNames(ListNames(), GetScriptsName());
@@ -68,10 +70,10 @@ namespace checking
 
             List<string> listAllFileNames = new List<string>();
             //listAllFileNames.AddRange(Directory.GetFiles(mypath, "*.sql", SearchOption.TopDirectoryOnly));
-            string[] fileAll=Directory.GetFiles(mypath, "*.sql", SearchOption.TopDirectoryOnly);
-            foreach(string str in fileAll)
+            string[] fileAll = Directory.GetFiles(mypath, "*.sql", SearchOption.TopDirectoryOnly);
+            foreach (string str in fileAll)
             {
-                listAllFileNames.Add(Path.GetFileName(str));
+                listAllFileNames.Add(Path.GetFileName(str));                           // REPLACE****************************
                 //Console.WriteLine(Path.GetFileName(str));
             }
             return listAllFileNames;
@@ -96,7 +98,7 @@ namespace checking
             }
         }
         //метод добавления записи в базу данных
-       private void AddScriptInTable(string scr)
+        private void AddScriptInTable(string scr)
         {
             if (scr == null) throw new ArgumentNullException(nameof(scr));
             MySqlConnection connection = Connection();
@@ -122,12 +124,12 @@ namespace checking
         private void readSQLFile(string fileDirectory)
         {
             //string[] result = File.ReadAllText($"{mypath}\\{fileDirectory}").Split(';');
-            string[] result = File.ReadAllText(mypath+"\\"+fileDirectory).Split(';');
+            string result = File.ReadAllText($"{mypath}\\{fileDirectory}") ;
 
-            foreach (string res in result)
-            {
-                ProcessLoader(res);
-            }
+
+            //Console.WriteLine(res.Replace("\n", "") + ";");
+            ProcessLoader(result);
+
         }
         // метод выполнения команд со считанного файла
         private void ProcessLoader(string text)
@@ -138,7 +140,7 @@ namespace checking
             try
             {
                 MySqlCommand command = new MySqlCommand(text, connection);
-                //command.ExecuteNonQuery();
+                command.ExecuteNonQuery();
 
             }
             catch (MySqlException ex)
