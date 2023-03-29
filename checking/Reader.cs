@@ -24,7 +24,6 @@ namespace checking
                                                    //);";
         private readonly string SQL_selectItems = "select name from TableScripts;";
         private readonly string SQL_AddItem = "insert into TableScripts (name) values (@name1);";
-
         // метод, который считает все названия скриптов с базы данных
         public void Start()
         {
@@ -32,7 +31,6 @@ namespace checking
             {
                 MySqlConnection connection = new MySqlConnection(ConnectionString);
                 connection.Open();
-
                 //MySqlConnection connection = Connection();
                 //MySqlCommand command = new MySqlCommand(SQL_AddDataBase, connection);
                 //command.CommandText = SQL_UseDatabase;
@@ -41,15 +39,16 @@ namespace checking
                 //GetScriptsName();    // названия скриптов с БД
                 //ListNames();     //названия файлов с папки
                 CheckFileNames(ListNames(), GetScriptsName(connection), connection);
+                connection.Close();
             }
-
             catch (MySqlException ex)
             {
                 Console.WriteLine(ex);
             }
             finally
             {
-                connection.Close();
+                Console.WriteLine("Добавлено в список ");
+                //connection.Close();
             }
         }
         private List<string> GetScriptsName(MySqlConnection connection)   // тянем  все названия скриптов с базы данных
@@ -72,24 +71,18 @@ namespace checking
                 Console.WriteLine(ex);
                 throw ex;
             }
-            
         }
         // метод считывания названий файлов в папке
         private List<string> ListNames()
         {
-
             List<string> listAllFileNames = new List<string>();
-            //listAllFileNames.AddRange(Directory.GetFiles(mypath, "*.sql", SearchOption.TopDirectoryOnly));
             string[] fileAll = Directory.GetFiles(mypath, "*.sql", SearchOption.TopDirectoryOnly);
             foreach (string str in fileAll)
             {
                 listAllFileNames.Add(Path.GetFileName(str));                           // REPLACE****************************
-                //Console.WriteLine(Path.GetFileName(str));
             }
             return listAllFileNames;
         }
-
-
 
         // метод, который сравнит названия,если нет его в списке,то вызывает метод считывания и его выполнение, затем добавление записи в базу данных
         private void CheckFileNames(List<string> files, List<string> lists, MySqlConnection connection)
@@ -133,11 +126,7 @@ namespace checking
         // метод считывания файла(скрипта) с папки и далее выполнение всех команд
         private void readSQLFile(string fileDirectory, MySqlConnection connection)
         {
-            //string[] result = File.ReadAllText($"{mypath}\\{fileDirectory}").Split(';');
             string result = File.ReadAllText($"{mypath}\\{fileDirectory}");
-
-
-            //Console.WriteLine(res.Replace("\n", "") + ";");
             ProcessLoader(result,connection);
 
         }
@@ -150,7 +139,7 @@ namespace checking
             try
             {
                 MySqlCommand command = new MySqlCommand(text, connection);
-                command.ExecuteNonQuery();
+                //command.ExecuteNonQuery();
 
             }
             catch (MySqlException ex)
