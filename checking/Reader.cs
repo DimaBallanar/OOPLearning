@@ -17,31 +17,44 @@ namespace checking
     {
         string mypath = "D:\\ДЗ С#\\hschool\\hschool_beggining_csh\\OOPLearning\\checking\\Scripts";
         private readonly string ConnectionString = "server=localhost;database=Scripts;uid=root;password=123qwe4r5t6YY;";
-        private readonly string SQL_CreateTable = @"create table if not exists TableScripts (
-                                                     Id INT auto_increment not null, 
-                                                     Name varchar(255) not null, 
-                                                     primary key(id) 
-                                                   );";                                                   
+        //private readonly string SQL_CreateTable = @"create table if not exists TableScripts (
+                                                   //  Id INT auto_increment not null, 
+                                                   //  Name varchar(255) not null, 
+                                                   //  primary key(id) 
+                                                   //);";
         private readonly string SQL_selectItems = "select name from TableScripts;";
         private readonly string SQL_AddItem = "insert into TableScripts (name) values (@name1);";
 
         // метод, который считает все названия скриптов с базы данных
         public void Start()
         {
-            //MySqlConnection connection = Connection();
-            //MySqlCommand command = new MySqlCommand(SQL_AddDataBase, connection);
-            //command.CommandText = SQL_UseDatabase;
-            //command.CommandText = SQL_CreateTable;
-            //connection.Close();
-            //GetScriptsName();    // названия скриптов с БД
-            //ListNames();     //названия файлов с папки
-            CheckFileNames(ListNames(), GetScriptsName());
+            try
+            {
+                MySqlConnection connection = new MySqlConnection(ConnectionString);
+                connection.Open();
 
+                //MySqlConnection connection = Connection();
+                //MySqlCommand command = new MySqlCommand(SQL_AddDataBase, connection);
+                //command.CommandText = SQL_UseDatabase;
+                //command.CommandText = SQL_CreateTable;
+                //connection.Close();
+                //GetScriptsName();    // названия скриптов с БД
+                //ListNames();     //названия файлов с папки
+                CheckFileNames(ListNames(), GetScriptsName(connection), connection);
+            }
 
+            catch (MySqlException ex)
+            {
+                Console.WriteLine(ex);
+            }
+            finally
+            {
+                connection.Close();
+            }
         }
-        private List<string> GetScriptsName()   // тянем  все названия скриптов с базы данных
+        private List<string> GetScriptsName(MySqlConnection connection)   // тянем  все названия скриптов с базы данных
         {
-            MySqlConnection connection = Connection();
+            //MySqlConnection connection = Connection();
             if (connection == null) throw new Exception("connection error");
             try
             {
@@ -59,10 +72,7 @@ namespace checking
                 Console.WriteLine(ex);
                 throw ex;
             }
-            finally
-            {
-                connection.Close();
-            }
+            
         }
         // метод считывания названий файлов в папке
         private List<string> ListNames()
@@ -82,26 +92,26 @@ namespace checking
 
 
         // метод, который сравнит названия,если нет его в списке,то вызывает метод считывания и его выполнение, затем добавление записи в базу данных
-        private void CheckFileNames(List<string> files, List<string> lists)
+        private void CheckFileNames(List<string> files, List<string> lists, MySqlConnection connection)
         {
             foreach (var st in files)
             {
                 if (!lists.Contains(st))
                 {
                     //метод считывания файла с командами и отработка
-                    readSQLFile(st);
+                    readSQLFile(st,connection);
                     Console.WriteLine(st);
 
                     //метод добавления названия скрипта в БД
-                    AddScriptInTable(st);
+                    AddScriptInTable(st,connection);
                 }
             }
         }
         //метод добавления записи в базу данных
-        private void AddScriptInTable(string scr)
+        private void AddScriptInTable(string scr, MySqlConnection connection)
         {
             if (scr == null) throw new ArgumentNullException(nameof(scr));
-            MySqlConnection connection = Connection();
+            //MySqlConnection connection = Connection();
             if (connection == null) throw new Exception("Connection Error");
             try
             {
@@ -115,27 +125,27 @@ namespace checking
                 Console.WriteLine(ex);
                 throw ex;
             }
-            finally
-            {
-                connection.Close();
-            }
+            //finally
+            //{
+            //    connection.Close();
+            //}
         }
         // метод считывания файла(скрипта) с папки и далее выполнение всех команд
-        private void readSQLFile(string fileDirectory)
+        private void readSQLFile(string fileDirectory, MySqlConnection connection)
         {
             //string[] result = File.ReadAllText($"{mypath}\\{fileDirectory}").Split(';');
-            string result = File.ReadAllText($"{mypath}\\{fileDirectory}") ;
+            string result = File.ReadAllText($"{mypath}\\{fileDirectory}");
 
 
             //Console.WriteLine(res.Replace("\n", "") + ";");
-            ProcessLoader(result);
+            ProcessLoader(result,connection);
 
         }
         // метод выполнения команд со считанного файла
-        private void ProcessLoader(string text)
+        private void ProcessLoader(string text, MySqlConnection connection)
         {
             if (text == null) throw new ArgumentNullException(nameof(text));
-            MySqlConnection connection = Connection();
+            //MySqlConnection connection = Connection();
             if (connection == null) throw new Exception("Connection Error");
             try
             {
@@ -148,24 +158,24 @@ namespace checking
                 Console.WriteLine(ex);
                 throw ex;
             }
-            finally
-            {
-                connection.Close();
-            }
+            //finally
+            //{
+            //    connection.Close();
+            //}
         }
-        private MySqlConnection Connection()
-        {
-            try
-            {
-                MySqlConnection connection = new MySqlConnection(ConnectionString);
-                connection.Open();
-                return connection;
-            }
-            catch (MySqlException ex)
-            {
-                return null;
-            }
-        }
+        //private MySqlConnection Connection()
+        //{
+        //    try
+        //    {
+        //        MySqlConnection connection = new MySqlConnection(ConnectionString);
+        //        connection.Open();
+        //        return connection;
+        //    }
+        //    catch (MySqlException ex)
+        //    {
+        //        return null;
+        //    }
+        //}
         //static void ChekerScript(string path, string fileChecker)
         //{
         //    List<string> list = new List<string>();
