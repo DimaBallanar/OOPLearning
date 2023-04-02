@@ -53,6 +53,7 @@ namespace MyApp // Note: actual namespace depends on the project name.
             //{
             //    Console.WriteLine(result[i++].ToString());
             //}
+
             //7.Найти все уникальные элементы в массиве. (linq)
             //List<int> ints = new List<int>() { 1, 55, 2, 3, 4, 0, 98, 9, 11,2,4, 0, 9, 0, 9, 22, 0, 5, 5 };
 
