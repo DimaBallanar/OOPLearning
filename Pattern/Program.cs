@@ -40,6 +40,7 @@ namespace MyApp // Note: actual namespace depends on the project name.
             //            4.Найти первый элемент массива, который больше 10. (linq)
             //List<int> ints= new List<int>() { 1,2,3,4,0,9,11,0,9,0,9,22,0,5,5};
             //Console.WriteLine(ints.Where(x=>x>10).FirstOrDefault());
+
             //5.Найти среднее значение всех элементов в массиве. (linq)
             //List<int> ints= new List<int>() { 1,2,3,4,0,9,11,0,9,0,9,22,0,5,5};
             //Console.WriteLine(ints.Average());
