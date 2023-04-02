@@ -56,8 +56,8 @@ namespace MyApp // Note: actual namespace depends on the project name.
 
             //7.Найти все уникальные элементы в массиве. (linq)
             //List<int> ints = new List<int>() { 1, 55, 2, 3, 4, 0, 98, 9, 11,2,4, 0, 9, 0, 9, 22, 0, 5, 5 };
-
             //Console.WriteLine(string.Join(",",ints.GroupBy(x=>x).Where(x=>x.Count()==1).Select(x=>x.Key)));
+
             //8.Найти все элементы в массиве, которые встречаются более одного раза. (linq)
             List<int> ints = new List<int>() { 1, 55, 2, 3, 4, 0, 98, 9, 11, 2, 4, 0, 9, 0, 9, 22, 0, 5, 5 };
 
