@@ -36,6 +36,7 @@ namespace MyApp // Note: actual namespace depends on the project name.
             //List<int> ints= new List<int>() { 1,2,3,4,0,9,0,9,0,9,0,5,5};
             //Console.WriteLine(ints.Count(x=>x==0));
 
+
             //            4.Найти первый элемент массива, который больше 10. (linq)
             //List<int> ints= new List<int>() { 1,2,3,4,0,9,11,0,9,0,9,22,0,5,5};
             //Console.WriteLine(ints.Where(x=>x>10).FirstOrDefault());
