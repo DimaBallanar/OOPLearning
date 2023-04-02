@@ -66,6 +66,7 @@ namespace MyApp // Note: actual namespace depends on the project name.
             //9.Найти наибольшее и наименьшее значение в массиве. (linq)
             //Console.WriteLine(string.Join(",", ints.Max()));
             //Console.WriteLine(string.Join(",", ints.Min()));
+
             //10.Найти сумму всех элементов в массиве. (linq)
             //Console.WriteLine(ints.Sum());
             //11.Объединить два массива и удалить все дубликаты. (linq)
