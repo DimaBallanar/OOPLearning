@@ -73,6 +73,7 @@ namespace MyApp // Note: actual namespace depends on the project name.
             //11.Объединить два массива и удалить все дубликаты. (linq)
             List<int> ints1 = new List<int>() { 1, 55, 2, 3, 4, 0, 98,54544, 9, 11, 2, 4, 0, 9, 1022, 9, 22, 0, 5, 5 };
             Console.WriteLine(string.Join(",",ints.Union(ints1)));
+
         }
     }
 
