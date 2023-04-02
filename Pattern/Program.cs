@@ -42,6 +42,7 @@ namespace MyApp // Note: actual namespace depends on the project name.
             //5.Найти среднее значение всех элементов в массиве. (linq)
             //List<int> ints= new List<int>() { 1,2,3,4,0,9,11,0,9,0,9,22,0,5,5};
             //Console.WriteLine(ints.Average());
+
             //6.Найти все четные числа в массиве и отсортировать их по возрастанию. (linq)
             //List<int> ints = new List<int>() { 1,55,2, 3, 4, 0, 98,9, 11, 0, 9, 0, 9, 22, 0, 5, 5 };
             //var result=ints.Where(x=>x%2==0).OrderBy(x=>x).ToList();
