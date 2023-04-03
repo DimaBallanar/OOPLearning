@@ -15,7 +15,7 @@ namespace MyApp // Note: actual namespace depends on the project name.
             //Reader read = new Reader();
             //new Reader().Start();
             IReader reader=new Reader();
-            
+            reader.Start();
 
 
 
