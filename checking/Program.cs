@@ -13,7 +13,13 @@ namespace MyApp // Note: actual namespace depends on the project name.
             Console.WriteLine("2");
             Console.WriteLine("3");
             //Reader read = new Reader();
-            new Reader().Start();
+            //new Reader().Start();
+            IReader reader=new Reader();
+            
+
+
+
+
             //**********************************************
             string mypath = "D:\\ДЗ С#\\hschool\\hschool_beggining_csh\\OOPLearning\\checking\\Scripts";
 

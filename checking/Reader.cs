@@ -13,7 +13,7 @@ using System.Threading.Tasks;
 using System.Xml.Linq;
 namespace checking
 {
-    public class Reader
+    public class Reader:IReader
     {
         string mypath = "D:\\ДЗ С#\\hschool\\hschool_beggining_csh\\OOPLearning\\checking\\Scripts";
         private readonly string ConnectionString = "server=localhost;database=Scripts;uid=root;password=123qwe4r5t6YY;";
