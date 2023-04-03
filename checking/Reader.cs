@@ -109,8 +109,7 @@ namespace checking
         private void AddScriptInTable(string scr, MySqlConnection connection)
         {
             var transaction = connection.BeginTransaction();
-            if (scr == null) throw new ArgumentNullException(nameof(scr));
-            //MySqlConnection connection = Connection();
+            if (scr == null) throw new ArgumentNullException(nameof(scr));           
             if (connection == null) throw new Exception("Connection Error");
             try
             {
