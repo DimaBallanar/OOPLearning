@@ -27,28 +27,33 @@ namespace checking
         // метод, который считает все названия скриптов с базы данных
         public void Start()
         {
-            try
+
+
+            using (MySqlConnection connection = new MySqlConnection(ConnectionString))
             {
-                MySqlConnection connection = new MySqlConnection(ConnectionString);
                 connection.Open();
-                //MySqlConnection connection = Connection();
-                //MySqlCommand command = new MySqlCommand(SQL_AddDataBase, connection);
-                //command.CommandText = SQL_UseDatabase;
-                //command.CommandText = SQL_CreateTable;
-                //connection.Close();
-                //GetScriptsName();    // названия скриптов с БД
-                //ListNames();     //названия файлов с папки
-                CheckFileNames(ListNames(), GetScriptsName(connection), connection);
-                connection.Close();
-            }
-            catch (MySqlException ex)
-            {
-                Console.WriteLine(ex);
-            }
-            finally
-            {
-                Console.WriteLine("Добавлено в список ");
-                //connection.Close();
+               
+                try
+                {
+                    //MySqlConnection connection = Connection();
+                    //MySqlCommand command = new MySqlCommand(SQL_AddDataBase, connection);
+                    //command.CommandText = SQL_UseDatabase;
+                    //command.CommandText = SQL_CreateTable;
+                    //connection.Close();
+                    //GetScriptsName();    // названия скриптов с БД
+                    //ListNames();     //названия файлов с папки
+                    CheckFileNames(ListNames(), GetScriptsName(connection), connection);
+                    connection.Close();
+                }
+                catch (MySqlException ex)
+                {
+                    Console.WriteLine(ex);
+                }
+                finally
+                {
+                    Console.WriteLine("Добавлено в список ");
+                    //connection.Close();
+                }
             }
         }
         private List<string> GetScriptsName(MySqlConnection connection)   // тянем  все названия скриптов с базы данных
@@ -103,18 +108,21 @@ namespace checking
         //метод добавления записи в базу данных
         private void AddScriptInTable(string scr, MySqlConnection connection)
         {
+            var transaction = connection.BeginTransaction();
             if (scr == null) throw new ArgumentNullException(nameof(scr));
             //MySqlConnection connection = Connection();
             if (connection == null) throw new Exception("Connection Error");
             try
             {
                 MySqlCommand command = new MySqlCommand(SQL_AddItem, connection);
+                command.Transaction= transaction;
                 command.Parameters.AddWithValue("@name1", scr);
                 command.ExecuteNonQuery();
-
+                transaction.Commit();
             }
             catch (MySqlException ex)
             {
+                transaction.Rollback();
                 Console.WriteLine(ex);
                 throw ex;
             }
