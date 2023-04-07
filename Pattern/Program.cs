@@ -6,10 +6,52 @@ namespace MyApp // Note: actual namespace depends on the project name.
     {
         static void Main(string[] args)
         {
-            //AmericanSocket socket= new SimpleAmericanSOcket();
-            //Radio radio=new Radio();
-            //EuroSocket euroSocket= new SocketAdapter(socket);
-            //radio.ListenMusic(euroSocket);
+            AmericanSocket socket = new SimpleAmericanSOcket();
+            Radio radio = new Radio();
+            EuroSocket euroSocket = new SocketAdapter(socket);
+            radio.ListenMusic(euroSocket);
+
+
+
+            //IAnimal animal = new PatterPrototype();
+            //animal.SetName("Овечка Долли");
+            //IAnimal animaclone = animal.Clone();
+            //Console.WriteLine(animal.GetName());
+            //Console.WriteLine(animaclone.GetName());
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
             //            1.Найти все числа в массиве, которые больше 5(linq)
@@ -59,7 +101,7 @@ namespace MyApp // Note: actual namespace depends on the project name.
             //Console.WriteLine(string.Join(",",ints.GroupBy(x=>x).Where(x=>x.Count()==1).Select(x=>x.Key)));
 
             //8.Найти все элементы в массиве, которые встречаются более одного раза. (linq)
-            List<int> ints = new List<int>() { 1, 55, 2, 3, 4, 0, 98, 9, 11, 2, 4, 0, 9, 0, 9, 22, 0, 5, 5 };
+            //List<int> ints = new List<int>() { 1, 55, 2, 3, 4, 0, 98, 9, 11, 2, 4, 0, 9, 0, 9, 22, 0, 5, 5 };
 
             //Console.WriteLine(string.Join(",", ints.GroupBy(x => x).Where(x => x.Count() > 1).Select(x => x.Key)));
 
@@ -71,8 +113,8 @@ namespace MyApp // Note: actual namespace depends on the project name.
             //Console.WriteLine(ints.Sum());
 
             //11.Объединить два массива и удалить все дубликаты. (linq)
-            List<int> ints1 = new List<int>() { 1, 55, 2, 3, 4, 0, 98,54544, 9, 11, 2, 4, 0, 9, 1022, 9, 22, 0, 5, 5 };
-            Console.WriteLine(string.Join(",",ints.Union(ints1)));
+            //List<int> ints1 = new List<int>() { 1, 55, 2, 3, 4, 0, 98,54544, 9, 11, 2, 4, 0, 9, 1022, 9, 22, 0, 5, 5 };
+            //Console.WriteLine(string.Join(",",ints.Union(ints1)));
 
         }
     }

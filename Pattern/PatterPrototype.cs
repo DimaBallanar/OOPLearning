@@ -8,8 +8,8 @@ namespace Pattern
 {
     public interface IAnimal
     {
-        //void SetName(string name);
-        //string GetName();
+        void SetName(string name);
+        string GetName();
         IAnimal Clone();
     }
     public class PatterPrototype : IAnimal

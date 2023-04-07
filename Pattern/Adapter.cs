@@ -35,7 +35,7 @@ namespace Pattern
     }
     class Radio                     // радио вилка европейская,а хотим врубить в америке
     {
-        public void ListenMusic(EuroSocket euroSocket)
+        public void ListenMusic (EuroSocket euroSocket)
         {
             euroSocket.GetPower();
         }
