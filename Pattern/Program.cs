@@ -4,23 +4,37 @@ namespace MyApp // Note: actual namespace depends on the project name.
 {
     internal class Program
     {
+        static async Task TaskMethod(int number)
+        {
+            Console.WriteLine($"Method {number} starting!");
+            await Task.Delay(100);
+            Console.WriteLine($"Method {number} finished!");
+        }
         static void Main(string[] args)
         {
-            AmericanSocket socket = new SimpleAmericanSOcket();
-            Radio radio = new Radio();
-            EuroSocket euroSocket = new SocketAdapter(socket);
-            radio.ListenMusic(euroSocket);
+            //AmericanSocket socket = new SimpleAmericanSOcket();
+            //Radio radio = new Radio();
+            //EuroSocket euroSocket = new SocketAdapter(socket);
+            //radio.ListenMusic(euroSocket);
 
 
 
             //IAnimal animal = new PatterPrototype();
             //animal.SetName("Овечка Долли");
+
             //IAnimal animaclone = animal.Clone();
             //Console.WriteLine(animal.GetName());
             //Console.WriteLine(animaclone.GetName());
 
 
+            //Напишите программу, которая создает 10 задач и запускает их параллельно.Каждая задача должна выводить в консоль свой порядковый номер.
 
+            List<Task> tasks = new List<Task>();
+            for (int i = 0; i < 10; i++)
+            {
+                tasks.Add(TaskMethod(i));
+            }
+            Task.WaitAll(tasks.ToArray());
 
 
 
