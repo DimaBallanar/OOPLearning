@@ -16,9 +16,8 @@ namespace MyApp // Note: actual namespace depends on the project name.
             //Radio radio = new Radio();
             //EuroSocket euroSocket = new SocketAdapter(socket);
             //radio.ListenMusic(euroSocket);
-
-
-
+            
+            //****************Прототип*************************
             //IAnimal animal = new PatterPrototype();
             //animal.SetName("Овечка Долли");
 
