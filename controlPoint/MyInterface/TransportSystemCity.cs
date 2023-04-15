@@ -183,16 +183,12 @@ public class TransportSystemCity
                     aprove = false;
                     result = $"У транспорного средства осталось {transport.CountSeats} свободных мест";
                     return (aprove, result);
-                }
-
-                
+                }                
             }
-
         }
         if (check == 0) throw new Exception("нет автобуса на базе");
         return (aprove, result);
     }
-
 
     public (bool, string) BuyShipTicket(int number, int countSeats)
     {
