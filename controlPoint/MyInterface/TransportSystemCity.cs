@@ -134,7 +134,6 @@ public class TransportSystemCity
             if (transport.NumberOfTransport == number && transport is Plane plane)
             {
                 check++;
-
                 if (transport.CountSeats >= countSeats)
                 {
                     aprove = true;
@@ -154,7 +153,7 @@ public class TransportSystemCity
         if (check == 0) throw new Exception("нет самолета на базе");
         return (aprove, result);
     }
-
+    ///fluy
     public (bool, string) BuyBusTicket(int number, int countSeats)
     {
         bool aprove = true;
