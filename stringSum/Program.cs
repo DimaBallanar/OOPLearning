@@ -15,10 +15,16 @@ namespace MyApp // Note: actual namespace depends on the project name.
             //Console.WriteLine();
             //str.MakeLeftSide();
             //str.MakeRightSides();
-            Code coe=new Code();
-            coe.Array();
+
+
+            Code coe = new Code();
+            Console.WriteLine(coe.ConsoleReturn());
+
+
             //foreach(string x in coe.Array()) { Console.WriteLine(x); }
-            Console.WriteLine(coe.Array()[1]);
+            //Console.WriteLine(coe.Array()[1]);
+            double re = 123 + 1 * 22 - 17 / 2 + 22 - 19 + 33.2 * 124 - 11 + 22 - 14.9 * 2 - 1;
+            Console.WriteLine( re );
         }
     }
 }
