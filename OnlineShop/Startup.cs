@@ -1,4 +1,5 @@
-﻿using OnlineShop.Services;
+﻿using MySql.Data.MySqlClient;
+using OnlineShop.Services;
 using System.Text.Json;
 
 namespace OnlineShop
@@ -13,8 +14,11 @@ namespace OnlineShop
         public IConfiguration Configuration { get; }
         public void ConfigureServices(IServiceCollection services)
         {
-            var connectionString = Configuration.GetConnectionString("MyConnsection");
-            
+            // Получение ConnectionString из конфигурации
+            var connectionString = Configuration.GetConnectionString("MyConnection");
+            // Добавление сервисов, использующих ConnectionString
+            services.AddTransient<MySqlConnection>(_ => new MySqlConnection(connectionString));
+
             services.AddTransient<WeatherForecastService>();
             services.AddSingleton<WeatherForecastService>();
             // Настройка сервисов, используемых в приложении (поговорим далее)
