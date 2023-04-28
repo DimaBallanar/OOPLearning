@@ -1,5 +1,5 @@
 ﻿using MySql.Data.MySqlClient;
-using OnlineShop.Services;
+using OnlineShop.Repository;
 using System.Text.Json;
 
 namespace OnlineShop
@@ -15,12 +15,11 @@ namespace OnlineShop
         public void ConfigureServices(IServiceCollection services)
         {
             // Получение ConnectionString из конфигурации
-            var connectionString = Configuration.GetConnectionString("MyConnection");
+            var connectionString = Configuration.GetConnectionString("MyDataBase");
             // Добавление сервисов, использующих ConnectionString
             services.AddTransient<MySqlConnection>(_ => new MySqlConnection(connectionString));
-
-            services.AddTransient<WeatherForecastService>();
-            services.AddSingleton<WeatherForecastService>();
+            services.AddTransient<UserRepository>();
+           
             // Настройка сервисов, используемых в приложении (поговорим далее)
             services.AddControllers().AddJsonOptions(options => { options.JsonSerializerOptions.PropertyNamingPolicy = JsonNamingPolicy.CamelCase; }) ;
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
