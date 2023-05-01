@@ -54,6 +54,19 @@ namespace OnlineShop.Controllers
             }
         }
 
+        [HttpPut]
+        public IActionResult Update(User user)
+        {
+            try
+            {
+                return Ok(m_userRepository.Update(user));
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
         [HttpDelete("{id}")]
         public IActionResult Delete(int id)
         {

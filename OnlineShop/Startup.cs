@@ -19,6 +19,10 @@ namespace OnlineShop
             // Добавление сервисов, использующих ConnectionString
             services.AddTransient<MySqlConnection>(_ => new MySqlConnection(connectionString));
             services.AddTransient<UserRepository>();
+            services.AddTransient<BrandRepository>();
+            services.AddTransient<ProductRepository>();
+            services.AddTransient<CategoryRepository>();
+            services.AddTransient<OrderProductRepository>();
            
             // Настройка сервисов, используемых в приложении (поговорим далее)
             services.AddControllers().AddJsonOptions(options => { options.JsonSerializerOptions.PropertyNamingPolicy = JsonNamingPolicy.CamelCase; }) ;
