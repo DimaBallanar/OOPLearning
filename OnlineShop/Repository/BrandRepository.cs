@@ -14,7 +14,31 @@ namespace OnlineShop.Repository
         {
 
         }
-        public List<User> GetAll()
+        public List<Brand> GetAll()
+        {
+            try
+            {
+                m_Connection.Open();
+                MySqlCommand cmd = new MySqlCommand(SQL_SELECT_GET_ALL, m_Connection);
+                List<Brand> brands = new List<Brand>();
+                MySqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    brands.Add(new Brand()
+                    {
+                        Id = reader.GetInt32(0),
+                        Name = reader.GetString(1)                        
+                    });
+                }
+                return brands;
+            }
+            catch (MySqlException e)
+            {
+                throw e;
+            }
+        }
+
+        public List<User> GetAll(int id)
         {
             try
             {
@@ -24,13 +48,45 @@ namespace OnlineShop.Repository
                 MySqlDataReader reader = cmd.ExecuteReader();
                 while (reader.Read())
                 {
-                    users.Add(new User()
+                    if (reader.GetInt32(0) == id)
                     {
-                        Id = reader.GetInt32(0),
-                        Name = reader.GetString(1)                        
-                    });
+                        users.Add(new User()
+                        {
+                            Id = reader.GetInt32(0),
+                            Name = reader.GetString(1)                           
+                        });
+                    }
                 }
                 return users;
+            }
+            catch (MySqlException e)
+            {
+                throw e;
+            }
+        }
+
+        public int Put(User user)
+        {
+            try
+            {
+                m_Connection.Open();
+                MySqlCommand cmd = new MySqlCommand(SQL_SELECT_GET_ALL, m_Connection);
+                MySqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    if (reader.GetString(3) != user.Email)
+                    {
+                        m_Connection.Close();
+                        User user1 = new User();
+                        m_Connection.Open();
+                        MySqlCommand command = new MySqlCommand(SQL_PUT_ITEM, m_Connection);                      
+                        command.Parameters.AddWithValue("@name", user.Name);                    
+                        command.ExecuteNonQuery();
+                        return (int)command.LastInsertedId;
+                    }
+
+                }
+                return -1;
             }
             catch (MySqlException e)
             {
