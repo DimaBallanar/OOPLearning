@@ -65,7 +65,7 @@ namespace OnlineShop.Repository
             }
         }
 
-        public int Put(User user)
+        public int Put(Brand brand)
         {
             try
             {
@@ -74,13 +74,13 @@ namespace OnlineShop.Repository
                 MySqlDataReader reader = cmd.ExecuteReader();
                 while (reader.Read())
                 {
-                    if (reader.GetString(3) != user.Email)
+                    if (reader.GetString(3) != brand.Name)
                     {
                         m_Connection.Close();
-                        User user1 = new User();
+                        Brand brand1 = new Brand();
                         m_Connection.Open();
                         MySqlCommand command = new MySqlCommand(SQL_PUT_ITEM, m_Connection);                      
-                        command.Parameters.AddWithValue("@name", user.Name);                    
+                        command.Parameters.AddWithValue("@name", brand.Name);                    
                         command.ExecuteNonQuery();
                         return (int)command.LastInsertedId;
                     }
