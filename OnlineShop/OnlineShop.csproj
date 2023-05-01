@@ -13,7 +13,6 @@
 
   <ItemGroup>
     <Folder Include="Extencsions\" />
-    <Folder Include="Services\" />
   </ItemGroup>
 
 </Project>
