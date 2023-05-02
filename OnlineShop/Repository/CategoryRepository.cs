@@ -1,5 +1,5 @@
 ﻿using MySql.Data.MySqlClient;
-using OnlineShop.Models;
+using OnlineShop.Models.Repository;
 
 namespace OnlineShop.Repository
 {

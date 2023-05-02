@@ -1,13 +1,15 @@
 ﻿using MySql.Data.MySqlClient;
-using OnlineShop.Models;
+using OnlineShop.Models.Repository;
 using System.Reflection.PortableExecutable;
 using System.Text;
+//using static Google.Protobuf.Collections.MapField<TKey, TValue>;
 
 namespace OnlineShop.Repository
 {
-    public class UserRepository:BaseRepository
-    {       
+    public class UserRepository : BaseRepository
+    {
         private readonly string SQL_SELECT_GET_ALL = "Select id,name,surname,email,password from studaki";
+        private readonly string SQL_SELECT_GET_BY_EMAIL = "Select id,name,surname,email,password from studaki where email=@email;";
         private readonly string SQL_PUT_ITEM = "insert into studaki(name,surname,email,password) values (@name, @surname, @email, @password)";
         private readonly string SQL_UPDATE_USER = "UPDATE studaki Set name=@name, surname=@surname, email=@email,password=@password where Id={0}";
         private readonly string SQL_DELETE_USER = "delete from studaki where Id=@id;";
@@ -65,6 +67,35 @@ namespace OnlineShop.Repository
                     }
                 }
                 return users;
+            }
+            catch (MySqlException e)
+            {
+                throw e;
+            }
+        }
+        public User GetByEmail(string email)
+        {
+
+            try
+            {
+                m_Connection.Open();
+                MySqlCommand cmd = new MySqlCommand(SQL_SELECT_GET_BY_EMAIL, m_Connection);
+                cmd.Parameters.AddWithValue("@email", email);
+                MySqlDataReader reader = cmd.ExecuteReader();
+                if (reader.Read())
+                {
+                    User user = new User()
+                    {
+                        Id = reader.GetInt32(0),
+                        Name = reader.GetString(1),
+                        Surname = reader.GetString(2),
+                        Email = reader.GetString(3),
+                        Password = reader.GetString(4)
+                    };
+
+                    return user;
+                }
+                return null;
             }
             catch (MySqlException e)
             {

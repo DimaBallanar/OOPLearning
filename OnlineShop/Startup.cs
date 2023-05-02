@@ -1,6 +1,10 @@
 ﻿using MySql.Data.MySqlClient;
 using OnlineShop.Repository;
 using System.Text.Json;
+using OnlineShop.Extensions;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
+using Options;
 
 namespace OnlineShop
 {
@@ -17,15 +21,26 @@ namespace OnlineShop
             // Получение ConnectionString из конфигурации
             var connectionString = Configuration.GetConnectionString("MyDataBase");
             // Добавление сервисов, использующих ConnectionString
-            services.AddTransient<MySqlConnection>(_ => new MySqlConnection(connectionString));
-            services.AddTransient<UserRepository>();
-            services.AddTransient<BrandRepository>();
-            services.AddTransient<ProductRepository>();
-            services.AddTransient<CategoryRepository>();
-            services.AddTransient<OrderProductRepository>();
-           
+            services.AddRepositories(connectionString);
+            services.AddServices();
+            services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+                    .AddJwtBearer(options =>
+            {
+                options.RequireHttpsMetadata = false;
+                options.TokenValidationParameters = new TokenValidationParameters
+                {
+                    ValidateIssuer = true, // укзывает, будет ли валидироваться издатель при валидации токена
+                    ValidIssuer = AuthOptions.ISSUER, // строка, представляющая издателя
+                    ValidateAudience = true, // будет ли валидироваться потребитель токена
+                    ValidAudience = AuthOptions.AUDIENCE, // установка потребителя токена
+                    ValidateLifetime = true, // будет ли валидироваться время существования
+                    IssuerSigningKey = AuthOptions.GetSymmetricSecurityKey(), // установка ключа безопасности
+                    ValidateIssuerSigningKey = true, // валидация ключа безопасности
+                };
+            });
+            
             // Настройка сервисов, используемых в приложении (поговорим далее)
-            services.AddControllers().AddJsonOptions(options => { options.JsonSerializerOptions.PropertyNamingPolicy = JsonNamingPolicy.CamelCase; }) ;
+            services.AddControllers().AddJsonOptions(options => { options.JsonSerializerOptions.PropertyNamingPolicy = JsonNamingPolicy.CamelCase; });
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             services.AddEndpointsApiExplorer();
             services.AddSwaggerGen();
@@ -44,6 +59,7 @@ namespace OnlineShop
 
             app.UseHttpsRedirection();
 
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>

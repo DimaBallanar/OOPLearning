@@ -1,10 +1,12 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using OnlineShop.Models;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+using OnlineShop.Models.Repository;
 using OnlineShop.Repository;
 
 namespace OnlineShop.Controllers
 {
     [ApiController]
+    [Authorize(Roles ="Admin")]
     [Route("api/[controller]")]
     public class UserController : ControllerBase
     {
@@ -28,6 +30,7 @@ namespace OnlineShop.Controllers
             }
         }
         //https://localhost:7172/api/User/get/1
+        [AllowAnonymous]
         [HttpGet("get/{id}")]
         public IActionResult Get(int id)
         {
