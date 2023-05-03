@@ -9,7 +9,12 @@ namespace OnlineShop.Repository
         private readonly string SQL_PUT_ITEM = "insert into Product(name,description,price,brand_id,category_id) values (@name, @description, @price, @brand_id, @category_id)";
         private readonly string SQL_UPDATE_PRODUCT = "UPDATE Product Set name=@name, description=@description, price=@price,brand_id=@brand_id, category_id=@category_id where Id={0}"; 
         private readonly string SQL_DELETE_PRODUCT = "delete from Product where Id=@id;";
-
+        private readonly string SQL_SELECT_FOR_VIEW_PRODUCTS= @"select c.name as Продукт ,description as описание,price  as цена,b.name as бренд,c.Name as категория from product p
+                                                                inner join brand b
+                                                                on b.ID=p.brand_id
+                                                                inner join category c
+                                                                on c.ID= p.category_id;";
+                                                                
         public ProductRepository(MySqlConnection connection) : base(connection)
         {
         }
