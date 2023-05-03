@@ -75,7 +75,6 @@ namespace OnlineShop.Repository
         }
         public User GetByEmail(string email)
         {
-
             try
             {
                 m_Connection.Open();
