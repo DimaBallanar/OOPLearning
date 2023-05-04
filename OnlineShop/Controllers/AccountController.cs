@@ -23,10 +23,10 @@ namespace OnlineShop.Controllers
             return m_accountService.Token(login.NickName, login.Password);
         }
 
-        public async Task<IActionResult> Logout()
-        {
-            await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
-            return Ok()
-        }
+        //public async Task<IActionResult> Logout()
+        //{
+        //    await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+        //    return Ok();
+        //}
     }
 }
