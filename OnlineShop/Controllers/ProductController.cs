@@ -6,8 +6,8 @@ using System.Data;
 
 namespace OnlineShop.Controllers
 {
-    //[ApiController]
-    [Authorize(Roles = "Admin")]
+    [ApiController]
+    //[Authorize(Roles = "Admin")]
     [Route("api/[controller]")]
     public class ProductController : ControllerBase
     {
