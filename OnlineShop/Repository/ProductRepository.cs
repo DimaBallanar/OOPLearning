@@ -5,6 +5,8 @@ namespace OnlineShop.Repository
 {
     public class ProductRepository : BaseRepository
     {
+        private readonly BrandRepository m_brandRepository;
+        private readonly CategoryRepository m_categoryRepository;
         private readonly string SQL_SELECT_GET_ALL = "Select id,name,description,price,brand_id,category_id from Product";
         private readonly string SQL_PUT_ITEM = "insert into Product(name,description,price,brand_id,category_id) values (@name, @description, @price, @brand_id, @category_id)";
         private readonly string SQL_UPDATE_PRODUCT = "UPDATE Product Set name=@name, description=@description, price=@price,brand_id=@brand_id, category_id=@category_id where Id={0}"; 
@@ -20,10 +22,13 @@ namespace OnlineShop.Repository
         }
         public List<Product> GetAll()
         {
+            //List<Brand> brands = m_brandRepository.GetAll();
+            //List<Category> categories = m_categoryRepository.GetAll();
             try
             {
                 m_Connection.Open();
                 MySqlCommand cmd = new MySqlCommand(SQL_SELECT_GET_ALL, m_Connection);
+                //MySqlCommand cmd = new MySqlCommand(SQL_SELECT_FOR_VIEW_PRODUCTS, m_Connection);
                 List<Product> products = new List<Product>();
                 MySqlDataReader reader = cmd.ExecuteReader();
                 while (reader.Read())
@@ -34,8 +39,10 @@ namespace OnlineShop.Repository
                         Name = reader.GetString(1),
                         Description = reader.GetString(2),
                         Price = reader.GetDecimal(3),
-                        Brand = reader.GetString(4),
-                        Category=reader.GetString(5)
+                        Brand = reader.GetInt32(4).ToString(),
+                        Category = reader.GetInt32(5).ToString()
+                        //Brand =(from b in brands where b.Id==reader.GetInt32(4) select b.Name).ToString(),
+                        //Category= (from b in categories where b.Id == reader.GetInt32(5) select b.Name).ToString()
 
                     });
                 }

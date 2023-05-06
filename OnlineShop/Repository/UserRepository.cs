@@ -11,7 +11,7 @@ namespace OnlineShop.Repository
         private readonly string SQL_SELECT_GET_ALL = "Select id,name,surname,email,password from users";
         private readonly string SQL_SELECT_GET_BY_EMAIL = "Select id,name,surname,email,password from users where email=@email;";
         private readonly string SQL_PUT_ITEM = "insert into users(name,surname,email,password) values (@name, @surname, @email, @password)";
-        private readonly string SQL_UPDATE_USER = "UPDATE users Set name=@name, surname=@surname, email=@email,password=@password where Id={0}";
+        private readonly string SQL_UPDATE_USER = "UPDATE users Set name=@name, surname=@surname, email=@email,password=@password where Id=@id";
         private readonly string SQL_DELETE_USER = "delete from users where Id=@id;";
 
         public UserRepository(MySqlConnection connection) : base(connection)
@@ -33,7 +33,7 @@ namespace OnlineShop.Repository
                         Id = reader.GetInt32(0),
                         Name = reader.GetString(1),
                         Surname = reader.GetString(2),
-                        Email = reader.GetString(3),
+                        Email = reader.GetString(3).ToLower(),
                         Password = reader.GetString(4)
                     });
                 }
@@ -61,7 +61,7 @@ namespace OnlineShop.Repository
                             Id = reader.GetInt32(0),
                             Name = reader.GetString(1),
                             Surname = reader.GetString(2),
-                            Email = reader.GetString(3),
+                            Email = reader.GetString(3).ToLower(),
                             Password = reader.GetString(4)
                         });
                     }
@@ -79,7 +79,7 @@ namespace OnlineShop.Repository
             {
                 m_Connection.Open();
                 MySqlCommand cmd = new MySqlCommand(SQL_SELECT_GET_BY_EMAIL, m_Connection);
-                cmd.Parameters.AddWithValue("@email", email);
+                cmd.Parameters.AddWithValue("@email", email.ToLower());
                 MySqlDataReader reader = cmd.ExecuteReader();
                 if (reader.Read())
                 {
@@ -88,7 +88,7 @@ namespace OnlineShop.Repository
                         Id = reader.GetInt32(0),
                         Name = reader.GetString(1),
                         Surname = reader.GetString(2),
-                        Email = reader.GetString(3),
+                        Email = reader.GetString(3).ToLower(),
                         Password = reader.GetString(4)
                     };
 
@@ -205,10 +205,12 @@ namespace OnlineShop.Repository
             try
             {
                 m_Connection.Open();
-                MySqlCommand cmd = new MySqlCommand(string.Format(SQL_UPDATE_USER, user.Id), m_Connection);
+                MySqlCommand cmd = new MySqlCommand(SQL_UPDATE_USER, m_Connection);
+                cmd.Parameters.AddWithValue("@email", user.Email.ToLower());
+
                 cmd.Parameters.AddWithValue("@name", user.Name);
                 cmd.Parameters.AddWithValue("@surname", user.Surname);
-                cmd.Parameters.AddWithValue("@email", user.Email);
+                cmd.Parameters.AddWithValue("@email", user.Email.ToLower());
                 cmd.Parameters.AddWithValue("@password", user.Password);
                 cmd.ExecuteNonQuery();
                 m_Connection.Close();

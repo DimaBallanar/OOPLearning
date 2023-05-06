@@ -6,7 +6,7 @@ using OnlineShop.Repository;
 namespace OnlineShop.Controllers
 {
     [ApiController]
-    [Authorize(Roles ="Admin")]
+    //[Authorize(Roles ="Admin")]
     [Route("api/[controller]")]
     public class UserController : ControllerBase
     {
