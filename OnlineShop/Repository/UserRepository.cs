@@ -222,7 +222,6 @@ namespace OnlineShop.Repository
                 throw e;
             }
         }
-
         public List<User> Delete(int code)
         {
             try
