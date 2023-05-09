@@ -22,8 +22,7 @@ namespace OnlineShop.Repository
         }
         public List<Product> GetAll()
         {
-            //List<Brand> brands = m_brandRepository.GetAll();
-            //List<Category> categories = m_categoryRepository.GetAll();
+          
             try
             {
                 m_Connection.Open();
