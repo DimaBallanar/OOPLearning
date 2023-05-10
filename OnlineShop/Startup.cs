@@ -7,6 +7,7 @@ using Microsoft.IdentityModel.Tokens;
 using Options;
 using Google.Protobuf.WellKnownTypes;
 using Microsoft.OpenApi.Models;
+using OnlineShop.MiddleWare;
 
 namespace OnlineShop
 {
@@ -20,11 +21,14 @@ namespace OnlineShop
         public IConfiguration Configuration { get; }
         public void ConfigureServices(IServiceCollection services)
         {
+
             // Получение ConnectionString из конфигурации
             var connectionString = Configuration.GetConnectionString("MyDataBase");
             // Добавление сервисов, использующих ConnectionString
             services.AddRepositories(connectionString);
             services.AddServices();
+            services.AddMemoryCache();
+
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
                     .AddJwtBearer(options =>
             {
@@ -85,6 +89,13 @@ namespace OnlineShop
             }
 
             app.UseHttpsRedirection();
+            app.UseMiddleware<ExceptionMiddleware>();
+            app.UseResponseCaching(); // добавляем Middleware кэширования
+            app.UseEndpoints(endpoints =>
+            {
+                endpoints.MapControllers();
+            });
+
 
             app.UseAuthentication();
             app.UseAuthorization();
