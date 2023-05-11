@@ -56,6 +56,7 @@ namespace OnlineShop.Repository
         {
             try
             {
+                if(id<=0)
                 m_Connection.Open();
                 MySqlCommand cmd = new MySqlCommand(SQL_SELECT_GET_ALL, m_Connection);
                 List<Product> products = new List<Product>();
