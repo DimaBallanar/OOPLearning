@@ -187,8 +187,10 @@ namespace MySQLAPP.DAOs
             {
                 MySqlCommand command = new MySqlCommand(string.Join(SQL_UpdateParametrs, id), connection);
                 Console.WriteLine("введите название:");
+
                 command.Parameters.AddWithValue($"@name", Convert.ToString(Console.ReadLine()));
                 Console.WriteLine("введите адрес");
+
                 command.Parameters.AddWithValue($"@adress", Convert.ToString(Console.ReadLine()));
                 Console.WriteLine("введите номер телефона в формате +375");
 
