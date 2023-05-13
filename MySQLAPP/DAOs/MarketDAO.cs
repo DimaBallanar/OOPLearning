@@ -191,6 +191,8 @@ namespace MySQLAPP.DAOs
                 Console.WriteLine("введите адрес");
                 command.Parameters.AddWithValue($"@adress", Convert.ToString(Console.ReadLine()));
                 Console.WriteLine("введите номер телефона в формате +375");
+
+
                 command.Parameters.AddWithValue($"@phone", Convert.ToString(Console.ReadLine()));
                 Console.WriteLine("введите количество мест");
                 command.Parameters.AddWithValue($"@countplace", Convert.ToInt32(Console.ReadLine()));
